@@ -1,0 +1,24 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Training/Corpus Data
+data/**/*
+!data/.gitkeep
+!data/**/.gitkeep
+
+db/*
+
+# DB dumps from scripts/export-db.sh / scripts/import-db.sh
+backups/*
+!backups/.gitkeep
+
+# Local secrets/config (copy .env.example -> .env)
+.env

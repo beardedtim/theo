@@ -1,0 +1,27 @@
+services:
+  db:
+    image: paradedb/paradedb:0.24.3-pg18
+    container_name: theo-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-theo}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-theo}
+      POSTGRES_DB: ${POSTGRES_DB:-theo}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - theo_pgdata:/var/lib/postgresql/
+      # Mounted as a single file, not the whole directory: the image already
+      # ships its own 10_bootstrap_paradedb.sh in /docker-entrypoint-initdb.d
+      # (enables pg_search/vector and auto-tunes postgresql.conf), and mounting
+      # the directory wholesale would hide it. This file's name sorts after
+      # it, so those extensions exist before it runs.
+      - ./artifacts/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-theo} -d ${POSTGRES_DB:-theo}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  theo_pgdata:

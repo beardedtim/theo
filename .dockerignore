@@ -1,0 +1,16 @@
+# Keeps the API build context small and out of the image -- none of this is
+# needed by Dockerfile.api (data/artifacts are ingested separately; client has
+# its own build context and .dockerignore).
+.git
+.venv
+__pycache__
+*.py[co]
+.pytest_cache
+data
+artifacts
+client
+imgs
+tests
+.claude
+*.log
+.env

@@ -1,0 +1,62 @@
+version: "3"
+
+tasks:
+  default:
+    desc: Start everything needed for local development (db, API, client)
+    cmds:
+      - task: dev
+
+  dev:
+    desc: Start the db, API server, and client dev server together
+    deps: [server, client]
+
+  db:up:
+    desc: Start the ParadeDB (Postgres) container and wait until it's healthy
+    cmds:
+      - docker compose up -d --wait
+
+  db:down:
+    desc: Stop the ParadeDB container
+    cmds:
+      - docker compose down
+
+  db:reset:
+    desc: Wipe the database volume and recreate it from artifacts/init.sql
+    prompt: This deletes all local data in the theo_pgdata volume. Continue?
+    cmds:
+      - docker compose down -v
+      - docker compose up -d --wait
+
+  server:
+    desc: Run the FastAPI server (uv + uvicorn, auto-reload)
+    deps: [db:up]
+    cmds:
+      - uv run uvicorn theo.server:app --reload --port 8000
+
+  client:
+    desc: Run the Vite dev server for the React client
+    dir: client
+    cmds:
+      - pnpm install
+      - pnpm dev
+
+  test:
+    desc: Run the pytest suite against the API (requires the db up and populated)
+    deps: [db:up]
+    cmds:
+      - uv run pytest
+
+  prod:up:
+    desc: Build (if needed) and start the full production stack (db, API, client, reverse proxy) in the background
+    cmds:
+      - docker compose -f docker-compose.prod.yaml up -d
+
+  prod:down:
+    desc: Stop the production stack
+    cmds:
+      - docker compose -f docker-compose.prod.yaml down
+
+  prod:build:
+    desc: Rebuild the production API and client images
+    cmds:
+      - docker compose -f docker-compose.prod.yaml build

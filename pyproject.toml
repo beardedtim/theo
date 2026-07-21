@@ -1,0 +1,39 @@
+[project]
+name = "theo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "cupy-cuda12x>=14.1.1",
+    "en-core-web-trf",
+    "fastapi>=0.139.2",
+    "fastcoref>=2.1.6",
+    "httpx>=0.28.1",
+    "pgvector>=0.5.0",
+    "psycopg[binary]>=3.3.4",
+    "pydantic>=2.13.4",
+    "pydantic-settings>=2.14.2",
+    "python-dotenv>=1.2.2",
+    "rich>=15.0.0",
+    "sentence-transformers>=5.6.0",
+    "spacy>=3.8.14",
+    "sqlalchemy>=2.0.51",
+    "torch>=2.13.0",
+    "transformers<5",
+    "tyro>=1.0.15",
+    "uvicorn[standard]>=0.51.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.uv.sources]
+en-core-web-trf = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.8.0/en_core_web_trf-3.8.0-py3-none-any.whl" }

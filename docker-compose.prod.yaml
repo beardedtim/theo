@@ -1,0 +1,72 @@
+# Production stack: ParadeDB, the FastAPI service, the built React client,
+# and an nginx reverse proxy as the single entrypoint (port 80 -- TLS is
+# expected to be terminated by something in front of this, e.g. a load
+# balancer or another proxy).
+#
+# Usage: docker compose -f docker-compose.prod.yaml up -d
+#
+# `name:` scopes this stack's containers/volumes/network separately from the
+# dev docker-compose.yml stack (default project name), so both can run side
+# by side from the same checkout without colliding.
+name: theo-prod
+
+services:
+  db:
+    image: paradedb/paradedb:0.24.3-pg18
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - theo_pgdata:/var/lib/postgresql/
+      # See docker-compose.yml for why this is mounted as a single file.
+      - ./artifacts/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-theo} -d ${POSTGRES_DB:-theo}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      POSTGRES_HOST: db
+      ENV_STATE: prd
+      LOG_FILE: /app/logs/theo.server.log
+    volumes:
+      - theo_api_logs:/app/logs
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-fs", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+
+  client:
+    build:
+      context: ./client
+      args:
+        VITE_API_BASE_URL: /api
+    restart: unless-stopped
+
+  proxy:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    ports:
+      - "${PROD_HTTP_PORT:-80}:80"
+    volumes:
+      - ./proxy/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      api:
+        condition: service_healthy
+      client:
+        condition: service_healthy
+
+volumes:
+  theo_pgdata:
+  theo_api_logs:

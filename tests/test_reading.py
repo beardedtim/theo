@@ -133,11 +133,15 @@ def test_assemble_consecutive_unstyled_verses_keep_distinct_verse_numbers():
 
 
 def test_assemble_heading_mid_chapter():
+    """Regression: the real Genesis 2 data anchors the "Adam and Eve" heading
+    at anchor_verse_num=3 -- the verse whose text preceded the heading in the
+    source stream, per its own r component -- even though the heading (and
+    the pericope it starts) belongs immediately before verse 4, not verse 3."""
     verse_rows = [
-        {"chapt_num": 2, "verse_num": 2, "tokens": [
-            {"word": "By", "codes": "p"}, {"word": "the"}, {"word": "seventh"}, {"word": "day"},
-        ]},
         {"chapt_num": 2, "verse_num": 3, "tokens": [
+            {"word": "Then", "codes": "p"}, {"word": "God"}, {"word": "blessed"},
+        ]},
+        {"chapt_num": 2, "verse_num": 4, "tokens": [
             {"word": "Adam", "codes": "p"}, {"word": "and"}, {"word": "Eve"},
         ]},
     ]
@@ -147,7 +151,7 @@ def test_assemble_heading_mid_chapter():
     blocks = assemble_blocks(verse_rows, heading_rows)
 
     assert [b.kind for b in blocks] == ["paragraph", "heading", "paragraph"]
-    assert blocks[0].lines[0].runs[0].text == "By the seventh day"
+    assert blocks[0].lines[0].runs[0].text == "Then God blessed"
     assert blocks[1].text == "Adam and Eve"
     assert blocks[1].level == 2
     assert blocks[2].lines[0].runs[0].text == "Adam and Eve"

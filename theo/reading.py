@@ -12,13 +12,17 @@ Source format (see data/info/README.md and build_pericopes.py, which already
 reads this same file to derive pericope boundaries): a flat JSON array of
 items shaped `{"o": <order>, "r": "niv:<Book>:<chapter>:<verse>", "t": <text>,
 "h"?: <level>}`. Items with `h` are section headings (1 = chapter title,
-2/2.5 = section, 3/4 = sub-heading), anchored to render immediately before
-the verse numbered by `r`'s verse component (0 = before the chapter's first
-verse). Items without `h` are verse text, where individual words in `t` can
-carry a `*<codes>` suffix (e.g. "Blessed*pn") marking paragraph starts (p),
-new poetry lines at various indents/alignments (l+one of n/d/e/g/c, or bare
-n/c paired directly with p), and inline styling (s smallcaps, i italic,
-b bold, r red-letter/words-of-Christ).
+2/2.5 = section, 3/4 = sub-heading). A verse component of 0 anchors the
+heading before the chapter's first verse; any other value reuses the verse
+number of the item immediately preceding it in the stream (that verse's text
+item already came before the heading), so the heading actually belongs
+*after* that verse -- i.e. immediately before the next one. (build_pericopes.py
+derives a new pericope's verse_start the same way: from the first verse item
+past the heading, not from the heading's own `r`.) Items without `h` are
+verse text, where individual words in `t` can carry a `*<codes>` suffix (e.g.
+"Blessed*pn") marking paragraph starts (p), new poetry lines at various
+indents/alignments (l+one of n/d/e/g/c, or bare n/c paired directly with p),
+and inline styling (s smallcaps, i italic, b bold, r red-letter/words-of-Christ).
 """
 
 from __future__ import annotations
@@ -160,15 +164,20 @@ def assemble_blocks(verse_rows: list[dict], heading_rows: list[dict]) -> list[Re
     (already filtered to a range and ordered by (chapt_num, verse_num) /
     (chapt_num, order_num)) into paragraph/poetry-line/heading blocks.
 
-    Headings are matched to position by (chapt_num, anchor verse normalized
-    to 1 when 0) rather than by a SQL range filter on anchor_verse_num --
-    anchor 0 ("before verse 1") would otherwise be silently excluded by a
-    naive tuple-range comparison whenever verse_start=1, which is the most
-    common query shape.
+    Headings are matched to position by (chapt_num, target verse) rather
+    than by a SQL range filter on anchor_verse_num -- anchor 0 ("before verse
+    1") would otherwise be silently excluded by a naive tuple-range
+    comparison whenever verse_start=1, which is the most common query shape.
+    anchor_verse_num of 0 targets verse 1; any other anchor targets
+    anchor_verse_num + 1, since the source data stores non-zero anchors as
+    the verse *before* which the heading's text actually occurred in the
+    stream (see module docstring) -- matching the raw anchor verbatim would
+    place the heading one verse too early.
     """
     headings_by_anchor: dict[tuple[int, int], list[dict]] = {}
     for h in heading_rows:
-        target_verse = h["anchor_verse_num"] or 1
+        anchor = h["anchor_verse_num"]
+        target_verse = 1 if anchor == 0 else anchor + 1
         headings_by_anchor.setdefault((h["chapt_num"], target_verse), []).append(h)
     for group in headings_by_anchor.values():
         group.sort(key=lambda h: h["order_num"])

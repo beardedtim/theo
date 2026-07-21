@@ -177,6 +177,16 @@ uv run ingest_lexicon.py                              # populates step_lexicon f
 uv run annotate_pericopes.py                          # populates pericope_annotations via spaCy + fastcoref
                                                        # (needs verses + pericopes; GPU strongly recommended --
                                                        # ~25 min for all NIV pericopes on an RTX 4060, resumable)
+uv run llm_annotate_pericopes.py                      # populates pericope_annotations via together.ai (entities,
+                                                       # SVO, themes, keywords, summary; needs TOGETHER_API_KEY)
+
+uv run index_pericope_metadata.py                     # populates pericope_metadata_index -- STEP/theographic
+                                                       # entity names+descriptions and the NLP annotation's SVO/
+                                                       # entities/themes/keywords/summary, denormalized into one
+                                                       # BM25-searchable text blob per pericope. theo.search's
+                                                       # hybrid mode fuses hits against it alongside chunk-text
+                                                       # BM25 and semantic similarity. Rerun after any of the
+                                                       # STEP/theographic/annotation steps above change.
 ```
 
 Every ingest script is safe to rerun — rows already present are left alone
@@ -189,8 +199,9 @@ Currently ingested: all 66 books' NIV verses, ~2,200 pericopes, one
 groups, 450 events, all 6,519 Easton's Dictionary entries with their verse
 mentions and cross-links, NIV reading-formatted text (~31,100 verses,
 ~3,300 headings), all 4,259 TIPNR proper nouns (~35,500 verse links), all 22,717 brief-lexicon
-entries (11,682 Hebrew + 11,035 Greek), and NLP annotations for every NIV
-pericope.
+entries (11,682 Hebrew + 11,035 Greek), NLP annotations for every NIV
+pericope (both the spaCy and together.ai pipelines), and a metadata search
+index built from all of the above for every NIV pericope.
 
 ## API
 

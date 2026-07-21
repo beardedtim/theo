@@ -45,7 +45,7 @@ function App() {
         <Container maxW="4xl" py="4">
           <Flex align="center" justify="space-between">
             <Link href="/">
-              <Heading size="md">Theo</Heading>
+              <Heading size="md">SproutFaith</Heading>
             </Link>
             <HStack gap="1">
               {NAV_LINKS.map((link) => (

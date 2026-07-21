@@ -6,10 +6,18 @@ verse text, and a relevance score, best match first):
 - semantic: cosine similarity between the query's embedding and each
   pericope's chunk embedding(s) (theo.embeddings.embed_query / chunks_<DIM>).
 - bm25: keyword full-text search over chunk text (chunks_<DIM>.raw_text).
-- hybrid: reciprocal rank fusion of the two rankings above. Semantic
-  similarity and BM25 relevance live on different, unnormalized scales, so
-  rather than combine the raw scores this fuses by rank -- the standard way
-  to blend heterogeneous search signals without score calibration.
+- hybrid: reciprocal rank fusion of THREE rankings: the two above plus
+  metadata_search, a keyword search over each pericope's indexed STEP/
+  theographic entities and NLP annotation (SVO triples, extracted entities,
+  themes, keywords, summary -- see theo.metadata_index). This is what lets
+  a query match on a passage's *subject matter* even when its words never
+  occur in the verse text itself -- e.g. "high priest" surfacing Exodus
+  4:14 via Aaron's STEP description, not the chunk text (which only says
+  "Aaron the Levite"). Semantic and BM25-over-chunk-text stay pure/
+  unchanged as standalone modes; only hybrid_search gets this third leg.
+  All rankings live on different, unnormalized scales, so rather than
+  combine the raw scores this fuses by rank -- the standard way to blend
+  heterogeneous search signals without score calibration.
 """
 
 from __future__ import annotations
@@ -113,18 +121,47 @@ def bm25_search(query: str, translation: str = "NIV", limit: int = 10, model: st
     return _results_from_pericope_scores(scores, translation)
 
 
+def metadata_search(query: str, translation: str = "NIV", limit: int = 10) -> list[SearchResult]:
+    """Rank pericopes by BM25 relevance of the query against their indexed
+    metadata text (theo.metadata_index): STEP + theographic entity names/
+    descriptions, plus the pericope's best NLP annotation (extracted
+    entities, SVO triples, themes, keywords, summary). Complements
+    bm25_search, which only sees chunks_<dim>.raw_text -- the literal verse
+    wording -- and nothing of who/what/what-happened a pericope is about."""
+    query = sanitize_query(query)
+    if not query:
+        return []
+
+    stmt = """
+        SELECT pericope_id, paradedb.score(id) AS relevance
+        FROM pericope_metadata_index
+        WHERE search_text @@@ %(query)s AND translation = %(translation)s
+        ORDER BY relevance DESC
+        LIMIT %(limit)s
+        """
+
+    with get_connection() as conn:
+        with conn.cursor(row_factory=dict_row) as cur:
+            cur.execute(stmt, {"query": query, "translation": translation, "limit": limit})
+            rows = cur.fetchall()
+
+    scores = [(str(row["pericope_id"]), float(row["relevance"])) for row in rows]
+    return _results_from_pericope_scores(scores, translation)
+
+
 def hybrid_search(
     query: str, translation: str = "NIV", limit: int = 10, model: str = MODEL_NAME, candidate_pool: int = 50
 ) -> list[SearchResult]:
-    """Blend semantic and BM25 rankings via reciprocal rank fusion: each
-    result's fused score is the sum of 1/(RRF_K + rank) across whichever
-    ranking(s) it appears in."""
+    """Blend semantic, chunk-text BM25, and metadata BM25 rankings via
+    reciprocal rank fusion: each result's fused score is the sum of
+    1/(RRF_K + rank) across whichever ranking(s) it appears in."""
     semantic_results = semantic_search(query, translation, limit=candidate_pool, model=model)
     bm25_results = bm25_search(query, translation, limit=candidate_pool, model=model)
+    metadata_results = metadata_search(query, translation, limit=candidate_pool)
 
     fused_scores: dict[str, float] = {}
     result_by_id: dict[str, SearchResult] = {}
-    for ranking in (semantic_results, bm25_results):
+    for ranking in (semantic_results, bm25_results, metadata_results):
         for rank, result in enumerate(ranking, start=1):
             fused_scores[result.pericope.id] = fused_scores.get(result.pericope.id, 0.0) + 1 / (RRF_K + rank)
             result_by_id.setdefault(result.pericope.id, result)

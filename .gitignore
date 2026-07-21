@@ -22,3 +22,5 @@ backups/*
 
 # Local secrets/config (copy .env.example -> .env)
 .env
+
+theo.server.log

@@ -146,10 +146,12 @@ ENTITY_SOURCES: tuple[tuple[str, EntityLoader], ...] = (
 )
 
 
-def _merge_entities(span: Span) -> list[Entity]:
+def merge_entities(span: Span) -> list[Entity]:
     """All sources' entities for the range, deduplicated per-entity by
     (kind, case-folded name): the first source in ENTITY_SOURCES to mention
-    an entity provides its record."""
+    an entity provides its record. Public because theo.metadata_index reuses
+    it too, so the metadata search index names exactly what /metadata
+    reports for a pericope."""
     merged: list[Entity] = []
     seen: set[tuple[str, str]] = set()
     for _, loader in ENTITY_SOURCES:
@@ -183,7 +185,10 @@ def _pipeline_rank(pipeline: str) -> int:
     return len(ANNOTATION_PIPELINES)
 
 
-def _best_annotation(pericope_id: str, translation: str) -> PericopeAnnotation | None:
+def best_annotation(pericope_id: str, translation: str) -> PericopeAnnotation | None:
+    """A pericope's single best-pipeline NLP annotation (see
+    ANNOTATION_PIPELINES). Public because theo.metadata_index reuses it to
+    pull the same SVO/entities/themes/keywords/summary /metadata reports."""
     rows = get_annotations(pericope_id, translation)
     if not rows:
         return None
@@ -232,11 +237,11 @@ def get_metadata_for_range(
     book_num = book if isinstance(book, int) else book_number(book)
     span: Span = (book_num, chapter_start, verse_start, chapter_end, verse_end)
     pericopes = get_pericopes_in_range(*span)
-    entities = _merge_entities(span)
+    entities = merge_entities(span)
     annotations = [
         annotation
         for p in pericopes
-        if (annotation := _best_annotation(p.id, translation)) is not None
+        if (annotation := best_annotation(p.id, translation)) is not None
     ]
     return VerseMetadata(
         book=book_num,

@@ -632,3 +632,29 @@ CREATE INDEX IF NOT EXISTS step_lexicon_search_idx ON step_lexicon USING bm25 (
     transliteration,
     meaning_html
 ) WITH (key_field = 'id');
+
+
+-- Denormalized per-pericope search text, assembled from the same sources
+-- /metadata reports (STEP/TIPNR entities, theographic entities, and the
+-- pericope's best NLP annotation -- entities/SVO triples/themes/keywords/
+-- summary; see theo.metadata_index) but that chunks_<dim>'s raw-verse-text
+-- BM25 index can't see. One row per (pericope, translation); theo.search's
+-- hybrid_search fuses BM25 hits against this table as a third ranking leg
+-- alongside chunk-text BM25 and semantic similarity.
+CREATE TABLE IF NOT EXISTS pericope_metadata_index (
+    id UUID NOT NULL DEFAULT uuidv7(),
+    pericope_id UUID NOT NULL,
+    translation TEXT NOT NULL,
+    search_text TEXT NOT NULL,
+    PRIMARY KEY (id),
+    CONSTRAINT fk_pericope_metadata_index_pericope FOREIGN KEY (pericope_id) REFERENCES pericopes(id) ON DELETE CASCADE,
+    CONSTRAINT unique_pericope_metadata_index UNIQUE (pericope_id, translation)
+);
+CREATE INDEX IF NOT EXISTS pericope_metadata_index_pericope_idx ON pericope_metadata_index(pericope_id);
+
+CREATE INDEX IF NOT EXISTS pericope_metadata_index_search_idx ON pericope_metadata_index USING bm25 (
+    id,
+    pericope_id,
+    search_text,
+    translation
+) WITH (key_field = 'id');

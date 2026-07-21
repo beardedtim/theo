@@ -175,7 +175,7 @@ function HomePage() {
         </Heading>
 
         <Text fontSize={{ base: "md", md: "lg" }} color="fg.muted" maxW="xl">
-          Theo is a Bible study tool that searches by meaning, not just
+          SproutFaith is a Bible study tool that searches by meaning, not just
           keywords, and connects every verse to the people, places, events,
           and original Hebrew or Greek words behind it.
         </Text>

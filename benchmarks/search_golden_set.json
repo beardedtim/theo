@@ -1,0 +1,5382 @@
+[
+  {
+    "event_id": "019f817d-cf19-7397-a9dd-cc8d3f96a24b",
+    "query": "Creation of all things",
+    "reference": "Genesis 1:1-2:3",
+    "book": 1,
+    "chapter_start": 1,
+    "verse_start": 1,
+    "chapter_end": 2,
+    "verse_end": 3,
+    "pericope_ids": [
+      "019f8113-efde-719b-bdd6-02dae9b8b8a8",
+      "019f8113-efdf-71d3-8b13-f9ab0ac3c86d"
+    ],
+    "pericope_titles": [
+      "The Beginning",
+      "Genesis 2"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1d-70ad-8336-66c5507c304b",
+    "query": "Creation of Adam and Eve",
+    "reference": "Genesis 2:4-2:25",
+    "book": 1,
+    "chapter_start": 2,
+    "verse_start": 4,
+    "chapter_end": 2,
+    "verse_end": 25,
+    "pericope_ids": [
+      "019f8113-efdf-7424-84a3-2802265a945e"
+    ],
+    "pericope_titles": [
+      "Adam and Eve"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1d-72f1-885e-2a893ca7ab23",
+    "query": "The Fall",
+    "reference": "Genesis 3:1-3:24",
+    "book": 1,
+    "chapter_start": 3,
+    "verse_start": 1,
+    "chapter_end": 3,
+    "verse_end": 24,
+    "pericope_ids": [
+      "019f8113-efdf-7579-b0cf-c11cf8244289"
+    ],
+    "pericope_titles": [
+      "The Fall"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1d-747c-8a88-047d7ecf9fee",
+    "query": "Lifetime of Adam",
+    "reference": "Genesis 5:3-5:5",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 3,
+    "chapter_end": 5,
+    "verse_end": 5,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1d-75ba-b59b-d73a494d0438",
+    "query": "Cain kills Abel",
+    "reference": "Genesis 4:1-4:10",
+    "book": 1,
+    "chapter_start": 4,
+    "verse_start": 1,
+    "chapter_end": 4,
+    "verse_end": 10,
+    "pericope_ids": [
+      "019f8113-efdf-76a6-9b6f-f7684345a4d1"
+    ],
+    "pericope_titles": [
+      "Cain and Abel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1d-76de-8493-0cf90d3adda3",
+    "query": "God curses Cain",
+    "reference": "Genesis 4:11-4:16",
+    "book": 1,
+    "chapter_start": 4,
+    "verse_start": 11,
+    "chapter_end": 4,
+    "verse_end": 16,
+    "pericope_ids": [
+      "019f8113-efdf-76a6-9b6f-f7684345a4d1"
+    ],
+    "pericope_titles": [
+      "Cain and Abel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1d-7906-a77d-5d654c3f4d11",
+    "query": "Lifetime of Seth",
+    "reference": "Genesis 5:6-5:8",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 6,
+    "chapter_end": 5,
+    "verse_end": 8,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1d-7c60-a08b-540df13b93b1",
+    "query": "Lifetime of Enos",
+    "reference": "Genesis 5:9-5:11",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 9,
+    "chapter_end": 5,
+    "verse_end": 11,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1d-7ed7-81f4-873e3a3db444",
+    "query": "Lifetime of Cainan",
+    "reference": "Genesis 5:12-5:14",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 12,
+    "chapter_end": 5,
+    "verse_end": 14,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1d-7fb8-a81c-8052fead5ace",
+    "query": "Birth of Mahlaleel",
+    "reference": "Genesis 5:12-5:12",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 12,
+    "chapter_end": 5,
+    "verse_end": 12,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1e-708a-8bfe-a5e90f1e2db6",
+    "query": "Lifetime of Mahlaleel",
+    "reference": "Genesis 5:15-5:17",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 15,
+    "chapter_end": 5,
+    "verse_end": 17,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1e-71a0-b361-8988b80e4b35",
+    "query": "Birth of Jared",
+    "reference": "Genesis 5:15-5:15",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 15,
+    "chapter_end": 5,
+    "verse_end": 15,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1e-7282-a8dd-5671e65945eb",
+    "query": "Lifetime of Jared",
+    "reference": "Genesis 5:18-5:20",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 18,
+    "chapter_end": 5,
+    "verse_end": 20,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1e-737b-affd-c89452ab96c5",
+    "query": "Birth of Enoch",
+    "reference": "Genesis 5:18-5:18",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 18,
+    "chapter_end": 5,
+    "verse_end": 18,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1e-7441-b6d5-723b8398d59c",
+    "query": "Lifetime of Enoch",
+    "reference": "Genesis 5:21-5:24",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 21,
+    "chapter_end": 5,
+    "verse_end": 24,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1e-74fb-ae31-f6d6d7659a17",
+    "query": "Birth of Methuselah",
+    "reference": "Genesis 5:21-5:21",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 21,
+    "chapter_end": 5,
+    "verse_end": 21,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1e-75b5-86a8-503ba337f784",
+    "query": "Lifetime of Methuselah",
+    "reference": "Genesis 5:25-5:27",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 25,
+    "chapter_end": 5,
+    "verse_end": 27,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1e-766d-b5de-27db44a28846",
+    "query": "Birth of Lamech",
+    "reference": "Genesis 5:25-5:25",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 25,
+    "chapter_end": 5,
+    "verse_end": 25,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1e-7747-a729-3aa7cdbaa88c",
+    "query": "Lifetime of Lamech",
+    "reference": "Genesis 5:28-5:31",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 28,
+    "chapter_end": 5,
+    "verse_end": 31,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1e-77fd-b629-fab5d1d9b9ad",
+    "query": "Death of Adam",
+    "reference": "Genesis 5:5-5:5",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 5,
+    "chapter_end": 5,
+    "verse_end": 5,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1e-7959-8472-b363e46d7a90",
+    "query": "Death of Seth",
+    "reference": "Genesis 5:8-5:8",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 8,
+    "chapter_end": 5,
+    "verse_end": 8,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1e-7a1e-b2c8-cb08fff01fcb",
+    "query": "Birth of Noah",
+    "reference": "Genesis 5:28-5:29",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 28,
+    "chapter_end": 5,
+    "verse_end": 29,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1e-7b98-a4c0-9ca2d99f399b",
+    "query": "Death of Enos",
+    "reference": "Genesis 5:11-5:11",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 11,
+    "chapter_end": 5,
+    "verse_end": 11,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1e-7c83-9371-2fa57e8228c5",
+    "query": "Death of Cainan",
+    "reference": "Genesis 5:14-5:14",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 14,
+    "chapter_end": 5,
+    "verse_end": 14,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1e-7d77-b031-6ce66eee8e47",
+    "query": "Death of Mahlaleel",
+    "reference": "Genesis 5:17-5:17",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 17,
+    "chapter_end": 5,
+    "verse_end": 17,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1e-7e3c-85e9-8fcd7145d027",
+    "query": "Death of Jared",
+    "reference": "Genesis 5:20-5:20",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 20,
+    "chapter_end": 5,
+    "verse_end": 20,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1e-7edf-ae66-5654cbd9a6c0",
+    "query": "God decides to destroy every living thing",
+    "reference": "Genesis 6:1-6:7",
+    "book": 1,
+    "chapter_start": 6,
+    "verse_start": 1,
+    "chapter_end": 6,
+    "verse_end": 7,
+    "pericope_ids": [
+      "019f8113-efdf-79d6-a7f9-66623f20d046"
+    ],
+    "pericope_titles": [
+      "Wickedness in the World"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1e-7f8e-bfa9-c1f85355a96e",
+    "query": "Birth of Shem",
+    "reference": "Genesis 5:32-5:32",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 32,
+    "chapter_end": 5,
+    "verse_end": 32,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-7030-b1b0-73c558e87ece",
+    "query": "Lifetime of Shem",
+    "reference": "Genesis 11:10-11:11",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 10,
+    "chapter_end": 11,
+    "verse_end": 11,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-70cf-98ae-9ae5d0a90e49",
+    "query": "God instructs Noah to build the ark",
+    "reference": "Genesis 6:8-7:5",
+    "book": 1,
+    "chapter_start": 6,
+    "verse_start": 8,
+    "chapter_end": 7,
+    "verse_end": 5,
+    "pericope_ids": [
+      "019f8113-efdf-79d6-a7f9-66623f20d046",
+      "019f8113-efdf-7afc-b805-eefab59146b4",
+      "019f8113-efdf-7c53-b1af-eb7a074668c9"
+    ],
+    "pericope_titles": [
+      "Wickedness in the World",
+      "Noah and the Flood",
+      "Genesis 7"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-7174-983e-fb056074222a",
+    "query": "Death of Lamech",
+    "reference": "Genesis 5:31-5:31",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 31,
+    "chapter_end": 5,
+    "verse_end": 31,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-7213-81c5-33972a1d51df",
+    "query": "Death of Methuselah",
+    "reference": "Genesis 5:27-5:27",
+    "book": 1,
+    "chapter_start": 5,
+    "verse_start": 27,
+    "chapter_end": 5,
+    "verse_end": 27,
+    "pericope_ids": [
+      "019f8113-efdf-7864-baa1-565889faeb52"
+    ],
+    "pericope_titles": [
+      "From Adam to Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-72b0-9a14-aa0f1893a578",
+    "query": "The Great Flood begins",
+    "reference": "Genesis 7:6-7:17",
+    "book": 1,
+    "chapter_start": 7,
+    "verse_start": 6,
+    "chapter_end": 7,
+    "verse_end": 17,
+    "pericope_ids": [
+      "019f8113-efdf-7c53-b1af-eb7a074668c9"
+    ],
+    "pericope_titles": [
+      "Genesis 7"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-734d-abaa-7951ee0ca64e",
+    "query": "The Great Flood",
+    "reference": "Genesis 7:6-8:19",
+    "book": 1,
+    "chapter_start": 7,
+    "verse_start": 6,
+    "chapter_end": 8,
+    "verse_end": 19,
+    "pericope_ids": [
+      "019f8113-efdf-7c53-b1af-eb7a074668c9",
+      "019f8113-efdf-7e6d-b7db-93e688aad43b"
+    ],
+    "pericope_titles": [
+      "Genesis 7",
+      "Genesis 8"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-73f3-bfb5-6c2db2336c9e",
+    "query": "Water covers the earth",
+    "reference": "Genesis 7:18-7:24",
+    "book": 1,
+    "chapter_start": 7,
+    "verse_start": 18,
+    "chapter_end": 7,
+    "verse_end": 24,
+    "pericope_ids": [
+      "019f8113-efdf-7c53-b1af-eb7a074668c9"
+    ],
+    "pericope_titles": [
+      "Genesis 7"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-7492-9bf0-eb61c91a3b17",
+    "query": "The flood subsides",
+    "reference": "Genesis 8:1-8:14",
+    "book": 1,
+    "chapter_start": 8,
+    "verse_start": 1,
+    "chapter_end": 8,
+    "verse_end": 14,
+    "pericope_ids": [
+      "019f8113-efdf-7e6d-b7db-93e688aad43b"
+    ],
+    "pericope_titles": [
+      "Genesis 8"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-7534-b7bf-5b76798c065f",
+    "query": "Leaving the Ark",
+    "reference": "Genesis 8:15-8:19",
+    "book": 1,
+    "chapter_start": 8,
+    "verse_start": 15,
+    "chapter_end": 8,
+    "verse_end": 19,
+    "pericope_ids": [
+      "019f8113-efdf-7e6d-b7db-93e688aad43b"
+    ],
+    "pericope_titles": [
+      "Genesis 8"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-75d2-b533-fc7ef9fce7b7",
+    "query": "God makes a covenant with Noah",
+    "reference": "Genesis 8:20-9:17",
+    "book": 1,
+    "chapter_start": 8,
+    "verse_start": 20,
+    "chapter_end": 9,
+    "verse_end": 17,
+    "pericope_ids": [
+      "019f8113-efdf-7e6d-b7db-93e688aad43b",
+      "019f8113-efdf-7fdc-a12f-fadcf6eca6c0"
+    ],
+    "pericope_titles": [
+      "Genesis 8",
+      "God’s Covenant With Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-7670-8343-27d9aa80498d",
+    "query": "Noah gets drunk and Canaan is cursed",
+    "reference": "Genesis 9:20-9:27",
+    "book": 1,
+    "chapter_start": 9,
+    "verse_start": 20,
+    "chapter_end": 9,
+    "verse_end": 27,
+    "pericope_ids": [
+      "019f8113-efe0-70fe-9fd8-9b12ca4d5c76"
+    ],
+    "pericope_titles": [
+      "The Sons of Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-770f-bd8e-b30f959e2a0d",
+    "query": "Birth of Arphaxad",
+    "reference": "Genesis 11:10-11:10",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 10,
+    "chapter_end": 11,
+    "verse_end": 10,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-77b4-96e5-87be8a816df7",
+    "query": "Lifetime of Arphaxad",
+    "reference": "Genesis 11:12-11:13",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 12,
+    "chapter_end": 11,
+    "verse_end": 13,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-7854-9950-d3bb03cf8f48",
+    "query": "Birth of Salah",
+    "reference": "Genesis 11:12-11:12",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 12,
+    "chapter_end": 11,
+    "verse_end": 12,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-78f8-a572-807f4f6fbaa5",
+    "query": "Lifetime of Salah",
+    "reference": "Genesis 11:14-11:15",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 14,
+    "chapter_end": 11,
+    "verse_end": 15,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-7998-8e15-63445d994409",
+    "query": "Birth of Eber",
+    "reference": "Genesis 11:14-11:14",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 14,
+    "chapter_end": 11,
+    "verse_end": 14,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-7a35-b253-ea7e2a8d9935",
+    "query": "Lifetime of Eber",
+    "reference": "Genesis 11:16-11:17",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 16,
+    "chapter_end": 11,
+    "verse_end": 17,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-7ad6-a756-2eb04f03b47f",
+    "query": "Birth of Peleg",
+    "reference": "Genesis 11:16-11:16",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 16,
+    "chapter_end": 11,
+    "verse_end": 16,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-7b7b-9b3a-98bfc852b2e4",
+    "query": "Lifetime of Peleg",
+    "reference": "Genesis 11:18-11:19",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 18,
+    "chapter_end": 11,
+    "verse_end": 19,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-7c21-9275-75101f9e5af1",
+    "query": "Tower of Babel",
+    "reference": "Genesis 11:1-11:9",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 1,
+    "chapter_end": 11,
+    "verse_end": 9,
+    "pericope_ids": [
+      "019f8113-efe0-7364-ab4e-0cc3baeb8113"
+    ],
+    "pericope_titles": [
+      "The Tower of Babel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-7ceb-a63d-4ac483dae208",
+    "query": "Birth of Reu",
+    "reference": "Genesis 11:18-11:18",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 18,
+    "chapter_end": 11,
+    "verse_end": 18,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-7d9f-88ee-291607509fb4",
+    "query": "Lifetime of Reu",
+    "reference": "Genesis 11:20-11:21",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 20,
+    "chapter_end": 11,
+    "verse_end": 21,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-7e41-83f6-1acba61321c9",
+    "query": "Birth of Serug",
+    "reference": "Genesis 11:20-11:20",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 20,
+    "chapter_end": 11,
+    "verse_end": 20,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-7ee5-a632-34f2c4339a37",
+    "query": "Lifetime of Serug",
+    "reference": "Genesis 11:22-11:23",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 22,
+    "chapter_end": 11,
+    "verse_end": 23,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf1f-7f84-b67f-fc72cede72a9",
+    "query": "Birth of Nahor",
+    "reference": "Genesis 11:22-11:22",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 22,
+    "chapter_end": 11,
+    "verse_end": 22,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf20-702b-8915-08345047f3dc",
+    "query": "Lifetime of Nahor",
+    "reference": "Genesis 11:24-11:25",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 24,
+    "chapter_end": 11,
+    "verse_end": 25,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf20-70d9-90f8-eb2d7efcb48a",
+    "query": "Birth of Terah",
+    "reference": "Genesis 11:24-11:24",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 24,
+    "chapter_end": 11,
+    "verse_end": 24,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf20-7178-9e9e-fdea92d648dd",
+    "query": "Lifetime of Terah",
+    "reference": "Genesis 11:26-11:28",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 26,
+    "chapter_end": 11,
+    "verse_end": 28,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd",
+      "019f8113-efe0-75f6-af7d-90dac4cb100c"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram",
+      "Abram’s Family"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf20-7217-a48a-3b75a64ea3b7",
+    "query": "Death of Peleg",
+    "reference": "Genesis 11:19-11:19",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 19,
+    "chapter_end": 11,
+    "verse_end": 19,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf20-72b6-8eda-a71363c26b16",
+    "query": "Death of Nahor",
+    "reference": "Genesis 11:25-11:25",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 25,
+    "chapter_end": 11,
+    "verse_end": 25,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf20-7358-a6ba-c146147e9bd2",
+    "query": "Death of Noah",
+    "reference": "Genesis 9:29-9:29",
+    "book": 1,
+    "chapter_start": 9,
+    "verse_start": 29,
+    "chapter_end": 9,
+    "verse_end": 29,
+    "pericope_ids": [
+      "019f8113-efe0-70fe-9fd8-9b12ca4d5c76"
+    ],
+    "pericope_titles": [
+      "The Sons of Noah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf20-73fc-83a6-a8917f3682a1",
+    "query": "Birth of Abraham",
+    "reference": "Genesis 11:26-11:27",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 26,
+    "chapter_end": 11,
+    "verse_end": 27,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd",
+      "019f8113-efe0-75f6-af7d-90dac4cb100c"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram",
+      "Abram’s Family"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf20-7544-8f18-dfd8b0f3ed40",
+    "query": "Judgeship of Jair",
+    "reference": "Judges 10:3-10:5",
+    "book": 7,
+    "chapter_start": 10,
+    "verse_start": 3,
+    "chapter_end": 10,
+    "verse_end": 5,
+    "pericope_ids": [
+      "019f8113-eff6-7e94-8ef5-8231b1fe4173"
+    ],
+    "pericope_titles": [
+      "Jair"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf20-75e5-abae-5e0526864f45",
+    "query": "Death of Reu",
+    "reference": "Genesis 11:21-11:21",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 21,
+    "chapter_end": 11,
+    "verse_end": 21,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf20-7685-baee-316b4afe0b80",
+    "query": "Death of Serug",
+    "reference": "Genesis 11:23-11:23",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 23,
+    "chapter_end": 11,
+    "verse_end": 23,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf20-7727-93ba-bd6a1cfbf7ae",
+    "query": "Death of Terah",
+    "reference": "Genesis 11:32-11:32",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 32,
+    "chapter_end": 11,
+    "verse_end": 32,
+    "pericope_ids": [
+      "019f8113-efe0-75f6-af7d-90dac4cb100c"
+    ],
+    "pericope_titles": [
+      "Abram’s Family"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf20-77ca-89d8-994b65667177",
+    "query": "Abraham enters Canaan",
+    "reference": "Genesis 11:31-12:9",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 31,
+    "chapter_end": 12,
+    "verse_end": 9,
+    "pericope_ids": [
+      "019f8113-efe0-75f6-af7d-90dac4cb100c",
+      "019f8113-efe0-76e1-9014-19fe42a305dc"
+    ],
+    "pericope_titles": [
+      "Abram’s Family",
+      "The Call of Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf20-786f-9d65-1e0c0108cf27",
+    "query": "Abrahamic Covenant",
+    "reference": "Genesis 12:1-12:3",
+    "book": 1,
+    "chapter_start": 12,
+    "verse_start": 1,
+    "chapter_end": 12,
+    "verse_end": 3,
+    "pericope_ids": [
+      "019f8113-efe0-76e1-9014-19fe42a305dc"
+    ],
+    "pericope_titles": [
+      "The Call of Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf20-790f-93ef-51b27c596adf",
+    "query": "Abraham goes to Egypt",
+    "reference": "Genesis 12:10-12:20",
+    "book": 1,
+    "chapter_start": 12,
+    "verse_start": 10,
+    "chapter_end": 12,
+    "verse_end": 20,
+    "pericope_ids": [
+      "019f8113-efe0-781b-b9dd-efb1ef305727"
+    ],
+    "pericope_titles": [
+      "Abram in Egypt"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf20-7b17-b521-ff3b6c13292c",
+    "query": "Abraham and Lot Separate",
+    "reference": "Genesis 13:1-13:18",
+    "book": 1,
+    "chapter_start": 13,
+    "verse_start": 1,
+    "chapter_end": 13,
+    "verse_end": 18,
+    "pericope_ids": [
+      "019f8113-efe0-7959-870f-87879321029d"
+    ],
+    "pericope_titles": [
+      "Abram and Lot Separate"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf20-7bbf-a868-e2b5704b4355",
+    "query": "Birth of Ishmael",
+    "reference": "Genesis 16:11-16:16",
+    "book": 1,
+    "chapter_start": 16,
+    "verse_start": 11,
+    "chapter_end": 16,
+    "verse_end": 16,
+    "pericope_ids": [
+      "019f8113-efe0-7cbd-850b-0f990bb9c559"
+    ],
+    "pericope_titles": [
+      "Hagar and Ishmael"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf20-7f5e-9a40-f94da7662799",
+    "query": "Death of Arphaxad",
+    "reference": "Genesis 11:13-11:13",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 13,
+    "chapter_end": 11,
+    "verse_end": 13,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf21-7026-a1e6-2c67223d4466",
+    "query": "Sodom Destroyed",
+    "reference": "Genesis 18:20-19:29",
+    "book": 1,
+    "chapter_start": 18,
+    "verse_start": 20,
+    "chapter_end": 19,
+    "verse_end": 29,
+    "pericope_ids": [
+      "019f8113-efe1-703d-82b7-53e06c6182e6",
+      "019f8113-efe1-7119-8d99-99b19f2e5440"
+    ],
+    "pericope_titles": [
+      "Abraham Pleads for Sodom",
+      "Sodom and Gomorrah Destroyed"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf21-7260-bc37-aa2fb9ac6048",
+    "query": "Death of Salah",
+    "reference": "Genesis 11:15-11:15",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 15,
+    "chapter_end": 11,
+    "verse_end": 15,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf21-7302-a825-fd0c6bf3420f",
+    "query": "Isaac Marries Rebekah",
+    "reference": "Genesis 25:20-25:20",
+    "book": 1,
+    "chapter_start": 25,
+    "verse_start": 20,
+    "chapter_end": 25,
+    "verse_end": 20,
+    "pericope_ids": [
+      "019f8113-efe1-7ecf-b8ee-a6f6f6ec9565"
+    ],
+    "pericope_titles": [
+      "Jacob and Esau"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf21-73a3-979e-249795df531a",
+    "query": "Death of Shem",
+    "reference": "Genesis 11:11-11:11",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 11,
+    "chapter_end": 11,
+    "verse_end": 11,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf21-7451-8cb3-b3beb428a809",
+    "query": "Birth of Jacob and Esau",
+    "reference": "Genesis 25:24-25:26",
+    "book": 1,
+    "chapter_start": 25,
+    "verse_start": 24,
+    "chapter_end": 25,
+    "verse_end": 26,
+    "pericope_ids": [
+      "019f8113-efe1-7ecf-b8ee-a6f6f6ec9565"
+    ],
+    "pericope_titles": [
+      "Jacob and Esau"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf21-7618-9275-50d4782e42a7",
+    "query": "Nimrod's kingdom begins",
+    "reference": "Genesis 10:8-10:12",
+    "book": 1,
+    "chapter_start": 10,
+    "verse_start": 8,
+    "chapter_end": 10,
+    "verse_end": 12,
+    "pericope_ids": [
+      "019f8113-efe0-7266-917c-1a7a16e36b00"
+    ],
+    "pericope_titles": [
+      "The Table of Nations"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf21-7714-8a24-4967d2c40bbf",
+    "query": "Death of Abraham",
+    "reference": "Genesis 25:7-25:7",
+    "book": 1,
+    "chapter_start": 25,
+    "verse_start": 7,
+    "chapter_end": 25,
+    "verse_end": 7,
+    "pericope_ids": [
+      "019f8113-efe1-7c9d-9e6a-d9862d71f630"
+    ],
+    "pericope_titles": [
+      "The Death of Abraham"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf21-77ec-8ea7-ec515793b74c",
+    "query": "Death of Eber",
+    "reference": "Genesis 11:17-11:17",
+    "book": 1,
+    "chapter_start": 11,
+    "verse_start": 17,
+    "chapter_end": 11,
+    "verse_end": 17,
+    "pericope_ids": [
+      "019f8113-efe0-7488-8b00-8606ce4dd3bd"
+    ],
+    "pericope_titles": [
+      "From Shem to Abram"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf21-78a4-b321-942ea0592c77",
+    "query": "Death of Ishmael",
+    "reference": "Genesis 25:17-25:17",
+    "book": 1,
+    "chapter_start": 25,
+    "verse_start": 17,
+    "chapter_end": 25,
+    "verse_end": 17,
+    "pericope_ids": [
+      "019f8113-efe1-7dcd-99ad-1cd020c01313"
+    ],
+    "pericope_titles": [
+      "Ishmael’s Sons"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf21-79c5-9be3-14da91675d98",
+    "query": "Birth of Reuben",
+    "reference": "Genesis 29:32-29:32",
+    "book": 1,
+    "chapter_start": 29,
+    "verse_start": 32,
+    "chapter_end": 29,
+    "verse_end": 32,
+    "pericope_ids": [
+      "019f8113-efe2-7800-b951-88776a1b6ead"
+    ],
+    "pericope_titles": [
+      "Jacob’s Children"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf21-7a79-acd4-2b71f8acc540",
+    "query": "Birth of Simeon",
+    "reference": "Genesis 29:33-29:33",
+    "book": 1,
+    "chapter_start": 29,
+    "verse_start": 33,
+    "chapter_end": 29,
+    "verse_end": 33,
+    "pericope_ids": [
+      "019f8113-efe2-7800-b951-88776a1b6ead"
+    ],
+    "pericope_titles": [
+      "Jacob’s Children"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf21-7b29-83fa-2fbe9b473c83",
+    "query": "Birth of Levi",
+    "reference": "Genesis 29:34-29:34",
+    "book": 1,
+    "chapter_start": 29,
+    "verse_start": 34,
+    "chapter_end": 29,
+    "verse_end": 34,
+    "pericope_ids": [
+      "019f8113-efe2-7800-b951-88776a1b6ead"
+    ],
+    "pericope_titles": [
+      "Jacob’s Children"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf21-7bf1-819e-170409717b11",
+    "query": "Birth of Judah",
+    "reference": "Genesis 29:35-29:35",
+    "book": 1,
+    "chapter_start": 29,
+    "verse_start": 35,
+    "chapter_end": 29,
+    "verse_end": 35,
+    "pericope_ids": [
+      "019f8113-efe2-7800-b951-88776a1b6ead"
+    ],
+    "pericope_titles": [
+      "Jacob’s Children"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf21-7c9a-bd22-ebad80110592",
+    "query": "Birth of Dan",
+    "reference": "Genesis 30:6-30:6",
+    "book": 1,
+    "chapter_start": 30,
+    "verse_start": 6,
+    "chapter_end": 30,
+    "verse_end": 6,
+    "pericope_ids": [
+      "019f8113-efe2-7912-a525-a2ae43844327"
+    ],
+    "pericope_titles": [
+      "Genesis 30"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf21-7d8d-845a-160dfbd8b39d",
+    "query": "Birth of Naphtali",
+    "reference": "Genesis 30:7-30:8",
+    "book": 1,
+    "chapter_start": 30,
+    "verse_start": 7,
+    "chapter_end": 30,
+    "verse_end": 8,
+    "pericope_ids": [
+      "019f8113-efe2-7912-a525-a2ae43844327"
+    ],
+    "pericope_titles": [
+      "Genesis 30"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf21-7e58-a4b6-d6110bfea4e7",
+    "query": "Birth of Gad",
+    "reference": "Genesis 30:10-30:11",
+    "book": 1,
+    "chapter_start": 30,
+    "verse_start": 10,
+    "chapter_end": 30,
+    "verse_end": 11,
+    "pericope_ids": [
+      "019f8113-efe2-7912-a525-a2ae43844327"
+    ],
+    "pericope_titles": [
+      "Genesis 30"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf21-7f24-b4d3-781d87399521",
+    "query": "Birth of Asher",
+    "reference": "Genesis 30:12-30:13",
+    "book": 1,
+    "chapter_start": 30,
+    "verse_start": 12,
+    "chapter_end": 30,
+    "verse_end": 13,
+    "pericope_ids": [
+      "019f8113-efe2-7912-a525-a2ae43844327"
+    ],
+    "pericope_titles": [
+      "Genesis 30"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf21-7ff6-bb82-cdf3326ef919",
+    "query": "Birth of Issachar",
+    "reference": "Genesis 30:17-30:18",
+    "book": 1,
+    "chapter_start": 30,
+    "verse_start": 17,
+    "chapter_end": 30,
+    "verse_end": 18,
+    "pericope_ids": [
+      "019f8113-efe2-7912-a525-a2ae43844327"
+    ],
+    "pericope_titles": [
+      "Genesis 30"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf22-70e8-ba3b-a050beb01e98",
+    "query": "Birth of Zebulon",
+    "reference": "Genesis 30:19-30:20",
+    "book": 1,
+    "chapter_start": 30,
+    "verse_start": 19,
+    "chapter_end": 30,
+    "verse_end": 20,
+    "pericope_ids": [
+      "019f8113-efe2-7912-a525-a2ae43844327"
+    ],
+    "pericope_titles": [
+      "Genesis 30"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf22-71c0-8ce2-bc0a1a4aac7f",
+    "query": "Birth of Dinah",
+    "reference": "Genesis 30:21-30:21",
+    "book": 1,
+    "chapter_start": 30,
+    "verse_start": 21,
+    "chapter_end": 30,
+    "verse_end": 21,
+    "pericope_ids": [
+      "019f8113-efe2-7912-a525-a2ae43844327"
+    ],
+    "pericope_titles": [
+      "Genesis 30"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf22-728b-b401-294d7a33c06d",
+    "query": "Birth of Joseph",
+    "reference": "Genesis 30:23-30:24",
+    "book": 1,
+    "chapter_start": 30,
+    "verse_start": 23,
+    "chapter_end": 30,
+    "verse_end": 24,
+    "pericope_ids": [
+      "019f8113-efe2-7912-a525-a2ae43844327"
+    ],
+    "pericope_titles": [
+      "Genesis 30"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf22-7413-8a82-caa4c90f2d4f",
+    "query": "Rachel dies giving birth to Benjamin",
+    "reference": "Genesis 35:16-35:27",
+    "book": 1,
+    "chapter_start": 35,
+    "verse_start": 16,
+    "chapter_end": 35,
+    "verse_end": 27,
+    "pericope_ids": [
+      "019f8113-efe3-73bc-a295-6b6de6fbca72"
+    ],
+    "pericope_titles": [
+      "The Deaths of Rachel and Isaac"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf22-74e7-9b14-63c639416649",
+    "query": "Joseph sold to Egypt",
+    "reference": "Genesis 37:3-37:36",
+    "book": 1,
+    "chapter_start": 37,
+    "verse_start": 3,
+    "chapter_end": 37,
+    "verse_end": 36,
+    "pericope_ids": [
+      "019f8113-efe3-782a-a590-b82a8f25db29",
+      "019f8113-efe3-797f-8881-0ab69cf7a3db"
+    ],
+    "pericope_titles": [
+      "Joseph’s Dreams",
+      "Joseph Sold by His Brothers"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf22-75b2-ac8d-9bb9976d1422",
+    "query": "Birth of Perez",
+    "reference": "Genesis 38:29-38:29",
+    "book": 1,
+    "chapter_start": 38,
+    "verse_start": 29,
+    "chapter_end": 38,
+    "verse_end": 29,
+    "pericope_ids": [
+      "019f8113-efe3-7aea-898d-e4ddf4ee040b"
+    ],
+    "pericope_titles": [
+      "Judah and Tamar"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf22-767d-95b4-d326de2cebda",
+    "query": "Birth of Job",
+    "reference": "Genesis 46:13-46:13",
+    "book": 1,
+    "chapter_start": 46,
+    "verse_start": 13,
+    "chapter_end": 46,
+    "verse_end": 13,
+    "pericope_ids": [
+      "019f8113-efe4-72fa-a893-0b4482e66523"
+    ],
+    "pericope_titles": [
+      "Jacob Goes to Egypt"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf22-789f-83c3-7984f225c06f",
+    "query": "Joseph imprisoned",
+    "reference": "Genesis 39:20-41:14",
+    "book": 1,
+    "chapter_start": 39,
+    "verse_start": 20,
+    "chapter_end": 41,
+    "verse_end": 14,
+    "pericope_ids": [
+      "019f8113-efe3-7c25-a5fb-4f40bfa82569",
+      "019f8113-efe3-7d67-b1c9-76f270b8e3f9",
+      "019f8113-efe3-7e5c-8acb-03de138e54b5"
+    ],
+    "pericope_titles": [
+      "Joseph and Potiphar’s Wife",
+      "The Cupbearer and the Baker",
+      "Pharaoh’s Dreams"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf22-79b5-b2e1-cfe61feb590f",
+    "query": "Death of Isaac",
+    "reference": "Genesis 35:28-35:29",
+    "book": 1,
+    "chapter_start": 35,
+    "verse_start": 28,
+    "chapter_end": 35,
+    "verse_end": 29,
+    "pericope_ids": [
+      "019f8113-efe3-73bc-a295-6b6de6fbca72"
+    ],
+    "pericope_titles": [
+      "The Deaths of Rachel and Isaac"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf22-7a91-9878-ce79eb83970b",
+    "query": "Joseph Promoted in Egypt",
+    "reference": "Genesis 41:37-41:46",
+    "book": 1,
+    "chapter_start": 41,
+    "verse_start": 37,
+    "chapter_end": 41,
+    "verse_end": 46,
+    "pericope_ids": [
+      "019f8113-efe3-7e5c-8acb-03de138e54b5",
+      "019f8113-efe3-7f27-918e-0c8584e1baf1"
+    ],
+    "pericope_titles": [
+      "Pharaoh’s Dreams",
+      "Joseph in Charge of Egypt"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf22-7b62-ba47-6f28c1e04210",
+    "query": "7 years of plenty",
+    "reference": "Genesis 41:47-41:53",
+    "book": 1,
+    "chapter_start": 41,
+    "verse_start": 47,
+    "chapter_end": 41,
+    "verse_end": 53,
+    "pericope_ids": [
+      "019f8113-efe3-7f27-918e-0c8584e1baf1"
+    ],
+    "pericope_titles": [
+      "Joseph in Charge of Egypt"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf22-7c17-9034-150e2d5fc7e0",
+    "query": "7 years of famine",
+    "reference": "Genesis 41:54-43:34",
+    "book": 1,
+    "chapter_start": 41,
+    "verse_start": 54,
+    "chapter_end": 43,
+    "verse_end": 34,
+    "pericope_ids": [
+      "019f8113-efe3-7f27-918e-0c8584e1baf1",
+      "019f8113-efe3-7ffc-9186-39fbfac271b8",
+      "019f8113-efe4-70bf-a4a8-ac8cab32bddb"
+    ],
+    "pericope_titles": [
+      "Joseph in Charge of Egypt",
+      "Joseph’s Brothers Go to Egypt",
+      "The Second Journey to Egypt"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf22-7cd5-ba35-30c51eac0d69",
+    "query": "Joseph's brothers go to Egypt",
+    "reference": "Genesis 42:1-42:38",
+    "book": 1,
+    "chapter_start": 42,
+    "verse_start": 1,
+    "chapter_end": 42,
+    "verse_end": 38,
+    "pericope_ids": [
+      "019f8113-efe3-7ffc-9186-39fbfac271b8"
+    ],
+    "pericope_titles": [
+      "Joseph’s Brothers Go to Egypt"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf22-7d9f-a34c-19e7ce2bf626",
+    "query": "Joseph's brothers return to Egypt",
+    "reference": "Genesis 43:1-45:28",
+    "book": 1,
+    "chapter_start": 43,
+    "verse_start": 1,
+    "chapter_end": 45,
+    "verse_end": 28,
+    "pericope_ids": [
+      "019f8113-efe4-70bf-a4a8-ac8cab32bddb",
+      "019f8113-efe4-7180-93a9-316d7acec1e8",
+      "019f8113-efe4-723e-ad58-80fe374cced8"
+    ],
+    "pericope_titles": [
+      "The Second Journey to Egypt",
+      "A Silver Cup in a Sack",
+      "Joseph Makes Himself Known"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf22-7fb5-bdeb-7a44762ba5bf",
+    "query": "Death of Joseph",
+    "reference": "Genesis 50:22-50:26",
+    "book": 1,
+    "chapter_start": 50,
+    "verse_start": 22,
+    "chapter_end": 50,
+    "verse_end": 26,
+    "pericope_ids": [
+      "019f8113-efe4-7993-9516-f62483b28972"
+    ],
+    "pericope_titles": [
+      "The Death of Joseph"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf23-7060-9a2b-0b9eaa3371e4",
+    "query": "Death of Job",
+    "reference": "Job 42:16-42:17",
+    "book": 18,
+    "chapter_start": 42,
+    "verse_start": 16,
+    "chapter_end": 42,
+    "verse_end": 17,
+    "pericope_ids": [
+      "019f8113-f017-75fa-8a51-2db43b979ea7"
+    ],
+    "pericope_titles": [
+      "Epilogue"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf23-712f-8c7a-c9a9c3080911",
+    "query": "Birth of Moses",
+    "reference": "Exodus 2:1-2:10",
+    "book": 2,
+    "chapter_start": 2,
+    "verse_start": 1,
+    "chapter_end": 2,
+    "verse_end": 10,
+    "pericope_ids": [
+      "019f8113-efe4-7b03-a75a-f4f571cfa855"
+    ],
+    "pericope_titles": [
+      "The Birth of Moses"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf23-7303-8aa9-2b505a1e5b3f",
+    "query": "Moses Flees Pharaoh",
+    "reference": "Exodus 2:11-2:15",
+    "book": 2,
+    "chapter_start": 2,
+    "verse_start": 11,
+    "chapter_end": 2,
+    "verse_end": 15,
+    "pericope_ids": [
+      "019f8113-efe4-7bc5-8a79-b037a33066f2"
+    ],
+    "pericope_titles": [
+      "Moses Flees to Midian"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf23-73cc-8949-1da14ad6473e",
+    "query": "Birth of Caleb",
+    "reference": "Numbers 13:6-13:6",
+    "book": 4,
+    "chapter_start": 13,
+    "verse_start": 6,
+    "chapter_end": 13,
+    "verse_end": 6,
+    "pericope_ids": [
+      "019f8113-efec-7897-8e84-a42c49741c5a"
+    ],
+    "pericope_titles": [
+      "Exploring Canaan"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf23-7493-8463-e2058772b842",
+    "query": "Lifetime of Joshua",
+    "reference": "Judges 2:8-2:8",
+    "book": 7,
+    "chapter_start": 2,
+    "verse_start": 8,
+    "chapter_end": 2,
+    "verse_end": 8,
+    "pericope_ids": [
+      "019f8113-eff5-7f83-bbb9-e740e0b0bad3"
+    ],
+    "pericope_titles": [
+      "Disobedience and Defeat"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf23-76e4-bafb-fae461fd8cb7",
+    "query": "Ten Commandments Given",
+    "reference": "Exodus 19:1-20:17",
+    "book": 2,
+    "chapter_start": 19,
+    "verse_start": 1,
+    "chapter_end": 20,
+    "verse_end": 17,
+    "pericope_ids": [
+      "019f8113-efe6-7959-a352-e621903ad6b6",
+      "019f8113-efe6-7a18-8537-e24d3ef471be"
+    ],
+    "pericope_titles": [
+      "At Mount Sinai",
+      "The Ten Commandments"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf23-792a-a6cd-98a0b25c7c3f",
+    "query": "Crossing the Jordan into Canaan",
+    "reference": "Joshua 1:1-3:17",
+    "book": 6,
+    "chapter_start": 1,
+    "verse_start": 1,
+    "chapter_end": 3,
+    "verse_end": 17,
+    "pericope_ids": [
+      "019f8113-eff3-73c3-bc4c-bfa8eaacd2f7",
+      "019f8113-eff3-74d6-94c4-f55f4ad48564",
+      "019f8113-eff3-75e9-8518-a45f77c8e99a"
+    ],
+    "pericope_titles": [
+      "Joshua Installed as Leader",
+      "Rahab and the Spies",
+      "Crossing the Jordan"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf23-7c55-b495-ce7cfbb3cfcd",
+    "query": "Subjugation by Cushan-rishathaim",
+    "reference": "Judges 3:7-3:8",
+    "book": 7,
+    "chapter_start": 3,
+    "verse_start": 7,
+    "chapter_end": 3,
+    "verse_end": 8,
+    "pericope_ids": [
+      "019f8113-eff6-7181-a8ad-19611416ea31"
+    ],
+    "pericope_titles": [
+      "Othniel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf23-7d56-8f43-e9f5b143f9e6",
+    "query": "Deliverance by Othniel",
+    "reference": "Judges 2:16-3:11",
+    "book": 7,
+    "chapter_start": 2,
+    "verse_start": 16,
+    "chapter_end": 3,
+    "verse_end": 11,
+    "pericope_ids": [
+      "019f8113-eff5-7f83-bbb9-e740e0b0bad3",
+      "019f8113-eff6-7080-8dbb-2eaf06bd3c39",
+      "019f8113-eff6-7181-a8ad-19611416ea31"
+    ],
+    "pericope_titles": [
+      "Disobedience and Defeat",
+      "Judges 3",
+      "Othniel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf23-7e0b-b77e-496ed2a9305c",
+    "query": "Subjugation by Eglon",
+    "reference": "Judges 3:12-3:14",
+    "book": 7,
+    "chapter_start": 3,
+    "verse_start": 12,
+    "chapter_end": 3,
+    "verse_end": 14,
+    "pericope_ids": [
+      "019f8113-eff6-7292-b724-0045bb563963"
+    ],
+    "pericope_titles": [
+      "Ehud"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf23-7ecc-b205-3673892119fa",
+    "query": "Deliverance by Ehud",
+    "reference": "Judges 3:15-3:30",
+    "book": 7,
+    "chapter_start": 3,
+    "verse_start": 15,
+    "chapter_end": 3,
+    "verse_end": 30,
+    "pericope_ids": [
+      "019f8113-eff6-7292-b724-0045bb563963"
+    ],
+    "pericope_titles": [
+      "Ehud"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf23-7f89-b293-0a1674320db0",
+    "query": "Subjugation by Jabin",
+    "reference": "Judges 4:1-4:3",
+    "book": 7,
+    "chapter_start": 4,
+    "verse_start": 1,
+    "chapter_end": 4,
+    "verse_end": 3,
+    "pericope_ids": [
+      "019f8113-eff6-74b7-9723-ffea578401bd"
+    ],
+    "pericope_titles": [
+      "Deborah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf24-7196-a226-122e359bc326",
+    "query": "Deliverance by Barak And Deborah",
+    "reference": "Judges 4:4-5:31",
+    "book": 7,
+    "chapter_start": 4,
+    "verse_start": 4,
+    "chapter_end": 5,
+    "verse_end": 31,
+    "pericope_ids": [
+      "019f8113-eff6-74b7-9723-ffea578401bd",
+      "019f8113-eff6-759b-b135-07f1ed387090"
+    ],
+    "pericope_titles": [
+      "Deborah",
+      "The Song of Deborah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf24-7293-976e-c3739daf9813",
+    "query": "Subjugation by Midian",
+    "reference": "Judges 6:1-6:10",
+    "book": 7,
+    "chapter_start": 6,
+    "verse_start": 1,
+    "chapter_end": 6,
+    "verse_end": 10,
+    "pericope_ids": [
+      "019f8113-eff6-76a3-a7ef-7ce1265126a7"
+    ],
+    "pericope_titles": [
+      "Gideon"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf24-7430-982d-69fb3cc0833e",
+    "query": "Usurpation by Abimelech",
+    "reference": "Judges 8:29-9:57",
+    "book": 7,
+    "chapter_start": 8,
+    "verse_start": 29,
+    "chapter_end": 9,
+    "verse_end": 57,
+    "pericope_ids": [
+      "019f8113-eff6-7b4e-9137-b62c34e7fee1",
+      "019f8113-eff6-7c5a-9e99-59a20410c840"
+    ],
+    "pericope_titles": [
+      "Gideon’s Death",
+      "Abimelek"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf24-74e9-871e-bd98ad6dbdcf",
+    "query": "Judgeship of Tola",
+    "reference": "Judges 10:1-10:2",
+    "book": 7,
+    "chapter_start": 10,
+    "verse_start": 1,
+    "chapter_end": 10,
+    "verse_end": 2,
+    "pericope_ids": [
+      "019f8113-eff6-7d7d-b833-7c9dfc7165a3"
+    ],
+    "pericope_titles": [
+      "Tola"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf24-75aa-a6a0-06b8198d4322",
+    "query": "Oppression by Ammon and Philistia",
+    "reference": "Judges 10:6-10:18",
+    "book": 7,
+    "chapter_start": 10,
+    "verse_start": 6,
+    "chapter_end": 10,
+    "verse_end": 18,
+    "pericope_ids": [
+      "019f8113-eff6-7f90-b6ca-6c67fa80d427"
+    ],
+    "pericope_titles": [
+      "Jephthah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf24-7660-962e-8cb7918b7426",
+    "query": "Judgeship of Eli",
+    "reference": "1 Samuel 4:15-4:18",
+    "book": 9,
+    "chapter_start": 4,
+    "verse_start": 15,
+    "chapter_end": 4,
+    "verse_end": 18,
+    "pericope_ids": [
+      "019f8113-eff8-7da3-8b5a-2c34dda0d7b9"
+    ],
+    "pericope_titles": [
+      "Death of Eli"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf24-771f-bbc3-b32357fe4fc4",
+    "query": "Deliverance by Jephthah",
+    "reference": "Judges 11:1-12:7",
+    "book": 7,
+    "chapter_start": 11,
+    "verse_start": 1,
+    "chapter_end": 12,
+    "verse_end": 7,
+    "pericope_ids": [
+      "019f8113-eff7-7095-a371-5019981171b0",
+      "019f8113-eff7-719b-8019-bc07cf394591"
+    ],
+    "pericope_titles": [
+      "Judges 11",
+      "Jephthah and Ephraim"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf24-77df-9b62-8c30d6888696",
+    "query": "Judgeship of Ibzan",
+    "reference": "Judges 12:8-12:10",
+    "book": 7,
+    "chapter_start": 12,
+    "verse_start": 8,
+    "chapter_end": 12,
+    "verse_end": 10,
+    "pericope_ids": [
+      "019f8113-eff7-72a0-b18c-ef8441a75d84"
+    ],
+    "pericope_titles": [
+      "Ibzan, Elon and Abdon"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf24-78ae-a041-8e6bfbdf0b50",
+    "query": "Philistine Dominion",
+    "reference": "Judges 13:1-15:20",
+    "book": 7,
+    "chapter_start": 13,
+    "verse_start": 1,
+    "chapter_end": 15,
+    "verse_end": 20,
+    "pericope_ids": [
+      "019f8113-eff7-739f-bc3f-7183989b5c75",
+      "019f8113-eff7-74a6-bb1b-96a69cfe1a96",
+      "019f8113-eff7-75a2-8eb1-122ee2d0fa8f"
+    ],
+    "pericope_titles": [
+      "The Birth of Samson",
+      "Samson’s Marriage",
+      "Samson’s Vengeance on the Philistines"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf24-797f-a5ec-1649e938b08d",
+    "query": "Judgeship of Elon",
+    "reference": "Judges 12:11-12:12",
+    "book": 7,
+    "chapter_start": 12,
+    "verse_start": 11,
+    "chapter_end": 12,
+    "verse_end": 12,
+    "pericope_ids": [
+      "019f8113-eff7-72a0-b18c-ef8441a75d84"
+    ],
+    "pericope_titles": [
+      "Ibzan, Elon and Abdon"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf24-7a41-a0c8-fb666bf89c8f",
+    "query": "Birth of Saul",
+    "reference": "1 Samuel 9:2-9:2",
+    "book": 9,
+    "chapter_start": 9,
+    "verse_start": 2,
+    "chapter_end": 9,
+    "verse_end": 2,
+    "pericope_ids": [
+      "019f8113-eff9-743f-bead-53413aaccd4a"
+    ],
+    "pericope_titles": [
+      "Samuel Anoints Saul"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf24-7afe-bdb3-b6b5b476a0f6",
+    "query": "Judgeship of Abdon",
+    "reference": "Judges 12:13-12:15",
+    "book": 7,
+    "chapter_start": 12,
+    "verse_start": 13,
+    "chapter_end": 12,
+    "verse_end": 15,
+    "pericope_ids": [
+      "019f8113-eff7-72a0-b18c-ef8441a75d84"
+    ],
+    "pericope_titles": [
+      "Ibzan, Elon and Abdon"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf24-7bb8-93a7-080f6a7e3de4",
+    "query": "Death of Eli, Ark Captured",
+    "reference": "1 Samuel 4:15-4:18",
+    "book": 9,
+    "chapter_start": 4,
+    "verse_start": 15,
+    "chapter_end": 4,
+    "verse_end": 18,
+    "pericope_ids": [
+      "019f8113-eff8-7da3-8b5a-2c34dda0d7b9"
+    ],
+    "pericope_titles": [
+      "Death of Eli"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf24-7d71-a115-a8c310ac7571",
+    "query": "Judgeship of Samson",
+    "reference": "Judges 15:20-16:31",
+    "book": 7,
+    "chapter_start": 15,
+    "verse_start": 20,
+    "chapter_end": 16,
+    "verse_end": 31,
+    "pericope_ids": [
+      "019f8113-eff7-75a2-8eb1-122ee2d0fa8f",
+      "019f8113-eff7-76a1-a799-bdec7a1514a6",
+      "019f8113-eff7-77a0-a113-572bba2ddf39"
+    ],
+    "pericope_titles": [
+      "Samson’s Vengeance on the Philistines",
+      "Samson and Delilah",
+      "The Death of Samson"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf24-7e25-be5e-a58feba3f9b1",
+    "query": "Sampson destroys Temple of Dagon",
+    "reference": "Judges 16:23-16:31",
+    "book": 7,
+    "chapter_start": 16,
+    "verse_start": 23,
+    "chapter_end": 16,
+    "verse_end": 31,
+    "pericope_ids": [
+      "019f8113-eff7-77a0-a113-572bba2ddf39"
+    ],
+    "pericope_titles": [
+      "The Death of Samson"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf24-7f74-a4a2-f3465a544ce7",
+    "query": "United Kingdom",
+    "reference": "1 Samuel 10:1-10:1",
+    "book": 9,
+    "chapter_start": 10,
+    "verse_start": 1,
+    "chapter_end": 10,
+    "verse_end": 1,
+    "pericope_ids": [
+      "019f8113-eff9-7530-bc48-9dac5fc3f1ba"
+    ],
+    "pericope_titles": [
+      "1 Samuel 10"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf25-7016-9247-5977ed06c145",
+    "query": "David Kills Goliath",
+    "reference": "1 Samuel 17:1-17:58",
+    "book": 9,
+    "chapter_start": 17,
+    "verse_start": 1,
+    "chapter_end": 17,
+    "verse_end": 58,
+    "pericope_ids": [
+      "019f8113-effa-759b-9047-a1aec711b6e8"
+    ],
+    "pericope_titles": [
+      "David and Goliath"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf25-70b9-ae16-538ea555ec8c",
+    "query": "Death of Saul",
+    "reference": "1 Samuel 31:3-31:13",
+    "book": 9,
+    "chapter_start": 31,
+    "verse_start": 3,
+    "chapter_end": 31,
+    "verse_end": 13,
+    "pericope_ids": [
+      "019f8113-effb-78e5-8ebc-68d79d4eabc5"
+    ],
+    "pericope_titles": [
+      "Saul Takes His Life"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf25-7201-9430-e94dba151fe7",
+    "query": "Death of David",
+    "reference": "1 Kings 2:10-2:11",
+    "book": 11,
+    "chapter_start": 2,
+    "verse_start": 10,
+    "chapter_end": 2,
+    "verse_end": 11,
+    "pericope_ids": [
+      "019f8113-f000-7575-90ab-53c39fd42517"
+    ],
+    "pericope_titles": [
+      "David’s Charge to Solomon"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf25-73f0-ba3b-3a6e20c37b53",
+    "query": "Southern Kingdom (Judah)",
+    "reference": "1 Kings 11:43-11:43",
+    "book": 11,
+    "chapter_start": 11,
+    "verse_start": 43,
+    "chapter_end": 11,
+    "verse_end": 43,
+    "pericope_ids": [
+      "019f8113-f001-78b9-be95-464d952647a6"
+    ],
+    "pericope_titles": [
+      "Solomon’s Death"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf25-7490-aafc-d5a6317b9051",
+    "query": "Death of Solomon",
+    "reference": "1 Kings 11:43-11:43",
+    "book": 11,
+    "chapter_start": 11,
+    "verse_start": 43,
+    "chapter_end": 11,
+    "verse_end": 43,
+    "pericope_ids": [
+      "019f8113-f001-78b9-be95-464d952647a6"
+    ],
+    "pericope_titles": [
+      "Solomon’s Death"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf25-7532-8a0e-a80be6a0bbd9",
+    "query": "Reign of Rehoboam",
+    "reference": "1 Kings 12:17-12:24",
+    "book": 11,
+    "chapter_start": 12,
+    "verse_start": 17,
+    "chapter_end": 12,
+    "verse_end": 24,
+    "pericope_ids": [
+      "019f8113-f001-7ac8-aea1-6764984ae4f3"
+    ],
+    "pericope_titles": [
+      "Israel Rebels Against Rehoboam"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf25-75d3-9b4c-3476abcd9260",
+    "query": "Northern Kingdom (Israel)",
+    "reference": "1 Kings 12:20-12:20",
+    "book": 11,
+    "chapter_start": 12,
+    "verse_start": 20,
+    "chapter_end": 12,
+    "verse_end": 20,
+    "pericope_ids": [
+      "019f8113-f001-7ac8-aea1-6764984ae4f3"
+    ],
+    "pericope_titles": [
+      "Israel Rebels Against Rehoboam"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf25-7713-8c54-518c5cd3011e",
+    "query": "Reign of Abijam",
+    "reference": "1 Kings 15:1-15:8",
+    "book": 11,
+    "chapter_start": 15,
+    "verse_start": 1,
+    "chapter_end": 15,
+    "verse_end": 8,
+    "pericope_ids": [
+      "019f8113-f002-76f6-9a76-c29978dcd09f"
+    ],
+    "pericope_titles": [
+      "Abijah King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf25-77be-96a8-86e1ee47dd30",
+    "query": "Death of Abijam",
+    "reference": "1 Kings 15:8-15:8",
+    "book": 11,
+    "chapter_start": 15,
+    "verse_start": 8,
+    "chapter_end": 15,
+    "verse_end": 8,
+    "pericope_ids": [
+      "019f8113-f002-76f6-9a76-c29978dcd09f"
+    ],
+    "pericope_titles": [
+      "Abijah King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf25-7862-b7a3-017e726edc3c",
+    "query": "Reign of Asa",
+    "reference": "1 Kings 15:9-15:24",
+    "book": 11,
+    "chapter_start": 15,
+    "verse_start": 9,
+    "chapter_end": 15,
+    "verse_end": 24,
+    "pericope_ids": [
+      "019f8113-f002-7870-a4de-bb28871214ef"
+    ],
+    "pericope_titles": [
+      "Asa King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf25-7904-9772-c47869993322",
+    "query": "Reign of Nadab",
+    "reference": "1 Kings 15:25-15:26",
+    "book": 11,
+    "chapter_start": 15,
+    "verse_start": 25,
+    "chapter_end": 15,
+    "verse_end": 26,
+    "pericope_ids": [
+      "019f8113-f002-79a4-bf7b-b8ad7b240ca6"
+    ],
+    "pericope_titles": [
+      "Nadab King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf25-79a8-a66a-325128434082",
+    "query": "Reign of Baasha",
+    "reference": "1 Kings 15:33-16:5",
+    "book": 11,
+    "chapter_start": 15,
+    "verse_start": 33,
+    "chapter_end": 16,
+    "verse_end": 5,
+    "pericope_ids": [
+      "019f8113-f002-7ba6-85eb-8b233f75daa0",
+      "019f8113-f002-7d4c-b879-5484da1f632d"
+    ],
+    "pericope_titles": [
+      "Baasha King of Israel",
+      "1 Kings 16"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf25-7a4c-a2b9-8a2fdaa9ecde",
+    "query": "Reign of Elah",
+    "reference": "1 Kings 16:6-16:8",
+    "book": 11,
+    "chapter_start": 16,
+    "verse_start": 6,
+    "chapter_end": 16,
+    "verse_end": 8,
+    "pericope_ids": [
+      "019f8113-f002-7d4c-b879-5484da1f632d",
+      "019f8113-f002-7e66-b868-ed61652a8a6a"
+    ],
+    "pericope_titles": [
+      "1 Kings 16",
+      "Elah King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf25-7aef-806f-95e375105979",
+    "query": "Reign of Zimri",
+    "reference": "1 Kings 16:15-16:16",
+    "book": 11,
+    "chapter_start": 16,
+    "verse_start": 15,
+    "chapter_end": 16,
+    "verse_end": 16,
+    "pericope_ids": [
+      "019f8113-f002-7f70-84cc-e41e999d18ea"
+    ],
+    "pericope_titles": [
+      "Zimri King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf25-7b92-98ad-2ee5955d2e41",
+    "query": "Reign of Tibni",
+    "reference": "1 Kings 16:21-16:22",
+    "book": 11,
+    "chapter_start": 16,
+    "verse_start": 21,
+    "chapter_end": 16,
+    "verse_end": 22,
+    "pericope_ids": [
+      "019f8113-f003-7062-8f00-17095f11f992"
+    ],
+    "pericope_titles": [
+      "Omri King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf25-7c3b-8bb5-fd32acccc338",
+    "query": "Reign of Omri",
+    "reference": "1 Kings 16:22-16:28",
+    "book": 11,
+    "chapter_start": 16,
+    "verse_start": 22,
+    "chapter_end": 16,
+    "verse_end": 28,
+    "pericope_ids": [
+      "019f8113-f003-7062-8f00-17095f11f992"
+    ],
+    "pericope_titles": [
+      "Omri King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf25-7d06-9131-c8091c3e01fd",
+    "query": "Death of Tibni",
+    "reference": "1 Kings 16:22-16:22",
+    "book": 11,
+    "chapter_start": 16,
+    "verse_start": 22,
+    "chapter_end": 16,
+    "verse_end": 22,
+    "pericope_ids": [
+      "019f8113-f003-7062-8f00-17095f11f992"
+    ],
+    "pericope_titles": [
+      "Omri King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf25-7dbc-8b26-d7db888000be",
+    "query": "Reign of Ahab",
+    "reference": "1 Kings 16:28-16:30",
+    "book": 11,
+    "chapter_start": 16,
+    "verse_start": 28,
+    "chapter_end": 16,
+    "verse_end": 30,
+    "pericope_ids": [
+      "019f8113-f003-7062-8f00-17095f11f992",
+      "019f8113-f003-717a-9d30-cd9fb9c5a2cd"
+    ],
+    "pericope_titles": [
+      "Omri King of Israel",
+      "Ahab Becomes King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf25-7e63-8ce0-b06a174beede",
+    "query": "Death of Omri",
+    "reference": "1 Kings 16:28-16:28",
+    "book": 11,
+    "chapter_start": 16,
+    "verse_start": 28,
+    "chapter_end": 16,
+    "verse_end": 28,
+    "pericope_ids": [
+      "019f8113-f003-7062-8f00-17095f11f992"
+    ],
+    "pericope_titles": [
+      "Omri King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf25-7f09-aae0-77be6e4fb620",
+    "query": "Death of Asa",
+    "reference": "1 Kings 15:24-15:24",
+    "book": 11,
+    "chapter_start": 15,
+    "verse_start": 24,
+    "chapter_end": 15,
+    "verse_end": 24,
+    "pericope_ids": [
+      "019f8113-f002-7870-a4de-bb28871214ef"
+    ],
+    "pericope_titles": [
+      "Asa King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf25-7faf-ac3e-9ce4a9a21f36",
+    "query": "Reign of Jehoshaphat",
+    "reference": "1 Kings 22:41-22:50",
+    "book": 11,
+    "chapter_start": 22,
+    "verse_start": 41,
+    "chapter_end": 22,
+    "verse_end": 50,
+    "pericope_ids": [
+      "019f8113-f004-7248-afa0-13a0a9d58630"
+    ],
+    "pericope_titles": [
+      "Jehoshaphat King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf26-7109-a65d-873284a6e402",
+    "query": "Death of Jehoshaphat",
+    "reference": "1 Kings 22:50-22:50",
+    "book": 11,
+    "chapter_start": 22,
+    "verse_start": 50,
+    "chapter_end": 22,
+    "verse_end": 50,
+    "pericope_ids": [
+      "019f8113-f004-7248-afa0-13a0a9d58630"
+    ],
+    "pericope_titles": [
+      "Jehoshaphat King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf26-71af-b86d-399bff67ec20",
+    "query": "Reign of Ahaziah",
+    "reference": "1 Kings 22:51-22:53",
+    "book": 11,
+    "chapter_start": 22,
+    "verse_start": 51,
+    "chapter_end": 22,
+    "verse_end": 53,
+    "pericope_ids": [
+      "019f8113-f004-7347-894e-b5abe94512bb"
+    ],
+    "pericope_titles": [
+      "Ahaziah King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf26-7253-8c2f-86aab676b933",
+    "query": "Elijah Translated",
+    "reference": "2 Kings 2:1-2:14",
+    "book": 12,
+    "chapter_start": 2,
+    "verse_start": 1,
+    "chapter_end": 2,
+    "verse_end": 14,
+    "pericope_ids": [
+      "019f8113-f004-753d-aa38-7c77ee982342"
+    ],
+    "pericope_titles": [
+      "Elijah Taken Up to Heaven"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf26-739e-927c-8b3487fd3448",
+    "query": "Reign of Joram",
+    "reference": "2 Kings 3:1-3:6",
+    "book": 12,
+    "chapter_start": 3,
+    "verse_start": 1,
+    "chapter_end": 3,
+    "verse_end": 6,
+    "pericope_ids": [
+      "019f8113-f004-7827-85a4-07c1cec1865e"
+    ],
+    "pericope_titles": [
+      "Moab Revolts"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf26-74e5-8d32-bf22f101508f",
+    "query": "Reign of Ahaziah (Jehoahaz)",
+    "reference": "2 Kings 8:25-8:29",
+    "book": 12,
+    "chapter_start": 8,
+    "verse_start": 25,
+    "chapter_end": 8,
+    "verse_end": 29,
+    "pericope_ids": [
+      "019f8113-f005-74e9-afa4-2a1620e4e3ba"
+    ],
+    "pericope_titles": [
+      "Ahaziah King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf26-7638-8eef-1f7871481b78",
+    "query": "Reign of Athaliah",
+    "reference": "2 Kings 11:1-11:3",
+    "book": 12,
+    "chapter_start": 11,
+    "verse_start": 1,
+    "chapter_end": 11,
+    "verse_end": 3,
+    "pericope_ids": [
+      "019f8113-f005-7a40-a970-01cf2df8e14c"
+    ],
+    "pericope_titles": [
+      "Athaliah and Joash"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf26-76db-8d04-7b219f435cf8",
+    "query": "Death of Jehoram",
+    "reference": "2 Kings 8:24-8:24",
+    "book": 12,
+    "chapter_start": 8,
+    "verse_start": 24,
+    "chapter_end": 8,
+    "verse_end": 24,
+    "pericope_ids": [
+      "019f8113-f005-7400-b99a-bc5e22bcccb1"
+    ],
+    "pericope_titles": [
+      "Jehoram King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf26-777d-bca1-fc3f69d2fa71",
+    "query": "Reign of Joash",
+    "reference": "2 Kings 11:21-12:21",
+    "book": 12,
+    "chapter_start": 11,
+    "verse_start": 21,
+    "chapter_end": 12,
+    "verse_end": 21,
+    "pericope_ids": [
+      "019f8113-f005-7a40-a970-01cf2df8e14c",
+      "019f8113-f005-7b26-9731-9f1554cc610d"
+    ],
+    "pericope_titles": [
+      "Athaliah and Joash",
+      "Joash Repairs the Temple"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf26-7824-9f28-e5efe65d1d2e",
+    "query": "Death of Jehu",
+    "reference": "2 Kings 10:35-10:35",
+    "book": 12,
+    "chapter_start": 10,
+    "verse_start": 35,
+    "chapter_end": 10,
+    "verse_end": 35,
+    "pericope_ids": [
+      "019f8113-f005-7961-a4d3-f0209fc8b3ad"
+    ],
+    "pericope_titles": [
+      "Servants of Baal Killed"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf26-78c8-9d31-4c58b4fa844a",
+    "query": "Reign of Jehoahaz",
+    "reference": "2 Kings 13:1-13:9",
+    "book": 12,
+    "chapter_start": 13,
+    "verse_start": 1,
+    "chapter_end": 13,
+    "verse_end": 9,
+    "pericope_ids": [
+      "019f8113-f005-7c07-bc22-cd02d8b33a0d"
+    ],
+    "pericope_titles": [
+      "Jehoahaz King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf26-7972-93b1-4295ace202bd",
+    "query": "Death of Jehoahaz",
+    "reference": "2 Kings 13:9-13:9",
+    "book": 12,
+    "chapter_start": 13,
+    "verse_start": 9,
+    "chapter_end": 13,
+    "verse_end": 9,
+    "pericope_ids": [
+      "019f8113-f005-7c07-bc22-cd02d8b33a0d"
+    ],
+    "pericope_titles": [
+      "Jehoahaz King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf26-7a18-ab13-2d51e7c2289f",
+    "query": "Reign of Jehoash",
+    "reference": "2 Kings 13:10-13:13",
+    "book": 12,
+    "chapter_start": 13,
+    "verse_start": 10,
+    "chapter_end": 13,
+    "verse_end": 13,
+    "pericope_ids": [
+      "019f8113-f006-7008-9c75-021139b7af33"
+    ],
+    "pericope_titles": [
+      "Jehoash King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf26-7abd-a7cd-e99c3a063100",
+    "query": "Reign of Amaziah",
+    "reference": "2 Kings 14:1-14:22",
+    "book": 12,
+    "chapter_start": 14,
+    "verse_start": 1,
+    "chapter_end": 14,
+    "verse_end": 22,
+    "pericope_ids": [
+      "019f8113-f006-7114-9d54-8e4f9a0e58d5"
+    ],
+    "pericope_titles": [
+      "Amaziah King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf26-7b61-9d02-351a46f9b6fe",
+    "query": "Reign of Jeroboam II",
+    "reference": "2 Kings 14:23-14:29",
+    "book": 12,
+    "chapter_start": 14,
+    "verse_start": 23,
+    "chapter_end": 14,
+    "verse_end": 29,
+    "pericope_ids": [
+      "019f8113-f006-71f7-9503-3000beac6735"
+    ],
+    "pericope_titles": [
+      "Jeroboam II King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf26-7cb2-a845-837ea8073b99",
+    "query": "Death of Jehoahash",
+    "reference": "2 Kings 13:13-13:13",
+    "book": 12,
+    "chapter_start": 13,
+    "verse_start": 13,
+    "chapter_end": 13,
+    "verse_end": 13,
+    "pericope_ids": [
+      "019f8113-f006-7008-9c75-021139b7af33"
+    ],
+    "pericope_titles": [
+      "Jehoash King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf26-7e2e-a342-d6dcb409631e",
+    "query": "Death of Amaziah",
+    "reference": "2 Kings 14:22-14:22",
+    "book": 12,
+    "chapter_start": 14,
+    "verse_start": 22,
+    "chapter_end": 14,
+    "verse_end": 22,
+    "pericope_ids": [
+      "019f8113-f006-7114-9d54-8e4f9a0e58d5"
+    ],
+    "pericope_titles": [
+      "Amaziah King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf26-7ed3-b954-0f81b7af12c4",
+    "query": "Reign of Uzziah",
+    "reference": "2 Kings 15:1-15:7",
+    "book": 12,
+    "chapter_start": 15,
+    "verse_start": 1,
+    "chapter_end": 15,
+    "verse_end": 7,
+    "pericope_ids": [
+      "019f8113-f006-72d5-be44-3f015539b7bd"
+    ],
+    "pericope_titles": [
+      "Azariah King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf27-70db-b075-56a6bd3d5e68",
+    "query": "Death of Jeroboam II",
+    "reference": "2 Kings 14:29-14:29",
+    "book": 12,
+    "chapter_start": 14,
+    "verse_start": 29,
+    "chapter_end": 14,
+    "verse_end": 29,
+    "pericope_ids": [
+      "019f8113-f006-71f7-9503-3000beac6735"
+    ],
+    "pericope_titles": [
+      "Jeroboam II King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf27-71b2-a329-8359f43c0b9a",
+    "query": "Reign of Zachariah",
+    "reference": "2 Kings 15:8-15:9",
+    "book": 12,
+    "chapter_start": 15,
+    "verse_start": 8,
+    "chapter_end": 15,
+    "verse_end": 9,
+    "pericope_ids": [
+      "019f8113-f006-73b2-bca4-22564ac34a79"
+    ],
+    "pericope_titles": [
+      "Zechariah King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf27-7255-8509-a8780e4c4bd0",
+    "query": "Reign of Shallum",
+    "reference": "2 Kings 15:10-15:10",
+    "book": 12,
+    "chapter_start": 15,
+    "verse_start": 10,
+    "chapter_end": 15,
+    "verse_end": 10,
+    "pericope_ids": [
+      "019f8113-f006-73b2-bca4-22564ac34a79"
+    ],
+    "pericope_titles": [
+      "Zechariah King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf27-7303-81af-63d4e2c70d40",
+    "query": "Death of Zachariah",
+    "reference": "2 Kings 15:10-15:10",
+    "book": 12,
+    "chapter_start": 15,
+    "verse_start": 10,
+    "chapter_end": 15,
+    "verse_end": 10,
+    "pericope_ids": [
+      "019f8113-f006-73b2-bca4-22564ac34a79"
+    ],
+    "pericope_titles": [
+      "Zechariah King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf27-73a6-b113-23744a938e55",
+    "query": "Death of Shallum",
+    "reference": "2 Kings 15:14-15:14",
+    "book": 12,
+    "chapter_start": 15,
+    "verse_start": 14,
+    "chapter_end": 15,
+    "verse_end": 14,
+    "pericope_ids": [
+      "019f8113-f006-748e-95ea-aadc965b67a4"
+    ],
+    "pericope_titles": [
+      "Shallum King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf27-744b-a550-79c6c122267c",
+    "query": "Reign of Menahem",
+    "reference": "2 Kings 15:17-15:22",
+    "book": 12,
+    "chapter_start": 15,
+    "verse_start": 17,
+    "chapter_end": 15,
+    "verse_end": 22,
+    "pericope_ids": [
+      "019f8113-f006-7575-8238-e6852cc86d63"
+    ],
+    "pericope_titles": [
+      "Menahem King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf27-74ef-b782-6217446e308b",
+    "query": "Death of Menahem",
+    "reference": "2 Kings 15:22-15:22",
+    "book": 12,
+    "chapter_start": 15,
+    "verse_start": 22,
+    "chapter_end": 15,
+    "verse_end": 22,
+    "pericope_ids": [
+      "019f8113-f006-7575-8238-e6852cc86d63"
+    ],
+    "pericope_titles": [
+      "Menahem King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf27-75c2-b27e-bc19b7dc8a13",
+    "query": "Reign of Pekahiah",
+    "reference": "2 Kings 15:23-15:26",
+    "book": 12,
+    "chapter_start": 15,
+    "verse_start": 23,
+    "chapter_end": 15,
+    "verse_end": 26,
+    "pericope_ids": [
+      "019f8113-f006-7658-a02d-b6aa3ac6c3f1"
+    ],
+    "pericope_titles": [
+      "Pekahiah King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf27-76c7-aaa6-c27252b6d05d",
+    "query": "Death of Pekahiah",
+    "reference": "2 Kings 15:25-15:25",
+    "book": 12,
+    "chapter_start": 15,
+    "verse_start": 25,
+    "chapter_end": 15,
+    "verse_end": 25,
+    "pericope_ids": [
+      "019f8113-f006-7658-a02d-b6aa3ac6c3f1"
+    ],
+    "pericope_titles": [
+      "Pekahiah King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf27-77b0-b62d-31d3d2d242de",
+    "query": "Reign of Pekah",
+    "reference": "2 Kings 15:27-15:31",
+    "book": 12,
+    "chapter_start": 15,
+    "verse_start": 27,
+    "chapter_end": 15,
+    "verse_end": 31,
+    "pericope_ids": [
+      "019f8113-f006-7737-8eef-0641881c66f9"
+    ],
+    "pericope_titles": [
+      "Pekah King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf27-7925-8a8f-ce9894103d38",
+    "query": "Death of Uzziah",
+    "reference": "2 Kings 15:7-15:7",
+    "book": 12,
+    "chapter_start": 15,
+    "verse_start": 7,
+    "chapter_end": 15,
+    "verse_end": 7,
+    "pericope_ids": [
+      "019f8113-f006-72d5-be44-3f015539b7bd"
+    ],
+    "pericope_titles": [
+      "Azariah King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf27-7a9f-a2d9-0b2fa4b6f751",
+    "query": "Reign of Jotham",
+    "reference": "2 Kings 15:32-15:38",
+    "book": 12,
+    "chapter_start": 15,
+    "verse_start": 32,
+    "chapter_end": 15,
+    "verse_end": 38,
+    "pericope_ids": [
+      "019f8113-f006-7813-b02d-3bd3647d207e"
+    ],
+    "pericope_titles": [
+      "Jotham King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf27-7c08-a409-47dad06b2cb1",
+    "query": "Reign of Ahaz",
+    "reference": "2 Kings 16:1-16:20",
+    "book": 12,
+    "chapter_start": 16,
+    "verse_start": 1,
+    "chapter_end": 16,
+    "verse_end": 20,
+    "pericope_ids": [
+      "019f8113-f006-78ed-b9ef-93c45c0a1018"
+    ],
+    "pericope_titles": [
+      "Ahaz King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf27-7cdb-92ab-57fe02a9d615",
+    "query": "Death of Jotham",
+    "reference": "2 Kings 15:38-15:38",
+    "book": 12,
+    "chapter_start": 15,
+    "verse_start": 38,
+    "chapter_end": 15,
+    "verse_end": 38,
+    "pericope_ids": [
+      "019f8113-f006-7813-b02d-3bd3647d207e"
+    ],
+    "pericope_titles": [
+      "Jotham King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf27-7da4-b9d7-246f773247f7",
+    "query": "Death of Pekah",
+    "reference": "2 Kings 15:30-15:30",
+    "book": 12,
+    "chapter_start": 15,
+    "verse_start": 30,
+    "chapter_end": 15,
+    "verse_end": 30,
+    "pericope_ids": [
+      "019f8113-f006-7737-8eef-0641881c66f9"
+    ],
+    "pericope_titles": [
+      "Pekah King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf27-7e64-88c4-37682beac682",
+    "query": "Reign of Hoshea",
+    "reference": "2 Kings 17:1-17:4",
+    "book": 12,
+    "chapter_start": 17,
+    "verse_start": 1,
+    "chapter_end": 17,
+    "verse_end": 4,
+    "pericope_ids": [
+      "019f8113-f006-79cb-862d-1cbacff33a3a"
+    ],
+    "pericope_titles": [
+      "Hoshea Last King of Israel"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf27-7f14-a145-538bd448a261",
+    "query": "Death of Ahaz",
+    "reference": "2 Kings 16:20-16:20",
+    "book": 12,
+    "chapter_start": 16,
+    "verse_start": 20,
+    "chapter_end": 16,
+    "verse_end": 20,
+    "pericope_ids": [
+      "019f8113-f006-78ed-b9ef-93c45c0a1018"
+    ],
+    "pericope_titles": [
+      "Ahaz King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf28-7089-848b-e19064a66635",
+    "query": "Death of Hezekiah",
+    "reference": "2 Kings 20:21-20:21",
+    "book": 12,
+    "chapter_start": 20,
+    "verse_start": 21,
+    "chapter_end": 20,
+    "verse_end": 21,
+    "pericope_ids": [
+      "019f8113-f007-71d7-92d3-f784022cfd7d"
+    ],
+    "pericope_titles": [
+      "Envoys From Babylon"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf28-73d8-8d75-421937ced431",
+    "query": "Reign of Manasseh",
+    "reference": "2 Kings 21:1-21:18",
+    "book": 12,
+    "chapter_start": 21,
+    "verse_start": 1,
+    "chapter_end": 21,
+    "verse_end": 18,
+    "pericope_ids": [
+      "019f8113-f007-7371-960a-3ef6044f6393"
+    ],
+    "pericope_titles": [
+      "Manasseh King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf28-7638-8f64-9de87ea2a84b",
+    "query": "Death of Manasseh",
+    "reference": "2 Kings 21:18-21:18",
+    "book": 12,
+    "chapter_start": 21,
+    "verse_start": 18,
+    "chapter_end": 21,
+    "verse_end": 18,
+    "pericope_ids": [
+      "019f8113-f007-7371-960a-3ef6044f6393"
+    ],
+    "pericope_titles": [
+      "Manasseh King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf28-7716-903b-38a258b76fbb",
+    "query": "Reign of Amon",
+    "reference": "2 Kings 21:19-21:26",
+    "book": 12,
+    "chapter_start": 21,
+    "verse_start": 19,
+    "chapter_end": 21,
+    "verse_end": 26,
+    "pericope_ids": [
+      "019f8113-f007-7500-9649-bc8f5329e72a"
+    ],
+    "pericope_titles": [
+      "Amon King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf28-77ea-9324-b94e7e769866",
+    "query": "Death of Amon",
+    "reference": "2 Kings 21:23-21:23",
+    "book": 12,
+    "chapter_start": 21,
+    "verse_start": 23,
+    "chapter_end": 21,
+    "verse_end": 23,
+    "pericope_ids": [
+      "019f8113-f007-7500-9649-bc8f5329e72a"
+    ],
+    "pericope_titles": [
+      "Amon King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf28-78ba-b9d2-c74cb7ec9863",
+    "query": "Reign of Josiah",
+    "reference": "2 Kings 22:1-23:30",
+    "book": 12,
+    "chapter_start": 22,
+    "verse_start": 1,
+    "chapter_end": 23,
+    "verse_end": 30,
+    "pericope_ids": [
+      "019f8113-f007-767c-bba5-3c38d5eb939e",
+      "019f8113-f007-77c9-ab51-a4c9a5527cfe"
+    ],
+    "pericope_titles": [
+      "The Book of the Law Found",
+      "Josiah Renews the Covenant"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf28-7b3e-a67f-011aea433157",
+    "query": "Death of Josiah",
+    "reference": "2 Kings 23:29-23:29",
+    "book": 12,
+    "chapter_start": 23,
+    "verse_start": 29,
+    "chapter_end": 23,
+    "verse_end": 29,
+    "pericope_ids": [
+      "019f8113-f007-77c9-ab51-a4c9a5527cfe"
+    ],
+    "pericope_titles": [
+      "Josiah Renews the Covenant"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf28-7bef-86f7-28485e0da2ec",
+    "query": "Reign of Johoahaz (Shallum)",
+    "reference": "2 Kings 23:31-23:35",
+    "book": 12,
+    "chapter_start": 23,
+    "verse_start": 31,
+    "chapter_end": 23,
+    "verse_end": 35,
+    "pericope_ids": [
+      "019f8113-f007-791c-9e73-856aab28121e"
+    ],
+    "pericope_titles": [
+      "Jehoahaz King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf28-7ca7-8c26-eaf509e20ead",
+    "query": "Reign of Jehoiakim",
+    "reference": "2 Kings 23:36-24:7",
+    "book": 12,
+    "chapter_start": 23,
+    "verse_start": 36,
+    "chapter_end": 24,
+    "verse_end": 7,
+    "pericope_ids": [
+      "019f8113-f007-7ae3-a7a3-d0e531a0ba8e",
+      "019f8113-f007-7c4d-be72-bfb29cbe9ede"
+    ],
+    "pericope_titles": [
+      "Jehoiakim King of Judah",
+      "2 Kings 24"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf28-7f7b-a98e-78b6da092e47",
+    "query": "Reign of Jeconiah",
+    "reference": "2 Kings 24:8-24:17",
+    "book": 12,
+    "chapter_start": 24,
+    "verse_start": 8,
+    "chapter_end": 24,
+    "verse_end": 17,
+    "pericope_ids": [
+      "019f8113-f007-7d9c-ae92-ef93f39fbd88"
+    ],
+    "pericope_titles": [
+      "Jehoiachin King of Judah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf29-707f-a5b7-e62269376dd7",
+    "query": "Reign of Zedekiah",
+    "reference": "2 Kings 24:18-25:7",
+    "book": 12,
+    "chapter_start": 24,
+    "verse_start": 18,
+    "chapter_end": 25,
+    "verse_end": 7,
+    "pericope_ids": [
+      "019f8113-f007-7ee9-84b1-b01a724b7b56",
+      "019f8113-f008-7000-b851-44e8f6f746df"
+    ],
+    "pericope_titles": [
+      "Zedekiah King of Judah",
+      "2 Kings 25"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf29-7218-a28d-b577eb0454f1",
+    "query": "Prophecies of Obadiah",
+    "reference": "Obadiah 1:1-1:21",
+    "book": 31,
+    "chapter_start": 1,
+    "verse_start": 1,
+    "chapter_end": 1,
+    "verse_end": 21,
+    "pericope_ids": [
+      "019f8113-f031-73b6-9572-903a18a01ac1"
+    ],
+    "pericope_titles": [
+      "Obadiah’s Vision"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf29-75e0-95f6-be3484a09609",
+    "query": "John's birth predicted",
+    "reference": "Luke 1:5-1:25",
+    "book": 42,
+    "chapter_start": 1,
+    "verse_start": 5,
+    "chapter_end": 1,
+    "verse_end": 25,
+    "pericope_ids": [
+      "019f8113-f039-7fb0-88dd-284d52f2f300"
+    ],
+    "pericope_titles": [
+      "The Birth of John the Baptist Foretold"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf29-76ab-a6c1-c34f68d17446",
+    "query": "An Angel Speaks to Joseph in a Dream",
+    "reference": "Matthew 1:19-1:25",
+    "book": 40,
+    "chapter_start": 1,
+    "verse_start": 19,
+    "chapter_end": 1,
+    "verse_end": 25,
+    "pericope_ids": [
+      "019f8113-f033-7d5c-b6e5-89ce7e2c6805"
+    ],
+    "pericope_titles": [
+      "Joseph Accepts Jesus as His Son"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf29-7778-b70b-1072a20d5e6a",
+    "query": "The Annuciation",
+    "reference": "Luke 1:26-1:38",
+    "book": 42,
+    "chapter_start": 1,
+    "verse_start": 26,
+    "chapter_end": 1,
+    "verse_end": 38,
+    "pericope_ids": [
+      "019f8113-f03a-702d-a2ec-bff382dea88d"
+    ],
+    "pericope_titles": [
+      "The Birth of Jesus Foretold"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf29-783c-ba3c-1d6acc2ee1c7",
+    "query": "Mary Visits Elizabeth",
+    "reference": "Luke 1:39-1:56",
+    "book": 42,
+    "chapter_start": 1,
+    "verse_start": 39,
+    "chapter_end": 1,
+    "verse_end": 56,
+    "pericope_ids": [
+      "019f8113-f03a-70a8-bf97-7a55536c0bef",
+      "019f8113-f03a-7126-856a-5b71bf5c869d"
+    ],
+    "pericope_titles": [
+      "Mary Visits Elizabeth",
+      "Mary’s Song"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf29-7aae-809f-838a4263d715",
+    "query": "Birth of John the Baptist",
+    "reference": "Luke 1:57-1:80",
+    "book": 42,
+    "chapter_start": 1,
+    "verse_start": 57,
+    "chapter_end": 1,
+    "verse_end": 80,
+    "pericope_ids": [
+      "019f8113-f03a-71ab-8333-dd79b063ca2b",
+      "019f8113-f03a-721c-b246-5ba3864fb773"
+    ],
+    "pericope_titles": [
+      "The Birth of John the Baptist",
+      "Zechariah’s Song"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf29-7ba0-9413-473ccd4d9a6e",
+    "query": "Wise Men Visit Herod",
+    "reference": "Matthew 2:1-2:8",
+    "book": 40,
+    "chapter_start": 2,
+    "verse_start": 1,
+    "chapter_end": 2,
+    "verse_end": 8,
+    "pericope_ids": [
+      "019f8113-f033-7ded-aa00-ee470c2074c8"
+    ],
+    "pericope_titles": [
+      "The Magi Visit the Messiah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf29-7c71-822b-a4d168470ba8",
+    "query": "Wise Men Visit Jesus",
+    "reference": "Matthew 2:9-2:12",
+    "book": 40,
+    "chapter_start": 2,
+    "verse_start": 9,
+    "chapter_end": 2,
+    "verse_end": 12,
+    "pericope_ids": [
+      "019f8113-f033-7ded-aa00-ee470c2074c8"
+    ],
+    "pericope_titles": [
+      "The Magi Visit the Messiah"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf29-7d79-a2cc-0a90bb787d79",
+    "query": "Joseph and Mary Flee to Egypt",
+    "reference": "Matthew 2:13-2:15",
+    "book": 40,
+    "chapter_start": 2,
+    "verse_start": 13,
+    "chapter_end": 2,
+    "verse_end": 15,
+    "pericope_ids": [
+      "019f8113-f033-7e6e-af6e-e9efa9c012cd"
+    ],
+    "pericope_titles": [
+      "The Escape to Egypt"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf29-7e73-a2b7-b0a9890ed2b3",
+    "query": "Herod slays male children",
+    "reference": "Matthew 2:16-2:18",
+    "book": 40,
+    "chapter_start": 2,
+    "verse_start": 16,
+    "chapter_end": 2,
+    "verse_end": 18,
+    "pericope_ids": [
+      "019f8113-f033-7e6e-af6e-e9efa9c012cd"
+    ],
+    "pericope_titles": [
+      "The Escape to Egypt"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf29-7f43-b6b2-4f30eff0da03",
+    "query": "Joseph and Mary return from Egypt",
+    "reference": "Matthew 2:19-2:22",
+    "book": 40,
+    "chapter_start": 2,
+    "verse_start": 19,
+    "chapter_end": 2,
+    "verse_end": 22,
+    "pericope_ids": [
+      "019f8113-f033-7ecd-b15c-4c2a0a72d413"
+    ],
+    "pericope_titles": [
+      "The Return to Nazareth"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2a-70cd-8ef1-c83116cfa945",
+    "query": "Birth of Jesus",
+    "reference": "Luke 2:1-2:20",
+    "book": 42,
+    "chapter_start": 2,
+    "verse_start": 1,
+    "chapter_end": 2,
+    "verse_end": 20,
+    "pericope_ids": [
+      "019f8113-f03a-72ac-bbd2-5eed35dadfbc"
+    ],
+    "pericope_titles": [
+      "The Birth of Jesus"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2a-7198-a6ce-16e86ae76308",
+    "query": "Jesus Circumsized",
+    "reference": "Luke 2:21-2:21",
+    "book": 42,
+    "chapter_start": 2,
+    "verse_start": 21,
+    "chapter_end": 2,
+    "verse_end": 21,
+    "pericope_ids": [
+      "019f8113-f03a-72ac-bbd2-5eed35dadfbc"
+    ],
+    "pericope_titles": [
+      "The Birth of Jesus"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2a-7258-bd88-cc6bbe72c21d",
+    "query": "Temple Presentation of Jesus",
+    "reference": "Luke 2:22-2:38",
+    "book": 42,
+    "chapter_start": 2,
+    "verse_start": 22,
+    "chapter_end": 2,
+    "verse_end": 38,
+    "pericope_ids": [
+      "019f8113-f03a-7314-b21b-3150ef7bfd3d"
+    ],
+    "pericope_titles": [
+      "Jesus Presented in the Temple"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2a-731c-badc-f5fec85cda5c",
+    "query": "Childhood of Jesus",
+    "reference": "Luke 2:40-2:40",
+    "book": 42,
+    "chapter_start": 2,
+    "verse_start": 40,
+    "chapter_end": 2,
+    "verse_end": 40,
+    "pericope_ids": [
+      "019f8113-f03a-7314-b21b-3150ef7bfd3d"
+    ],
+    "pericope_titles": [
+      "Jesus Presented in the Temple"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2a-73e7-9eb5-dd306091459c",
+    "query": "Jesus as a child in the Temple",
+    "reference": "Luke 2:41-2:50",
+    "book": 42,
+    "chapter_start": 2,
+    "verse_start": 41,
+    "chapter_end": 2,
+    "verse_end": 50,
+    "pericope_ids": [
+      "019f8113-f03a-7395-b072-5fc92c5411cf"
+    ],
+    "pericope_titles": [
+      "The Boy Jesus at the Temple"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2a-74ad-bc96-a9708a3277b0",
+    "query": "Jesus Growing Up",
+    "reference": "Luke 2:51-2:52",
+    "book": 42,
+    "chapter_start": 2,
+    "verse_start": 51,
+    "chapter_end": 2,
+    "verse_end": 52,
+    "pericope_ids": [
+      "019f8113-f03a-7395-b072-5fc92c5411cf"
+    ],
+    "pericope_titles": [
+      "The Boy Jesus at the Temple"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2a-7d67-a437-baf5927c5cec",
+    "query": "Jesus Rejected at Nazareth",
+    "reference": "Luke 4:16-4:30",
+    "book": 42,
+    "chapter_start": 4,
+    "verse_start": 16,
+    "chapter_end": 4,
+    "verse_end": 30,
+    "pericope_ids": [
+      "019f8113-f03a-7576-8873-0f1da3bbff7b"
+    ],
+    "pericope_titles": [
+      "Jesus Rejected at Nazareth"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2a-7e22-b72c-1812094c8a2e",
+    "query": "John's Witness",
+    "reference": "John 1:15-1:34",
+    "book": 43,
+    "chapter_start": 1,
+    "verse_start": 15,
+    "chapter_end": 1,
+    "verse_end": 34,
+    "pericope_ids": [
+      "019f8113-f03d-75bb-9575-6d26b86d4325",
+      "019f8113-f03d-761c-b3c9-aff9fce38838",
+      "019f8113-f03d-767a-aac7-64a95b518c00"
+    ],
+    "pericope_titles": [
+      "The Word Became Flesh",
+      "John the Baptist Denies Being the Messiah",
+      "John Testifies About Jesus"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2a-7ec9-a7fe-33fbb70b289b",
+    "query": "First Disciples Gathered",
+    "reference": "John 1:35-1:51",
+    "book": 43,
+    "chapter_start": 1,
+    "verse_start": 35,
+    "chapter_end": 1,
+    "verse_end": 51,
+    "pericope_ids": [
+      "019f8113-f03d-76f8-958f-5be03a520ec1",
+      "019f8113-f03d-7784-9aa1-6b47929b1081"
+    ],
+    "pericope_titles": [
+      "John’s Disciples Follow Jesus",
+      "Jesus Calls Philip and Nathanael"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2a-7f75-a4e9-1168a1a22211",
+    "query": "Water to Wine",
+    "reference": "John 2:1-2:11",
+    "book": 43,
+    "chapter_start": 2,
+    "verse_start": 1,
+    "chapter_end": 2,
+    "verse_end": 11,
+    "pericope_ids": [
+      "019f8113-f03d-784e-8927-8878bc8440b3"
+    ],
+    "pericope_titles": [
+      "Jesus Changes Water Into Wine"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2b-701c-afd7-d49221bd48cf",
+    "query": "Visiting Capernaum",
+    "reference": "John 2:12-2:12",
+    "book": 43,
+    "chapter_start": 2,
+    "verse_start": 12,
+    "chapter_end": 2,
+    "verse_end": 12,
+    "pericope_ids": [
+      "019f8113-f03d-784e-8927-8878bc8440b3"
+    ],
+    "pericope_titles": [
+      "Jesus Changes Water Into Wine"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2b-70c4-8afb-a142b8a66287",
+    "query": "First Passover and Temple Cleansing",
+    "reference": "John 2:13-2:25",
+    "book": 43,
+    "chapter_start": 2,
+    "verse_start": 13,
+    "chapter_end": 2,
+    "verse_end": 25,
+    "pericope_ids": [
+      "019f8113-f03d-78bb-a879-8c9ba423a007"
+    ],
+    "pericope_titles": [
+      "Jesus Clears the Temple Courts"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2b-7169-9437-9989ef646b69",
+    "query": "Jesus and Nicodemus",
+    "reference": "John 3:1-3:21",
+    "book": 43,
+    "chapter_start": 3,
+    "verse_start": 1,
+    "chapter_end": 3,
+    "verse_end": 21,
+    "pericope_ids": [
+      "019f8113-f03d-791b-b951-500544565184"
+    ],
+    "pericope_titles": [
+      "Jesus Teaches Nicodemus"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2b-7211-ae33-f35b95c1707b",
+    "query": "John the Baptist Witnesses",
+    "reference": "John 3:22-3:36",
+    "book": 43,
+    "chapter_start": 3,
+    "verse_start": 22,
+    "chapter_end": 3,
+    "verse_end": 36,
+    "pericope_ids": [
+      "019f8113-f03d-7984-86bc-44d3d8a0a1b2"
+    ],
+    "pericope_titles": [
+      "John Testifies Again About Jesus"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2b-72be-9239-ee61d5dc7701",
+    "query": "The Samaritan Woman",
+    "reference": "John 4:5-4:42",
+    "book": 43,
+    "chapter_start": 4,
+    "verse_start": 5,
+    "chapter_end": 4,
+    "verse_end": 42,
+    "pericope_ids": [
+      "019f8113-f03d-79e3-a1a0-bef6dd676109",
+      "019f8113-f03d-7a40-9192-2aa2dc16bab6",
+      "019f8113-f03d-7ac5-9a85-31fc7451935f"
+    ],
+    "pericope_titles": [
+      "Jesus Talks With a Samaritan Woman",
+      "The Disciples Rejoin Jesus",
+      "Many Samaritans Believe"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2b-7bdb-86ba-08a6216c5928",
+    "query": "Woe to Chorazin and Bethsaida",
+    "reference": "Matthew 11:20-11:30",
+    "book": 40,
+    "chapter_start": 11,
+    "verse_start": 20,
+    "chapter_end": 11,
+    "verse_end": 30,
+    "pericope_ids": [
+      "019f8113-f035-7365-a72b-b594618b6598",
+      "019f8113-f035-73e2-aa7b-5bc6c47c783c"
+    ],
+    "pericope_titles": [
+      "Woe on Unrepentant Towns",
+      "The Father Revealed in the Son"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2c-711f-a989-40818b64b3c2",
+    "query": "Widow's Son Resurrected",
+    "reference": "Luke 7:11-7:17",
+    "book": 42,
+    "chapter_start": 7,
+    "verse_start": 11,
+    "chapter_end": 7,
+    "verse_end": 17,
+    "pericope_ids": [
+      "019f8113-f03a-7ddb-af0c-4787f24b36ee"
+    ],
+    "pericope_titles": [
+      "Jesus Raises a Widow’s Son"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2c-71d4-b332-659b518760f7",
+    "query": "Anointed by a Sinner Woman",
+    "reference": "Luke 7:36-7:50",
+    "book": 42,
+    "chapter_start": 7,
+    "verse_start": 36,
+    "chapter_end": 7,
+    "verse_end": 50,
+    "pericope_ids": [
+      "019f8113-f03a-7ed3-bf58-374da98f04d0"
+    ],
+    "pericope_titles": [
+      "Jesus Anointed by a Sinful Woman"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2c-727c-84ac-c498e8b71e66",
+    "query": "Jesus' 2nd Tour of Galilee",
+    "reference": "Luke 8:1-8:3",
+    "book": 42,
+    "chapter_start": 8,
+    "verse_start": 1,
+    "chapter_end": 8,
+    "verse_end": 3,
+    "pericope_ids": [
+      "019f8113-f03a-7f41-bba3-47bfd6c3d5ae"
+    ],
+    "pericope_titles": [
+      "The Parable of the Sower"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2c-7325-bd54-5a5c70a7f9f8",
+    "query": "Bethesda pool healing",
+    "reference": "John 5:1-5:47",
+    "book": 43,
+    "chapter_start": 5,
+    "verse_start": 1,
+    "chapter_end": 5,
+    "verse_end": 47,
+    "pericope_ids": [
+      "019f8113-f03d-7c25-a347-75bbc976fa8a",
+      "019f8113-f03d-7caa-8878-3324e1aa960e",
+      "019f8113-f03d-7d25-97ed-0ebf20b06108"
+    ],
+    "pericope_titles": [
+      "The Healing at the Pool",
+      "The Authority of the Son",
+      "Testimonies About Jesus"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf31-7762-90c6-9edb9c22d909",
+    "query": "Tax Coin in a Fish's Mouth",
+    "reference": "Matthew 17:24-17:27",
+    "book": 40,
+    "chapter_start": 17,
+    "verse_start": 24,
+    "chapter_end": 17,
+    "verse_end": 27,
+    "pericope_ids": [
+      "019f8113-f036-7050-9c83-bd1a7d58dd43"
+    ],
+    "pericope_titles": [
+      "The Temple Tax"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf31-735c-b335-b39a8ee307d0",
+    "query": "Healing a Blind Man at Bethsaida",
+    "reference": "Mark 8:22-8:26",
+    "book": 41,
+    "chapter_start": 8,
+    "verse_start": 22,
+    "chapter_end": 8,
+    "verse_end": 26,
+    "pericope_ids": [
+      "019f8113-f038-7c2b-804e-112183d5b897"
+    ],
+    "pericope_titles": [
+      "Jesus Heals a Blind Man at Bethsaida"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf31-7cfd-b522-e971c1e99d1b",
+    "query": "Samaritans Reject Jesus",
+    "reference": "Luke 9:51-9:56",
+    "book": 42,
+    "chapter_start": 9,
+    "verse_start": 51,
+    "chapter_end": 9,
+    "verse_end": 56,
+    "pericope_ids": [
+      "019f8113-f03b-7556-9bbf-545a463ed277"
+    ],
+    "pericope_titles": [
+      "Samaritan Opposition"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf31-7dbf-936e-3af31d06f1a4",
+    "query": "70 Sent Out",
+    "reference": "Luke 10:1-10:24",
+    "book": 42,
+    "chapter_start": 10,
+    "verse_start": 1,
+    "chapter_end": 10,
+    "verse_end": 24,
+    "pericope_ids": [
+      "019f8113-f03b-764a-9baf-78ddb4633110"
+    ],
+    "pericope_titles": [
+      "Jesus Sends Out the Seventy-Two"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf31-7e68-a1d8-38a6d46f0ecc",
+    "query": "Good Samaritan Parable Taught",
+    "reference": "Luke 10:25-10:37",
+    "book": 42,
+    "chapter_start": 10,
+    "verse_start": 25,
+    "chapter_end": 10,
+    "verse_end": 37,
+    "pericope_ids": [
+      "019f8113-f03b-76b4-b982-b36452af3f5b"
+    ],
+    "pericope_titles": [
+      "The Parable of the Good Samaritan"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf31-7f1e-a881-5d517608b2f7",
+    "query": "Jesus meets Martha and Mary",
+    "reference": "Luke 10:38-10:42",
+    "book": 42,
+    "chapter_start": 10,
+    "verse_start": 38,
+    "chapter_end": 10,
+    "verse_end": 42,
+    "pericope_ids": [
+      "019f8113-f03b-7732-82cc-99df8c51afcb"
+    ],
+    "pericope_titles": [
+      "At the Home of Martha and Mary"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf31-7fce-b35c-76bddb518d41",
+    "query": "Lord's Prayer Taught",
+    "reference": "Luke 11:1-11:13",
+    "book": 42,
+    "chapter_start": 11,
+    "verse_start": 1,
+    "chapter_end": 11,
+    "verse_end": 13,
+    "pericope_ids": [
+      "019f8113-f03b-77b7-a331-14056f00243b"
+    ],
+    "pericope_titles": [
+      "Jesus’ Teaching on Prayer"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf32-7271-85ce-4c30196826a1",
+    "query": "Healing Woman With 18-year Infirmity",
+    "reference": "Luke 13:10-13:17",
+    "book": 42,
+    "chapter_start": 13,
+    "verse_start": 10,
+    "chapter_end": 13,
+    "verse_end": 17,
+    "pericope_ids": [
+      "019f8113-f03b-7d97-80ec-3adf2f89e37e"
+    ],
+    "pericope_titles": [
+      "Jesus Heals a Crippled Woman on the Sabbath"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf32-7319-a75d-ba489a49c517",
+    "query": "Mustard Seed and Leaven Teaching",
+    "reference": "Luke 13:18-13:21",
+    "book": 42,
+    "chapter_start": 13,
+    "verse_start": 18,
+    "chapter_end": 13,
+    "verse_end": 21,
+    "pericope_ids": [
+      "019f8113-f03b-7e01-8b2d-0dc40fad5f9e"
+    ],
+    "pericope_titles": [
+      "The Parables of the Mustard Seed and the Yeast"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2c-77d0-a05e-e777fbed17cf",
+    "query": "Bread of Life Sermon",
+    "reference": "John 6:22-6:71",
+    "book": 43,
+    "chapter_start": 6,
+    "verse_start": 22,
+    "chapter_end": 6,
+    "verse_end": 71,
+    "pericope_ids": [
+      "019f8113-f03d-7e6f-a47d-04746daa51cd",
+      "019f8113-f03d-7eda-a0cc-e304bbc2883d",
+      "019f8113-f03d-7f47-a3a6-12fd83b49738"
+    ],
+    "pericope_titles": [
+      "Jesus Walks on the Water",
+      "Jesus the Bread of Life",
+      "Many Disciples Desert Jesus"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf31-7b64-bbee-0def8e455844",
+    "query": "Woman Caught in Adultery",
+    "reference": "John 7:53-8:11",
+    "book": 43,
+    "chapter_start": 7,
+    "verse_start": 53,
+    "chapter_end": 8,
+    "verse_end": 11,
+    "pericope_ids": [
+      "019f8113-f03e-7130-bbbb-1e7d1d1b65c8",
+      "019f8113-f03e-7190-93ba-bd448f69055a"
+    ],
+    "pericope_titles": [
+      "Unbelief of the Jewish Leaders",
+      "John 8"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf32-7074-959e-ac9e8532a880",
+    "query": "Blind Man Healed",
+    "reference": "John 9:1-9:41",
+    "book": 43,
+    "chapter_start": 9,
+    "verse_start": 1,
+    "chapter_end": 9,
+    "verse_end": 41,
+    "pericope_ids": [
+      "019f8113-f03e-73f5-ab33-900f314a15d4",
+      "019f8113-f03e-7498-be78-0f5fd14c79c7",
+      "019f8113-f03e-7526-a21b-b9684b927b84"
+    ],
+    "pericope_titles": [
+      "Jesus Heals a Man Born Blind",
+      "The Pharisees Investigate the Healing",
+      "Spiritual Blindness"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf32-711d-b142-a7ad3c5af94a",
+    "query": "The Good Shepherd Teaching",
+    "reference": "John 10:1-10:21",
+    "book": 43,
+    "chapter_start": 10,
+    "verse_start": 1,
+    "chapter_end": 10,
+    "verse_end": 21,
+    "pericope_ids": [
+      "019f8113-f03e-758c-8259-611e17f07a36"
+    ],
+    "pericope_titles": [
+      "The Good Shepherd and His Sheep"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf32-73c9-8afa-62b4bed63fdc",
+    "query": "Feast of Dedication",
+    "reference": "John 10:22-10:39",
+    "book": 43,
+    "chapter_start": 10,
+    "verse_start": 22,
+    "chapter_end": 10,
+    "verse_end": 39,
+    "pericope_ids": [
+      "019f8113-f03e-760c-9918-47eae5d3f7ce"
+    ],
+    "pericope_titles": [
+      "Further Conflict Over Jesus’ Claims"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf33-793f-a7fb-f51ed16f25eb",
+    "query": "Judas' Suicide",
+    "reference": "Matthew 27:3-27:10",
+    "book": 40,
+    "chapter_start": 27,
+    "verse_start": 3,
+    "chapter_end": 27,
+    "verse_end": 10,
+    "pericope_ids": [
+      "019f8113-f037-73d1-8527-b8f61f3d83f6"
+    ],
+    "pericope_titles": [
+      "Judas Hangs Himself"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf32-770e-af96-93691d7fca76",
+    "query": "Lepers Healed",
+    "reference": "Luke 17:11-17:19",
+    "book": 42,
+    "chapter_start": 17,
+    "verse_start": 11,
+    "chapter_end": 17,
+    "verse_end": 19,
+    "pericope_ids": [
+      "019f8113-f03c-7450-bac6-bf2df3a8b050"
+    ],
+    "pericope_titles": [
+      "Jesus Heals Ten Men With Leprosy"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf32-77b4-b4a2-0717b968b48b",
+    "query": "Discourse on the Kingdom and Other Parables",
+    "reference": "Luke 17:20-18:14",
+    "book": 42,
+    "chapter_start": 17,
+    "verse_start": 20,
+    "chapter_end": 18,
+    "verse_end": 14,
+    "pericope_ids": [
+      "019f8113-f03c-74bc-935a-fd381fd629eb",
+      "019f8113-f03c-7549-9538-ba47178fd83c",
+      "019f8113-f03c-75cd-af28-acc3979b0717"
+    ],
+    "pericope_titles": [
+      "The Coming of the Kingdom of God",
+      "The Parable of the Persistent Widow",
+      "The Parable of the Pharisee and the Tax Collector"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf32-79ac-8b14-481b421733da",
+    "query": "Zaccheus Converted and Parable of the Pounds",
+    "reference": "Luke 19:1-19:28",
+    "book": 42,
+    "chapter_start": 19,
+    "verse_start": 1,
+    "chapter_end": 19,
+    "verse_end": 28,
+    "pericope_ids": [
+      "019f8113-f03c-78c7-8b5e-fb09ca40069e",
+      "019f8113-f03c-7947-baae-5dfa76da815b",
+      "019f8113-f03c-79be-807a-30d8f96a8127"
+    ],
+    "pericope_titles": [
+      "Zacchaeus the Tax Collector",
+      "The Parable of the Ten Minas",
+      "Jesus Comes to Jerusalem as King"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf32-75c0-802d-6d7957bf3673",
+    "query": "Chief Priests Conspire Against Jesus",
+    "reference": "John 11:47-11:53",
+    "book": 43,
+    "chapter_start": 11,
+    "verse_start": 47,
+    "chapter_end": 11,
+    "verse_end": 53,
+    "pericope_ids": [
+      "019f8113-f03e-77cc-8422-ac9b0e9dd562"
+    ],
+    "pericope_titles": [
+      "The Plot to Kill Jesus"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf32-7669-9e33-c27bd1648c33",
+    "query": "Jesus Withdraws to Ephraim",
+    "reference": "John 11:54-11:57",
+    "book": 43,
+    "chapter_start": 11,
+    "verse_start": 54,
+    "chapter_end": 11,
+    "verse_end": 57,
+    "pericope_ids": [
+      "019f8113-f03e-77cc-8422-ac9b0e9dd562"
+    ],
+    "pericope_titles": [
+      "The Plot to Kill Jesus"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf32-7a55-8f2e-f8d07c6566b5",
+    "query": "Mary Anoints Jesus",
+    "reference": "John 12:1-12:11",
+    "book": 43,
+    "chapter_start": 12,
+    "verse_start": 1,
+    "chapter_end": 12,
+    "verse_end": 11,
+    "pericope_ids": [
+      "019f8113-f03e-7841-b450-5125fbbf01b1"
+    ],
+    "pericope_titles": [
+      "Jesus Anointed at Bethany"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2c-787c-9bca-3d25b5913875",
+    "query": "The Holy Spirit is promised",
+    "reference": "Acts 1:4-1:5",
+    "book": 44,
+    "chapter_start": 1,
+    "verse_start": 4,
+    "chapter_end": 1,
+    "verse_end": 5,
+    "pericope_ids": [
+      "019f8113-f040-742e-ba0f-951dbdcfb8f5"
+    ],
+    "pericope_titles": [
+      "Jesus Taken Up Into Heaven"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2c-7924-af1d-f1a1d070877c",
+    "query": "Jesus ascends to Heaven",
+    "reference": "Acts 1:6-1:11",
+    "book": 44,
+    "chapter_start": 1,
+    "verse_start": 6,
+    "chapter_end": 1,
+    "verse_end": 11,
+    "pericope_ids": [
+      "019f8113-f040-742e-ba0f-951dbdcfb8f5"
+    ],
+    "pericope_titles": [
+      "Jesus Taken Up Into Heaven"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2c-7a9e-911c-ac75f6585536",
+    "query": "Matthias replaces Judas",
+    "reference": "Acts 1:12-1:26",
+    "book": 44,
+    "chapter_start": 1,
+    "verse_start": 12,
+    "chapter_end": 1,
+    "verse_end": 26,
+    "pericope_ids": [
+      "019f8113-f040-74a5-8fb9-2f8a091a5121"
+    ],
+    "pericope_titles": [
+      "Matthias Chosen to Replace Judas"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2c-7b95-ba7c-863cdba82352",
+    "query": "The Holy Spirit comes",
+    "reference": "Acts 2:1-2:13",
+    "book": 44,
+    "chapter_start": 2,
+    "verse_start": 1,
+    "chapter_end": 2,
+    "verse_end": 13,
+    "pericope_ids": [
+      "019f8113-f040-7517-a114-195032b78ae5"
+    ],
+    "pericope_titles": [
+      "The Holy Spirit Comes at Pentecost"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2c-7c5b-bb64-8ade228df8c5",
+    "query": "Peter preaches at Pentecost",
+    "reference": "Acts 2:14-2:41",
+    "book": 44,
+    "chapter_start": 2,
+    "verse_start": 14,
+    "chapter_end": 2,
+    "verse_end": 41,
+    "pericope_ids": [
+      "019f8113-f040-7595-aca1-4c4f918713c0"
+    ],
+    "pericope_titles": [
+      "Peter Addresses the Crowd"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2c-7d3c-9f4d-387672fa1e9e",
+    "query": "The church grows",
+    "reference": "Acts 2:42-2:47",
+    "book": 44,
+    "chapter_start": 2,
+    "verse_start": 42,
+    "chapter_end": 2,
+    "verse_end": 47,
+    "pericope_ids": [
+      "019f8113-f040-75fc-addf-87570313a787"
+    ],
+    "pericope_titles": [
+      "The Fellowship of the Believers"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2c-7df7-b9a7-b4c1baf7fad1",
+    "query": "Lame man healed",
+    "reference": "Acts 3:1-3:10",
+    "book": 44,
+    "chapter_start": 3,
+    "verse_start": 1,
+    "chapter_end": 3,
+    "verse_end": 10,
+    "pericope_ids": [
+      "019f8113-f040-7682-b28f-061b534f726b"
+    ],
+    "pericope_titles": [
+      "Peter Heals a Lame Beggar"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2c-7ea7-89b8-6b7c7aaadcd6",
+    "query": "Peter preaches in Solomon's Portico",
+    "reference": "Acts 3:11-3:26",
+    "book": 44,
+    "chapter_start": 3,
+    "verse_start": 11,
+    "chapter_end": 3,
+    "verse_end": 26,
+    "pericope_ids": [
+      "019f8113-f040-7705-8d5b-943d01bbdbe9"
+    ],
+    "pericope_titles": [
+      "Peter Speaks to the Onlookers"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2c-7f56-8dab-98b145089240",
+    "query": "Peter and John's Trial",
+    "reference": "Acts 4:1-4:22",
+    "book": 44,
+    "chapter_start": 4,
+    "verse_start": 1,
+    "chapter_end": 4,
+    "verse_end": 22,
+    "pericope_ids": [
+      "019f8113-f040-7767-b138-04a7e8cb7e29"
+    ],
+    "pericope_titles": [
+      "Peter and John Before the Sanhedrin"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2d-700c-b754-06c43b735968",
+    "query": "Believers pray for boldness",
+    "reference": "Acts 4:23-4:31",
+    "book": 44,
+    "chapter_start": 4,
+    "verse_start": 23,
+    "chapter_end": 4,
+    "verse_end": 31,
+    "pericope_ids": [
+      "019f8113-f040-77e0-ae81-52601e07fdc9"
+    ],
+    "pericope_titles": [
+      "The Believers Pray"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2d-70b7-9839-975f9b66974b",
+    "query": "Believers share all things",
+    "reference": "Acts 4:32-4:37",
+    "book": 44,
+    "chapter_start": 4,
+    "verse_start": 32,
+    "chapter_end": 4,
+    "verse_end": 37,
+    "pericope_ids": [
+      "019f8113-f040-7855-b3bc-fc33008ff61d"
+    ],
+    "pericope_titles": [
+      "The Believers Share Their Possessions"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2d-7190-afbf-c5bb9edf9cd3",
+    "query": "Ananias and Sapphira lie to God",
+    "reference": "Acts 5:1-5:11",
+    "book": 44,
+    "chapter_start": 5,
+    "verse_start": 1,
+    "chapter_end": 5,
+    "verse_end": 11,
+    "pericope_ids": [
+      "019f8113-f040-78ce-a60e-0c8a7ebe370c"
+    ],
+    "pericope_titles": [
+      "Ananias and Sapphira"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2d-7240-8130-a2dc09521337",
+    "query": "Apostles work signs and wonders in Solomon's Portico",
+    "reference": "Acts 5:12-5:17",
+    "book": 44,
+    "chapter_start": 5,
+    "verse_start": 12,
+    "chapter_end": 5,
+    "verse_end": 17,
+    "pericope_ids": [
+      "019f8113-f040-792b-9c3f-9a5c6028c887",
+      "019f8113-f040-79a9-a0ec-04f29fc19840"
+    ],
+    "pericope_titles": [
+      "The Apostles Heal Many",
+      "The Apostles Persecuted"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2d-72eb-811a-bd6961b3ee5f",
+    "query": "Apostles arrested, put on trial",
+    "reference": "Acts 5:18-5:33",
+    "book": 44,
+    "chapter_start": 5,
+    "verse_start": 18,
+    "chapter_end": 5,
+    "verse_end": 33,
+    "pericope_ids": [
+      "019f8113-f040-79a9-a0ec-04f29fc19840"
+    ],
+    "pericope_titles": [
+      "The Apostles Persecuted"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2d-7398-902a-f071fff9abec",
+    "query": "Gamaliel advises the counsel and Apostles freed",
+    "reference": "Acts 5:34-5:42",
+    "book": 44,
+    "chapter_start": 5,
+    "verse_start": 34,
+    "chapter_end": 5,
+    "verse_end": 42,
+    "pericope_ids": [
+      "019f8113-f040-79a9-a0ec-04f29fc19840"
+    ],
+    "pericope_titles": [
+      "The Apostles Persecuted"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2d-7444-ba6a-1a91a4a696ba",
+    "query": "Seven chosen to serve",
+    "reference": "Acts 6:1-6:7",
+    "book": 44,
+    "chapter_start": 6,
+    "verse_start": 1,
+    "chapter_end": 6,
+    "verse_end": 7,
+    "pericope_ids": [
+      "019f8113-f040-7a37-bffa-8deb3e2dd2f4"
+    ],
+    "pericope_titles": [
+      "The Choosing of the Seven"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2d-74f2-8ec6-f1e121d7c805",
+    "query": "Stephen is seized",
+    "reference": "Acts 6:8-6:15",
+    "book": 44,
+    "chapter_start": 6,
+    "verse_start": 8,
+    "chapter_end": 6,
+    "verse_end": 15,
+    "pericope_ids": [
+      "019f8113-f040-7a9f-a231-24cdca8ed506"
+    ],
+    "pericope_titles": [
+      "Stephen Seized"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2d-759d-a1b4-cec4fca1b9ed",
+    "query": "Stephen addresses the council",
+    "reference": "Acts 7:1-7:53",
+    "book": 44,
+    "chapter_start": 7,
+    "verse_start": 1,
+    "chapter_end": 7,
+    "verse_end": 53,
+    "pericope_ids": [
+      "019f8113-f040-7b15-b392-ed1263bb1e4e"
+    ],
+    "pericope_titles": [
+      "Stephen’s Speech to the Sanhedrin"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2d-764c-b7da-ecae8dc63334",
+    "query": "Stephen is stoned",
+    "reference": "Acts 7:54-7:60",
+    "book": 44,
+    "chapter_start": 7,
+    "verse_start": 54,
+    "chapter_end": 7,
+    "verse_end": 60,
+    "pericope_ids": [
+      "019f8113-f040-7b82-9be2-36300cc3a987"
+    ],
+    "pericope_titles": [
+      "The Stoning of Stephen"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2d-7786-ba11-6ca92a22f1d5",
+    "query": "Saul persecutes the church",
+    "reference": "Acts 8:1-8:3",
+    "book": 44,
+    "chapter_start": 8,
+    "verse_start": 1,
+    "chapter_end": 8,
+    "verse_end": 3,
+    "pericope_ids": [
+      "019f8113-f040-7c02-ad21-357201687237",
+      "019f8113-f040-7c64-bdb3-21576e47bdc2"
+    ],
+    "pericope_titles": [
+      "Acts 8",
+      "The Church Persecuted and Scattered"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2d-78b7-a6b0-35342cbdf15e",
+    "query": "Philip preaches in Samaria",
+    "reference": "Acts 8:4-8:25",
+    "book": 44,
+    "chapter_start": 8,
+    "verse_start": 4,
+    "chapter_end": 8,
+    "verse_end": 25,
+    "pericope_ids": [
+      "019f8113-f040-7cfe-945e-3e9c6e91a421",
+      "019f8113-f040-7d8f-9391-1a1b0c734150"
+    ],
+    "pericope_titles": [
+      "Philip in Samaria",
+      "Simon the Sorcerer"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2d-79c8-b691-84f1917d876e",
+    "query": "Conversion of Ethiopian Eunuch",
+    "reference": "Acts 8:26-8:40",
+    "book": 44,
+    "chapter_start": 8,
+    "verse_start": 26,
+    "chapter_end": 8,
+    "verse_end": 40,
+    "pericope_ids": [
+      "019f8113-f040-7e11-8925-43237c5d3e20"
+    ],
+    "pericope_titles": [
+      "Philip and the Ethiopian"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2d-7ac7-8d90-571f8a21329e",
+    "query": "Saul is converted",
+    "reference": "Acts 9:1-9:19",
+    "book": 44,
+    "chapter_start": 9,
+    "verse_start": 1,
+    "chapter_end": 9,
+    "verse_end": 19,
+    "pericope_ids": [
+      "019f8113-f040-7e78-973a-ae2091861c0f"
+    ],
+    "pericope_titles": [
+      "Saul’s Conversion"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2d-7c00-9249-6295c62f3d3f",
+    "query": "Saul proclaims Jesus",
+    "reference": "Acts 9:20-9:31",
+    "book": 44,
+    "chapter_start": 9,
+    "verse_start": 20,
+    "chapter_end": 9,
+    "verse_end": 31,
+    "pericope_ids": [
+      "019f8113-f040-7ef1-9f59-fd7548c1a5f8"
+    ],
+    "pericope_titles": [
+      "Saul in Damascus and Jerusalem"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2d-7cde-bfeb-3d8d0e4f9b71",
+    "query": "Peter heals Aeneas and Dorcas",
+    "reference": "Acts 9:32-9:43",
+    "book": 44,
+    "chapter_start": 9,
+    "verse_start": 32,
+    "chapter_end": 9,
+    "verse_end": 43,
+    "pericope_ids": [
+      "019f8113-f040-7f6e-9e91-dc80f3bc6cf8"
+    ],
+    "pericope_titles": [
+      "Aeneas and Dorcas"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2d-7dd6-92b4-111b69a5b586",
+    "query": "Peter meets Cornelius",
+    "reference": "Acts 10:1-10:33",
+    "book": 44,
+    "chapter_start": 10,
+    "verse_start": 1,
+    "chapter_end": 10,
+    "verse_end": 33,
+    "pericope_ids": [
+      "019f8113-f040-7fd4-b9b6-6fe607556fb6",
+      "019f8113-f041-7045-a60f-14ac43399823",
+      "019f8113-f041-70b2-8e21-eefd7aa37eed"
+    ],
+    "pericope_titles": [
+      "Cornelius Calls for Peter",
+      "Peter’s Vision",
+      "Peter at Cornelius’s House"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2d-7ebb-be6e-d4cfa7f43f2e",
+    "query": "Peter preaches to gentiles in Caesarea",
+    "reference": "Acts 10:34-10:48",
+    "book": 44,
+    "chapter_start": 10,
+    "verse_start": 34,
+    "chapter_end": 10,
+    "verse_end": 48,
+    "pericope_ids": [
+      "019f8113-f041-70b2-8e21-eefd7aa37eed"
+    ],
+    "pericope_titles": [
+      "Peter at Cornelius’s House"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2d-7f8d-bb18-24d28a10937d",
+    "query": "Peter defends Gentile salvation",
+    "reference": "Acts 11:1-11:18",
+    "book": 44,
+    "chapter_start": 11,
+    "verse_start": 1,
+    "chapter_end": 11,
+    "verse_end": 18,
+    "pericope_ids": [
+      "019f8113-f041-713f-bcd2-dd86fd0c0650"
+    ],
+    "pericope_titles": [
+      "Peter Explains His Actions"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2e-7061-9a95-e3ae09786eb2",
+    "query": "Disciples first called Christians",
+    "reference": "Acts 11:19-11:30",
+    "book": 44,
+    "chapter_start": 11,
+    "verse_start": 19,
+    "chapter_end": 11,
+    "verse_end": 30,
+    "pericope_ids": [
+      "019f8113-f041-71a3-9147-be491124e837"
+    ],
+    "pericope_titles": [
+      "The Church in Antioch"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2e-7168-a198-d1622327a0cd",
+    "query": "Herod kills James",
+    "reference": "Acts 12:1-12:2",
+    "book": 44,
+    "chapter_start": 12,
+    "verse_start": 1,
+    "chapter_end": 12,
+    "verse_end": 2,
+    "pericope_ids": [
+      "019f8113-f041-72e9-93c5-818fee4a3a9b"
+    ],
+    "pericope_titles": [
+      "Peter’s Miraculous Escape From Prison"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2e-7248-91f5-e0dda6ca00c5",
+    "query": "Herod imprisons Peter",
+    "reference": "Acts 12:3-12:5",
+    "book": 44,
+    "chapter_start": 12,
+    "verse_start": 3,
+    "chapter_end": 12,
+    "verse_end": 5,
+    "pericope_ids": [
+      "019f8113-f041-72e9-93c5-818fee4a3a9b"
+    ],
+    "pericope_titles": [
+      "Peter’s Miraculous Escape From Prison"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2e-7320-9bd4-5525ef5ec412",
+    "query": "An angel rescues Peter from prison",
+    "reference": "Acts 12:6-12:19",
+    "book": 44,
+    "chapter_start": 12,
+    "verse_start": 6,
+    "chapter_end": 12,
+    "verse_end": 19,
+    "pericope_ids": [
+      "019f8113-f041-72e9-93c5-818fee4a3a9b"
+    ],
+    "pericope_titles": [
+      "Peter’s Miraculous Escape From Prison"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2e-73e1-ae40-9aa54e6af1c6",
+    "query": "Herod dies",
+    "reference": "Acts 12:20-12:23",
+    "book": 44,
+    "chapter_start": 12,
+    "verse_start": 20,
+    "chapter_end": 12,
+    "verse_end": 23,
+    "pericope_ids": [
+      "019f8113-f041-736a-a14f-1d161605140a"
+    ],
+    "pericope_titles": [
+      "Herod’s Death"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2e-74a9-bc8f-3e9da3e8c698",
+    "query": "First missionary journey begins",
+    "reference": "Acts 12:24-13:3",
+    "book": 44,
+    "chapter_start": 12,
+    "verse_start": 24,
+    "chapter_end": 13,
+    "verse_end": 3,
+    "pericope_ids": [
+      "019f8113-f041-736a-a14f-1d161605140a",
+      "019f8113-f041-73f2-8392-a5b4a0a8baab",
+      "019f8113-f041-7474-9cf5-af8858e292c5"
+    ],
+    "pericope_titles": [
+      "Herod’s Death",
+      "Barnabas and Saul Sent Off",
+      "Acts 13"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2e-7669-a631-fb8f84e08bdf",
+    "query": "Barnabas and Saul go to Cyprus",
+    "reference": "Acts 13:4-13:12",
+    "book": 44,
+    "chapter_start": 13,
+    "verse_start": 4,
+    "chapter_end": 13,
+    "verse_end": 12,
+    "pericope_ids": [
+      "019f8113-f041-74f0-9b0d-d0a595a6dd4d"
+    ],
+    "pericope_titles": [
+      "On Cyprus"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2e-774e-9b96-df53e7855418",
+    "query": "Mission to Antioch in Pisidia",
+    "reference": "Acts 13:13-13:52",
+    "book": 44,
+    "chapter_start": 13,
+    "verse_start": 13,
+    "chapter_end": 13,
+    "verse_end": 52,
+    "pericope_ids": [
+      "019f8113-f041-76e0-8a15-ff3598d5e620"
+    ],
+    "pericope_titles": [
+      "In Pisidian Antioch"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2e-7820-a806-aa97f8fdfd63",
+    "query": "Mission to Iconium",
+    "reference": "Acts 14:1-14:5",
+    "book": 44,
+    "chapter_start": 14,
+    "verse_start": 1,
+    "chapter_end": 14,
+    "verse_end": 5,
+    "pericope_ids": [
+      "019f8113-f041-7790-bf6f-87067ffbdf76"
+    ],
+    "pericope_titles": [
+      "In Iconium"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2e-7939-846b-edd8ed11d1b7",
+    "query": "Mission to Lystra and Derbe",
+    "reference": "Acts 14:6-14:20",
+    "book": 44,
+    "chapter_start": 14,
+    "verse_start": 6,
+    "chapter_end": 14,
+    "verse_end": 20,
+    "pericope_ids": [
+      "019f8113-f041-7790-bf6f-87067ffbdf76",
+      "019f8113-f041-7808-824a-9ad314240a40"
+    ],
+    "pericope_titles": [
+      "In Iconium",
+      "In Lystra and Derbe"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2e-7a89-ae4d-9b9763f550e7",
+    "query": "Return to Antioch in Syria",
+    "reference": "Acts 14:21-14:28",
+    "book": 44,
+    "chapter_start": 14,
+    "verse_start": 21,
+    "chapter_end": 14,
+    "verse_end": 28,
+    "pericope_ids": [
+      "019f8113-f041-788a-b948-46c5e4be161d"
+    ],
+    "pericope_titles": [
+      "The Return to Antioch in Syria"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2e-7b7b-9286-048f86fcd120",
+    "query": "Jerusalem Council",
+    "reference": "Acts 15:1-15:34",
+    "book": 44,
+    "chapter_start": 15,
+    "verse_start": 1,
+    "chapter_end": 15,
+    "verse_end": 34,
+    "pericope_ids": [
+      "019f8113-f041-78f2-8e9d-954d119a8016",
+      "019f8113-f041-7978-8e32-bb22103e6b1b"
+    ],
+    "pericope_titles": [
+      "The Council at Jerusalem",
+      "The Council’s Letter to Gentile Believers"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2e-7d56-9e1d-2f76f186bfbd",
+    "query": "Paul and Barnabas part ways",
+    "reference": "Acts 15:35-15:39",
+    "book": 44,
+    "chapter_start": 15,
+    "verse_start": 35,
+    "chapter_end": 15,
+    "verse_end": 39,
+    "pericope_ids": [
+      "019f8113-f041-7978-8e32-bb22103e6b1b",
+      "019f8113-f041-79fd-a2c4-a79034141f21"
+    ],
+    "pericope_titles": [
+      "The Council’s Letter to Gentile Believers",
+      "Disagreement Between Paul and Barnabas"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2e-7ed0-a8c7-965298eaf28f",
+    "query": "Second Missionary Journey begins",
+    "reference": "Acts 15:40-15:41",
+    "book": 44,
+    "chapter_start": 15,
+    "verse_start": 40,
+    "chapter_end": 15,
+    "verse_end": 41,
+    "pericope_ids": [
+      "019f8113-f041-79fd-a2c4-a79034141f21"
+    ],
+    "pericope_titles": [
+      "Disagreement Between Paul and Barnabas"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2e-7f88-afe9-9e0bd5bcfb0a",
+    "query": "Timothy Joins Paul and Silas",
+    "reference": "Acts 16:1-16:5",
+    "book": 44,
+    "chapter_start": 16,
+    "verse_start": 1,
+    "chapter_end": 16,
+    "verse_end": 5,
+    "pericope_ids": [
+      "019f8113-f041-7a60-92ed-510d2381f9a1"
+    ],
+    "pericope_titles": [
+      "Timothy Joins Paul and Silas"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2f-703b-a476-ccff8b0565c7",
+    "query": "Mission to Phrygia, Galatia and Asia",
+    "reference": "Acts 16:6-16:8",
+    "book": 44,
+    "chapter_start": 16,
+    "verse_start": 6,
+    "chapter_end": 16,
+    "verse_end": 8,
+    "pericope_ids": [
+      "019f8113-f041-7b3a-8950-1113295dec4d"
+    ],
+    "pericope_titles": [
+      "Paul’s Vision of the Man of Macedonia"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2f-70f0-af0b-0870e0bdc35f",
+    "query": "Call to Macedonia",
+    "reference": "Acts 16:9-16:12",
+    "book": 44,
+    "chapter_start": 16,
+    "verse_start": 9,
+    "chapter_end": 16,
+    "verse_end": 12,
+    "pericope_ids": [
+      "019f8113-f041-7b3a-8950-1113295dec4d",
+      "019f8113-f041-7c76-8b23-2cb5e55e55f4"
+    ],
+    "pericope_titles": [
+      "Paul’s Vision of the Man of Macedonia",
+      "Lydia’s Conversion in Philippi"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2f-71ab-8d34-3562260d8f40",
+    "query": "Lydia's Conversion",
+    "reference": "Acts 16:13-16:15",
+    "book": 44,
+    "chapter_start": 16,
+    "verse_start": 13,
+    "chapter_end": 16,
+    "verse_end": 15,
+    "pericope_ids": [
+      "019f8113-f041-7c76-8b23-2cb5e55e55f4"
+    ],
+    "pericope_titles": [
+      "Lydia’s Conversion in Philippi"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2f-72be-a6a3-4380b7b8172d",
+    "query": "Paul casts demon out of soothsayer",
+    "reference": "Acts 16:16-16:18",
+    "book": 44,
+    "chapter_start": 16,
+    "verse_start": 16,
+    "chapter_end": 16,
+    "verse_end": 18,
+    "pericope_ids": [
+      "019f8113-f041-7d38-8459-1ab1ac8900c5"
+    ],
+    "pericope_titles": [
+      "Paul and Silas in Prison"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2f-739e-82e1-0d4e4cc6a23f",
+    "query": "Paul and Silas imprisoned",
+    "reference": "Acts 16:19-16:34",
+    "book": 44,
+    "chapter_start": 16,
+    "verse_start": 19,
+    "chapter_end": 16,
+    "verse_end": 34,
+    "pericope_ids": [
+      "019f8113-f041-7d38-8459-1ab1ac8900c5"
+    ],
+    "pericope_titles": [
+      "Paul and Silas in Prison"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2f-7457-aee8-058c7f333b14",
+    "query": "Philippian jailer converted",
+    "reference": "Acts 16:25-16:34",
+    "book": 44,
+    "chapter_start": 16,
+    "verse_start": 25,
+    "chapter_end": 16,
+    "verse_end": 34,
+    "pericope_ids": [
+      "019f8113-f041-7d38-8459-1ab1ac8900c5"
+    ],
+    "pericope_titles": [
+      "Paul and Silas in Prison"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2f-7527-8e92-1f6ed3ca2fc9",
+    "query": "Paul and Silas released",
+    "reference": "Acts 16:35-16:40",
+    "book": 44,
+    "chapter_start": 16,
+    "verse_start": 35,
+    "chapter_end": 16,
+    "verse_end": 40,
+    "pericope_ids": [
+      "019f8113-f041-7d38-8459-1ab1ac8900c5"
+    ],
+    "pericope_titles": [
+      "Paul and Silas in Prison"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2f-7603-9171-92b8b81e6904",
+    "query": "Uproar in Thessalonica",
+    "reference": "Acts 17:1-17:9",
+    "book": 44,
+    "chapter_start": 17,
+    "verse_start": 1,
+    "chapter_end": 17,
+    "verse_end": 9,
+    "pericope_ids": [
+      "019f8113-f041-7dc6-bf06-944de5cde9f4"
+    ],
+    "pericope_titles": [
+      "In Thessalonica"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2f-76e7-804b-a4a7d033a545",
+    "query": "Mission to Berea",
+    "reference": "Acts 17:10-17:15",
+    "book": 44,
+    "chapter_start": 17,
+    "verse_start": 10,
+    "chapter_end": 17,
+    "verse_end": 15,
+    "pericope_ids": [
+      "019f8113-f041-7e4d-9e41-83099ec9afaf"
+    ],
+    "pericope_titles": [
+      "In Berea"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2f-77cb-a071-f4a6a0bdeb54",
+    "query": "Paul preaches in Athens",
+    "reference": "Acts 17:16-17:34",
+    "book": 44,
+    "chapter_start": 17,
+    "verse_start": 16,
+    "chapter_end": 17,
+    "verse_end": 34,
+    "pericope_ids": [
+      "019f8113-f041-7ec9-8397-0d6f160d667d"
+    ],
+    "pericope_titles": [
+      "In Athens"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2f-78af-a95c-2ae3ea854744",
+    "query": "Mission to Corinth, 1&2 Thess Written",
+    "reference": "Acts 18:1-18:17",
+    "book": 44,
+    "chapter_start": 18,
+    "verse_start": 1,
+    "chapter_end": 18,
+    "verse_end": 17,
+    "pericope_ids": [
+      "019f8113-f041-7f38-a1a7-5b8c30fc2067"
+    ],
+    "pericope_titles": [
+      "In Corinth"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2e-7e1d-8f0f-93d4fff5201a",
+    "query": "Paul Writes Galatians",
+    "reference": "Galatians 1:1-1:1",
+    "book": 48,
+    "chapter_start": 1,
+    "verse_start": 1,
+    "chapter_end": 1,
+    "verse_end": 1,
+    "pericope_ids": [
+      "019f8113-f045-7f1e-99a8-3b177b6ed9ca"
+    ],
+    "pericope_titles": [
+      "Galatians 1"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2f-796f-adf4-b3d979c91925",
+    "query": "Return from Second Missionary Journey",
+    "reference": "Acts 18:18-18:23",
+    "book": 44,
+    "chapter_start": 18,
+    "verse_start": 18,
+    "chapter_end": 18,
+    "verse_end": 23,
+    "pericope_ids": [
+      "019f8113-f041-7faa-90b8-dd79c8da784f"
+    ],
+    "pericope_titles": [
+      "Priscilla, Aquila and Apollos"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2f-7a3c-8dd8-fab6d8737294",
+    "query": "Third Missionary Journey Begins",
+    "reference": "Acts 18:24-18:28",
+    "book": 44,
+    "chapter_start": 18,
+    "verse_start": 24,
+    "chapter_end": 18,
+    "verse_end": 28,
+    "pericope_ids": [
+      "019f8113-f041-7faa-90b8-dd79c8da784f"
+    ],
+    "pericope_titles": [
+      "Priscilla, Aquila and Apollos"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2f-7d65-ac22-9abc3163a085",
+    "query": "Mission to Ephesus/1 Cor Written",
+    "reference": "Acts 19:1-19:22",
+    "book": 44,
+    "chapter_start": 19,
+    "verse_start": 1,
+    "chapter_end": 19,
+    "verse_end": 22,
+    "pericope_ids": [
+      "019f8113-f042-7017-87db-013e26c406d8"
+    ],
+    "pericope_titles": [
+      "Paul in Ephesus"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2f-7e2f-af14-f027e45cc17e",
+    "query": "Riot in Ephesus",
+    "reference": "Acts 19:23-19:41",
+    "book": 44,
+    "chapter_start": 19,
+    "verse_start": 23,
+    "chapter_end": 19,
+    "verse_end": 41,
+    "pericope_ids": [
+      "019f8113-f042-709a-ac04-9cbde9fa2c0a"
+    ],
+    "pericope_titles": [
+      "The Riot in Ephesus"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2f-7ee6-ab48-5c14e20402c8",
+    "query": "Mission to Macedonia and Greece",
+    "reference": "Acts 20:1-20:6",
+    "book": 44,
+    "chapter_start": 20,
+    "verse_start": 1,
+    "chapter_end": 20,
+    "verse_end": 6,
+    "pericope_ids": [
+      "019f8113-f042-70fd-85f4-cc5bde5da171"
+    ],
+    "pericope_titles": [
+      "Through Macedonia and Greece"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf2f-7fc1-b399-7588b60e2b1e",
+    "query": "Eutychus revived",
+    "reference": "Acts 20:7-20:12",
+    "book": 44,
+    "chapter_start": 20,
+    "verse_start": 7,
+    "chapter_end": 20,
+    "verse_end": 12,
+    "pericope_ids": [
+      "019f8113-f042-7183-a154-8ec2cd735f00"
+    ],
+    "pericope_titles": [
+      "Eutychus Raised From the Dead at Troas"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf30-7095-888b-1b48284014b8",
+    "query": "Voyage to Miletus",
+    "reference": "Acts 20:13-20:16",
+    "book": 44,
+    "chapter_start": 20,
+    "verse_start": 13,
+    "chapter_end": 20,
+    "verse_end": 16,
+    "pericope_ids": [
+      "019f8113-f042-7209-82ea-0b9bd6aee10a"
+    ],
+    "pericope_titles": [
+      "Paul’s Farewell to the Ephesian Elders"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf30-715f-83cc-6aee889c4ecc",
+    "query": "Paul speaks to Ephesian Elders",
+    "reference": "Acts 20:17-20:38",
+    "book": 44,
+    "chapter_start": 20,
+    "verse_start": 17,
+    "chapter_end": 20,
+    "verse_end": 38,
+    "pericope_ids": [
+      "019f8113-f042-7209-82ea-0b9bd6aee10a"
+    ],
+    "pericope_titles": [
+      "Paul’s Farewell to the Ephesian Elders"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf30-7220-83ef-a4cdbaa40fc3",
+    "query": "Voyage from Miletus to Jerusalem",
+    "reference": "Acts 21:1-21:17",
+    "book": 44,
+    "chapter_start": 21,
+    "verse_start": 1,
+    "chapter_end": 21,
+    "verse_end": 17,
+    "pericope_ids": [
+      "019f8113-f042-7275-8d03-5877ca7bbbcc",
+      "019f8113-f042-72ee-b6fe-b91c0cf937a5"
+    ],
+    "pericope_titles": [
+      "On to Jerusalem",
+      "Paul’s Arrival at Jerusalem"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf30-72f1-b2a7-76fa5ce8c0da",
+    "query": "Paul visits elders in Jerusalem",
+    "reference": "Acts 21:18-21:26",
+    "book": 44,
+    "chapter_start": 21,
+    "verse_start": 18,
+    "chapter_end": 21,
+    "verse_end": 26,
+    "pericope_ids": [
+      "019f8113-f042-72ee-b6fe-b91c0cf937a5"
+    ],
+    "pericope_titles": [
+      "Paul’s Arrival at Jerusalem"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf30-73af-8c9f-9472fa5cc25f",
+    "query": "Paul arrested in the Temple",
+    "reference": "Acts 21:27-21:36",
+    "book": 44,
+    "chapter_start": 21,
+    "verse_start": 27,
+    "chapter_end": 21,
+    "verse_end": 36,
+    "pericope_ids": [
+      "019f8113-f042-7362-af71-da37f8990edb"
+    ],
+    "pericope_titles": [
+      "Paul Arrested"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf30-747e-b900-0be5d75b1c79",
+    "query": "Paul gives his testimony",
+    "reference": "Acts 21:37-22:29",
+    "book": 44,
+    "chapter_start": 21,
+    "verse_start": 37,
+    "chapter_end": 22,
+    "verse_end": 29,
+    "pericope_ids": [
+      "019f8113-f042-73df-be47-62f476da4c7f",
+      "019f8113-f042-7451-ab47-845be5416ad3",
+      "019f8113-f042-74c2-b588-ac076a26d6ac"
+    ],
+    "pericope_titles": [
+      "Paul Speaks to the Crowd",
+      "Acts 22",
+      "Paul the Roman Citizen"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf30-7548-b662-601b406a5f43",
+    "query": "Paul goes before the Council",
+    "reference": "Acts 22:30-23:11",
+    "book": 44,
+    "chapter_start": 22,
+    "verse_start": 30,
+    "chapter_end": 23,
+    "verse_end": 11,
+    "pericope_ids": [
+      "019f8113-f042-75b5-9b1b-3f9044f4b626",
+      "019f8113-f042-766c-9d55-5364812241c6"
+    ],
+    "pericope_titles": [
+      "Paul Before the Sanhedrin",
+      "Acts 23"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf30-7610-bbd1-cfef1be4c16f",
+    "query": "The conspiracy to kill Paul",
+    "reference": "Acts 23:12-23:22",
+    "book": 44,
+    "chapter_start": 23,
+    "verse_start": 12,
+    "chapter_end": 23,
+    "verse_end": 22,
+    "pericope_ids": [
+      "019f8113-f042-76d9-b728-02c0a0a926ca"
+    ],
+    "pericope_titles": [
+      "The Plot to Kill Paul"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf30-76d1-bab6-c46ddb73cc8f",
+    "query": "Paul sent to Felix",
+    "reference": "Acts 23:23-24:27",
+    "book": 44,
+    "chapter_start": 23,
+    "verse_start": 23,
+    "chapter_end": 24,
+    "verse_end": 27,
+    "pericope_ids": [
+      "019f8113-f042-7764-b676-c316074cdf10",
+      "019f8113-f042-77c9-8c9d-1e6cc5882df8"
+    ],
+    "pericope_titles": [
+      "Paul Transferred to Caesarea",
+      "Paul’s Trial Before Felix"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf30-779c-96c1-ed702c54826f",
+    "query": "Paul appeals to Caesar",
+    "reference": "Acts 25:1-25:12",
+    "book": 44,
+    "chapter_start": 25,
+    "verse_start": 1,
+    "chapter_end": 25,
+    "verse_end": 12,
+    "pericope_ids": [
+      "019f8113-f042-7849-9655-467ff4414842"
+    ],
+    "pericope_titles": [
+      "Paul’s Trial Before Festus"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf30-7858-abe5-c9d1f36427cb",
+    "query": "Agrippa and Bernice meet Festus",
+    "reference": "Acts 25:13-25:21",
+    "book": 44,
+    "chapter_start": 25,
+    "verse_start": 13,
+    "chapter_end": 25,
+    "verse_end": 21,
+    "pericope_ids": [
+      "019f8113-f042-78ac-b50d-1a283ba84573"
+    ],
+    "pericope_titles": [
+      "Festus Consults King Agrippa"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf30-792e-bca9-c8dcb5b1333a",
+    "query": "Paul goes before Agrippa",
+    "reference": "Acts 25:22-26:32",
+    "book": 44,
+    "chapter_start": 25,
+    "verse_start": 22,
+    "chapter_end": 26,
+    "verse_end": 32,
+    "pericope_ids": [
+      "019f8113-f042-78ac-b50d-1a283ba84573",
+      "019f8113-f042-7928-ae98-d3361e81d44b",
+      "019f8113-f042-799f-a531-3886b0ed78d6"
+    ],
+    "pericope_titles": [
+      "Festus Consults King Agrippa",
+      "Paul Before Agrippa",
+      "Acts 26"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf30-7a23-955b-b8f8495cbe87",
+    "query": "Journey to Rome begins",
+    "reference": "Acts 27:1-27:12",
+    "book": 44,
+    "chapter_start": 27,
+    "verse_start": 1,
+    "chapter_end": 27,
+    "verse_end": 12,
+    "pericope_ids": [
+      "019f8113-f042-7a19-a6e2-c02fac40c2e1"
+    ],
+    "pericope_titles": [
+      "Paul Sails for Rome"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf30-7bd0-a149-3b5bde9e76b9",
+    "query": "Paul is shipwrecked by a storm",
+    "reference": "Acts 27:13-27:44",
+    "book": 44,
+    "chapter_start": 27,
+    "verse_start": 13,
+    "chapter_end": 27,
+    "verse_end": 44,
+    "pericope_ids": [
+      "019f8113-f042-7b15-af5f-22d662991cbc",
+      "019f8113-f042-7b8a-8cd7-05e2b50b9022"
+    ],
+    "pericope_titles": [
+      "The Storm",
+      "The Shipwreck"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf30-7d16-932e-465db3947a78",
+    "query": "Paul stays at Malta",
+    "reference": "Acts 28:1-28:10",
+    "book": 44,
+    "chapter_start": 28,
+    "verse_start": 1,
+    "chapter_end": 28,
+    "verse_end": 10,
+    "pericope_ids": [
+      "019f8113-f042-7c10-b9c0-e019f80f919f"
+    ],
+    "pericope_titles": [
+      "Paul Ashore on Malta"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf30-7dfe-9df5-a6ceb2c3f053",
+    "query": "Paul arrives at Rome",
+    "reference": "Acts 28:11-28:16",
+    "book": 44,
+    "chapter_start": 28,
+    "verse_start": 11,
+    "chapter_end": 28,
+    "verse_end": 16,
+    "pericope_ids": [
+      "019f8113-f042-7c7f-8575-a0eb2eb1d0b7"
+    ],
+    "pericope_titles": [
+      "Paul’s Arrival at Rome"
+    ]
+  },
+  {
+    "event_id": "019f817d-cf30-7ec1-a2cb-28d63746de25",
+    "query": "Paul's First Roman imprisonment",
+    "reference": "Acts 28:17-28:31",
+    "book": 44,
+    "chapter_start": 28,
+    "verse_start": 17,
+    "chapter_end": 28,
+    "verse_end": 31,
+    "pericope_ids": [
+      "019f8113-f042-7d27-ad4e-88ecae137410"
+    ],
+    "pericope_titles": [
+      "Paul Preaches at Rome Under Guard"
+    ]
+  }
+]

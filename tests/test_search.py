@@ -31,3 +31,26 @@ def test_search_rejects_unknown_mode(client):
     response = client.get("/search", params={"q": "test", "mode": "bogus"})
 
     assert response.status_code == 422
+
+
+def test_search_bm25_survives_query_syntax_characters(client):
+    # Regression test: raw_text @@@ 'shepherd''s heart' is a tantivy parse
+    # error (unbalanced quote) that used to surface as a 500.
+    response = client.get("/search", params={"q": "shepherd's heart", "mode": "bm25"})
+
+    assert response.status_code == 200
+
+
+def test_search_hybrid_survives_query_syntax_characters(client):
+    response = client.get("/search", params={"q": "shepherd's heart", "mode": "hybrid"})
+
+    assert response.status_code == 200
+
+
+def test_search_bm25_query_sanitizing_to_empty_returns_empty_list(client):
+    # "()" sanitizes to the empty string; @@@ '' is itself a parse error,
+    # so this must short-circuit rather than query the database.
+    response = client.get("/search", params={"q": "()", "mode": "bm25"})
+
+    assert response.status_code == 200
+    assert response.json() == []

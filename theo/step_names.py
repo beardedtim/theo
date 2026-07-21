@@ -35,6 +35,7 @@ from pathlib import Path
 
 from psycopg.rows import dict_row
 
+from theo.bm25 import sanitize_query
 from theo.db import get_connection
 
 TIPNR_PATH = Path(
@@ -512,6 +513,10 @@ def get_names_in_range(
 def search_names(query: str, limit: int = 50) -> list[StepName]:
     """Full-text search over names and their descriptions/articles (BM25),
     best match first."""
+    query = sanitize_query(query)
+    if not query:
+        return []
+
     with get_connection() as conn:
         with conn.cursor(row_factory=dict_row) as cur:
             cur.execute(

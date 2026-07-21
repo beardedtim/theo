@@ -19,8 +19,8 @@ def main(translation: str = "NIV", model: str = MODEL_NAME) -> None:
         translation: Translation to pull verse text from
         model: embedding_model label to store
     """
-    submitted = embed_pericopes(translation=translation, model=model)
-    print(f"Submitted {submitted} chunks for model {model!r} (duplicates skipped).")
+    written = embed_pericopes(translation=translation, model=model)
+    print(f"Wrote {written} chunks for model {model!r} (already-current pericopes skipped).")
 
 
 if __name__ == "__main__":

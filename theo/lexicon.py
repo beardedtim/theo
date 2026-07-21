@@ -32,6 +32,7 @@ from pathlib import Path
 
 from psycopg.rows import dict_row
 
+from theo.bm25 import sanitize_query
 from theo.db import get_connection
 
 LEXICON_DIR = Path(__file__).parent.parent / "data" / "step-bible" / "Lexicons"
@@ -206,6 +207,10 @@ def get_lexicon_for_ustrongs(ustrongs: list[str]) -> dict[str, list[LexiconEntry
 def search_lexicon(query: str, limit: int = 50) -> list[LexiconEntry]:
     """Full-text search over glosses, transliterations, and meanings (BM25),
     best match first."""
+    query = sanitize_query(query)
+    if not query:
+        return []
+
     with get_connection() as conn:
         with conn.cursor(row_factory=dict_row) as cur:
             cur.execute(

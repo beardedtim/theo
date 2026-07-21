@@ -19,6 +19,12 @@ def test_search_dictionary_requires_query(client):
     assert response.status_code == 422
 
 
+def test_search_dictionary_survives_query_syntax_characters(client):
+    response = client.get("/dictionary", params={"q": "shepherd's"})
+
+    assert response.status_code == 200
+
+
 def test_get_dictionary_entry(client):
     entry_id = client.get("/dictionary", params={"q": "phylactery"}).json()[0]["id"]
 

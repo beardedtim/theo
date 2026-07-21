@@ -11,12 +11,11 @@ from __future__ import annotations
 
 from dataclasses import asdict
 
-import torch
 from psycopg.rows import dict_row
 from psycopg.types.json import Jsonb
 from rich.progress import track
 
-from theo.chunks import _chunk_text
+from theo.pericopes import pericope_text
 from theo.db import get_connection
 from theo.parse import PIPELINE_VERSION, parse_texts
 from theo.pericopes import list_pericopes
@@ -29,6 +28,8 @@ def _parse_batch(texts: list[str]):
     sequence length squared, so a batch of unusually long pericopes can blow
     the GPU -- retry those one text at a time. A single text that still OOMs
     raises, rather than being silently skipped."""
+    import torch
+
     try:
         return parse_texts(texts)
     except torch.OutOfMemoryError:
@@ -78,7 +79,7 @@ def annotate_pericopes(
                 keep = [
                     (pericope, text)
                     for pericope in batch
-                    if (text := _chunk_text(pericope, translation))
+                    if (text := pericope_text(pericope, translation))
                 ]
                 if not keep:
                     continue

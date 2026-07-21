@@ -21,6 +21,7 @@ from pathlib import Path
 
 from psycopg.rows import dict_row
 
+from theo.bm25 import sanitize_query
 from theo.db import get_connection
 from theo.theographic import load_source
 
@@ -132,6 +133,10 @@ def _row_to_entry(row: dict) -> DictionaryEntry:
 def search_dictionary(query: str, limit: int = 50) -> list[DictionaryEntry]:
     """Full-text search over dictionary terms and definitions (BM25), best
     match first."""
+    query = sanitize_query(query)
+    if not query:
+        return []
+
     with get_connection() as conn:
         with conn.cursor(row_factory=dict_row) as cur:
             cur.execute(

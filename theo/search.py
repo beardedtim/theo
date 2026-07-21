@@ -21,10 +21,11 @@ from pgvector import Vector
 from psycopg import sql
 from psycopg.rows import dict_row
 
-from theo.bible import Verse, get_verses_in_range
+from theo.bible import Verse
+from theo.bm25 import sanitize_query
 from theo.db import get_connection
 from theo.embeddings import DIMENSIONS, MODEL_NAME, embed_query
-from theo.pericopes import Pericope, get_pericope
+from theo.pericopes import Pericope, get_pericopes_by_ids, get_verses_for_pericopes
 
 SearchMode = Literal["semantic", "bm25", "hybrid"]
 
@@ -43,22 +44,17 @@ def _table():
 
 
 def _results_from_pericope_scores(scores: list[tuple[str, float]], translation: str) -> list[SearchResult]:
-    """scores: [(pericope_id, score), ...] already ranked best-first."""
-    results = []
-    for pericope_id, score in scores:
-        pericope = get_pericope(pericope_id)
-        if pericope is None:
-            continue
-        verses = get_verses_in_range(
-            translation,
-            pericope.book,
-            pericope.chapter_start,
-            pericope.verse_start,
-            pericope.chapter_end,
-            pericope.verse_end,
-        )
-        results.append(SearchResult(pericope=pericope, verses=verses, score=score))
-    return results
+    """scores: [(pericope_id, score), ...] already ranked best-first.
+    Hydrates the whole result list in two queries (pericopes, then all
+    their verses) rather than two per result."""
+    ids = [pericope_id for pericope_id, _ in scores]
+    pericopes = get_pericopes_by_ids(ids)
+    verses = get_verses_for_pericopes(list(pericopes), translation)
+    return [
+        SearchResult(pericope=pericopes[pericope_id], verses=verses.get(pericope_id, []), score=score)
+        for pericope_id, score in scores
+        if pericope_id in pericopes
+    ]
 
 
 def semantic_search(query: str, translation: str = "NIV", limit: int = 10, model: str = MODEL_NAME) -> list[SearchResult]:
@@ -91,6 +87,10 @@ def semantic_search(query: str, translation: str = "NIV", limit: int = 10, model
 
 def bm25_search(query: str, translation: str = "NIV", limit: int = 10, model: str = MODEL_NAME) -> list[SearchResult]:
     """Rank pericopes by BM25 relevance of the query against each pericope's chunk text."""
+    query = sanitize_query(query)
+    if not query:
+        return []
+
     stmt = sql.SQL(
         """
         SELECT pericope_id, relevance FROM (
@@ -119,9 +119,8 @@ def hybrid_search(
     """Blend semantic and BM25 rankings via reciprocal rank fusion: each
     result's fused score is the sum of 1/(RRF_K + rank) across whichever
     ranking(s) it appears in."""
-    cleaned_query = query.replace("'", "")
-    semantic_results = semantic_search(cleaned_query, translation, limit=candidate_pool, model=model)
-    bm25_results = bm25_search(cleaned_query, translation, limit=candidate_pool, model=model)
+    semantic_results = semantic_search(query, translation, limit=candidate_pool, model=model)
+    bm25_results = bm25_search(query, translation, limit=candidate_pool, model=model)
 
     fused_scores: dict[str, float] = {}
     result_by_id: dict[str, SearchResult] = {}

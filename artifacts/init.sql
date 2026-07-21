@@ -5,6 +5,15 @@
 CREATE EXTENSION IF NOT EXISTS vector;
 CREATE EXTENSION IF NOT EXISTS pg_search;
 
+-- ParadeDB 0.24.3's DataFusion aggregate scan returns wrong results for SQL
+-- aggregates over joins with non-equi conditions (verified here: a count(*)
+-- over the verses/pericopes range join returned 2,073,477 instead of the
+-- true 31,101 -- the non-equi join quals were silently dropped). The app
+-- only needs ParadeDB for the @@@ BM25 operator, so turn the aggregate scan
+-- off instance-wide until an upstream fix is verified.
+ALTER SYSTEM SET paradedb.enable_aggregate_custom_scan = off;
+SELECT pg_reload_conf();
+
 -- Theo Data Model
 --
 -- Verse: Source of truth for what the text says in some unit of work

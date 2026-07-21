@@ -37,6 +37,12 @@ def test_names_search(client):
     assert "Aaron" in [n["name"] for n in response.json()]
 
 
+def test_names_search_survives_query_syntax_characters(client):
+    response = client.get("/names", params={"q": "Aaron's"})
+
+    assert response.status_code == 200
+
+
 def test_name_detail(client):
     aaron = next(
         n for n in client.get("/names/2/4/14/4/14").json() if n["name"] == "Aaron"

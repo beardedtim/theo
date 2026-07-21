@@ -1,8 +1,11 @@
 # syntax=docker/dockerfile:1
 
-# Builder: resolves/installs the uv-managed venv (torch, spaCy, sentence-
-# transformers, en_core_web_trf, ...). This image is large by nature of the
-# NLP/embedding stack -- expect a multi-GB build on first run.
+# Builder: resolves/installs the uv-managed venv. Deliberately slim: the
+# NLP dependency group (spaCy/en_core_web_trf/fastcoref/cupy) stays out --
+# annotation runs on the dev machine, not the droplet -- and torch comes
+# from the CPU-only wheel index (the `cpu` dependency group), keeping the
+# multi-GB CUDA libraries out of the image. The API's only model work is
+# embedding search queries, which runs fine on CPU.
 FROM ghcr.io/astral-sh/uv:python3.12-bookworm-slim AS builder
 
 RUN apt-get update && apt-get install -y --no-install-recommends build-essential \
@@ -16,14 +19,23 @@ ENV UV_COMPILE_BYTECODE=1 \
 # changes, not by every source edit.
 COPY pyproject.toml uv.lock README.md ./
 RUN --mount=type=cache,target=/root/.cache/uv \
-    uv sync --frozen --no-dev --no-install-project
+    uv sync --frozen --no-default-groups --group cpu --no-install-project
+
+# Bake the embedding model into the image so the first /search doesn't
+# download ~1.3GB from HuggingFace at runtime (slow cold start, and an
+# outage if HF is unreachable). Placed before the source COPY so this
+# layer, like the deps layer, survives source edits. The model name must
+# match theo/embeddings.py's MODEL_NAME.
+ENV HF_HOME=/app/hf-cache
+RUN /app/.venv/bin/python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('BAAI/bge-large-en-v1.5')"
 
 COPY main.py ./
 COPY theo ./theo
 RUN --mount=type=cache,target=/root/.cache/uv \
-    uv sync --frozen --no-dev
+    uv sync --frozen --no-default-groups --group cpu
 
-# Runtime: no compiler/uv, just the venv + source, run as a non-root user.
+# Runtime: no compiler/uv, just the venv + source + model cache, run as a
+# non-root user.
 FROM python:3.12-slim-bookworm AS runtime
 
 WORKDIR /app
@@ -34,11 +46,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends curl libgomp1 \
     && mkdir -p /app/logs && chown theo:theo /app/logs
 
 COPY --from=builder --chown=theo:theo /app/.venv ./.venv
+COPY --from=builder --chown=theo:theo /app/hf-cache ./hf-cache
 COPY --from=builder --chown=theo:theo /app/main.py ./main.py
 COPY --from=builder --chown=theo:theo /app/theo ./theo
 
+# HF_HUB_OFFLINE: the baked cache is complete, so never touch the network
+# for model files -- a missing file should fail loudly, not hang on a
+# download at request time.
 ENV PATH="/app/.venv/bin:$PATH" \
-    PYTHONUNBUFFERED=1
+    PYTHONUNBUFFERED=1 \
+    HF_HOME=/app/hf-cache \
+    HF_HUB_OFFLINE=1
 
 USER theo
 EXPOSE 8000

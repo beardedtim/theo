@@ -12,6 +12,7 @@ from functools import lru_cache
 
 MODEL_NAME = "BAAI/bge-large-en-v1.5"
 DIMENSIONS = 1024
+MAX_TOKENS = 512  # BGE's hard context limit; longer input is silently truncated
 
 QUERY_INSTRUCTION = "Represent this sentence for searching relevant passages: "
 
@@ -21,6 +22,13 @@ def _model():
     from sentence_transformers import SentenceTransformer
 
     return SentenceTransformer(MODEL_NAME)
+
+
+def count_tokens(texts: list[str]) -> list[int]:
+    """Token counts as the embedding model's tokenizer sees them (special
+    tokens included). Used to keep chunk text under MAX_TOKENS."""
+    encodings = _model().tokenizer(list(texts))["input_ids"]
+    return [len(ids) for ids in encodings]
 
 
 def embed_texts(texts: list[str]) -> list[list[float]]:

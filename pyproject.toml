@@ -5,31 +5,51 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "cupy-cuda12x>=14.1.1",
-    "en-core-web-trf",
     "fastapi>=0.139.2",
-    "fastcoref>=2.1.6",
     "httpx>=0.28.1",
     "pgvector>=0.5.0",
     "psycopg[binary]>=3.3.4",
+    "psycopg-pool>=3.2.0",
     "pydantic>=2.13.4",
     "pydantic-settings>=2.14.2",
     "python-dotenv>=1.2.2",
     "rich>=15.0.0",
     "sentence-transformers>=5.6.0",
-    "spacy>=3.8.14",
-    "sqlalchemy>=2.0.51",
-    "torch>=2.13.0",
+    # transformers<5: fastcoref 2.1.6 breaks on transformers 5.x
+    # ('FCorefModel' has no 'all_tied_weights_keys')
     "transformers<5",
     "tyro>=1.0.15",
     "uvicorn[standard]>=0.51.0",
 ]
 
+# The API only ever runs embed_query (sentence-transformers on CPU); the
+# spaCy/fastcoref annotation pipeline runs on the dev machine. Splitting
+# torch into conflicting cpu/gpu groups and the NLP stack into its own group
+# keeps the multi-GB CUDA wheels (nvidia-*, cupy, triton) out of the API
+# Docker image:
+#   local dev:  uv sync                    (default groups: dev + nlp + gpu)
+#   API image:  uv sync --no-default-groups --group cpu
 [dependency-groups]
 dev = [
     "httpx>=0.28.1",
     "pytest>=9.1.1",
 ]
+nlp = [
+    "cupy-cuda12x>=14.1.1",
+    "en-core-web-trf",
+    "fastcoref>=2.1.6",
+    "spacy>=3.8.14",
+]
+cpu = [
+    "torch>=2.13.0",
+]
+gpu = [
+    "torch>=2.13.0",
+]
+
+[tool.uv]
+default-groups = ["dev", "nlp", "gpu"]
+conflicts = [[{ group = "cpu" }, { group = "gpu" }]]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -37,3 +57,10 @@ pythonpath = ["."]
 
 [tool.uv.sources]
 en-core-web-trf = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.8.0/en_core_web_trf-3.8.0-py3-none-any.whl" }
+# gpu keeps PyPI's default (CUDA-bundled) torch; cpu pulls the CPU-only wheel.
+torch = [{ index = "pytorch-cpu", group = "cpu" }]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true

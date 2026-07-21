@@ -24,6 +24,12 @@ def test_list_pericopes_search(client):
     assert "The Good Shepherd and His Sheep" in titles
 
 
+def test_list_pericopes_search_survives_query_syntax_characters(client):
+    response = client.get("/pericopes", params={"q": "prodigal's"})
+
+    assert response.status_code == 200
+
+
 def test_pericopes_for_book(client):
     response = client.get("/pericopes/1")
 

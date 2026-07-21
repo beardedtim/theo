@@ -20,13 +20,17 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 from functools import lru_cache
+from typing import TYPE_CHECKING
 
-import spacy
-from spacy.language import Language
-from spacy.tokens import Doc
-
-from fastcoref import spacy_component  # noqa: F401  -- registers the "fastcoref" pipe
 from theo.step_names import TipnrRecord, parse_tipnr
+
+# spacy/fastcoref/torch are imported inside get_nlp(), not here: the API
+# Docker image deliberately omits the NLP dependency group (annotation runs
+# on the dev machine), and theo.server transitively imports this module via
+# theo.metadata -> theo.annotations, so it must stay importable without them.
+if TYPE_CHECKING:
+    from spacy.language import Language
+    from spacy.tokens import Doc
 
 # Bump when the models or extraction logic change in a way that should
 # invalidate stored annotations; theo.annotations keys rows on this.
@@ -93,7 +97,9 @@ def get_nlp() -> Language:
     """The full pipeline: en_core_web_trf with a TIPNR entity_ruler ahead of
     NER (ruler matches win; the statistical NER fills in around them) and
     fastcoref at the end. Runs on GPU when one is available."""
+    import spacy
     import torch
+    from fastcoref import spacy_component  # noqa: F401  -- registers the "fastcoref" pipe
 
     spacy.prefer_gpu()
     nlp = spacy.load("en_core_web_trf")

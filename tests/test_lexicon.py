@@ -106,3 +106,9 @@ def test_lexicon_lookup_endpoint_unknown_code(client):
     response = client.get("/lexicon/H9999X")
 
     assert response.status_code == 404
+
+
+def test_lexicon_search_endpoint_survives_query_syntax_characters(client):
+    response = client.get("/lexicon", params={"q": 'steadfast "love'})
+
+    assert response.status_code == 200

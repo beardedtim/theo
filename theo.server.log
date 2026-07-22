@@ -1,0 +1,566 @@
+22 Jul 2026 | 16:22:36 | Started server process [42217]
+22 Jul 2026 | 16:22:36 | Waiting for application startup.
+22 Jul 2026 | 16:22:36 | Application startup complete.
+22 Jul 2026 | 16:22:48 | No device provided, using cuda:0
+22 Jul 2026 | 16:22:49 | Loading SentenceTransformer model from BAAI/bge-large-en-v1.5.
+22 Jul 2026 | 16:22:52 | 127.0.0.1:46272 - "GET /search?q=god%27s+promises&mode=hybrid&limit=10&translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:22:56 | 127.0.0.1:46272 - "GET /verses/2%20Peter/1/3/11?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:22:56 | 127.0.0.1:36216 - "GET /verses/2%20Peter/1/3/11?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:22:56 | 127.0.0.1:46272 - "GET /reading/2%20Peter/1/3/1/11?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:22:56 | 127.0.0.1:36216 - "GET /reading/2%20Peter/1/3/1/11?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:22:56 | 127.0.0.1:36216 - "GET /metadata/pericope/019f8113-f04a-7c27-b454-27f2d206ad10?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:22:56 | 127.0.0.1:46272 - "GET /metadata/pericope/019f8113-f04a-7c27-b454-27f2d206ad10?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:22:59 | 127.0.0.1:46272 - "GET /name/019f825f-9eb7-7dba-8411-3cbc6234c2c1 HTTP/1.1" 200
+22 Jul 2026 | 16:28:33 | Shutting down
+22 Jul 2026 | 16:28:33 | Waiting for application shutdown.
+22 Jul 2026 | 16:28:33 | Application shutdown complete.
+22 Jul 2026 | 16:28:33 | Finished server process [42217]
+22 Jul 2026 | 16:28:34 | Started server process [48584]
+22 Jul 2026 | 16:28:34 | Waiting for application startup.
+22 Jul 2026 | 16:28:34 | Application startup complete.
+22 Jul 2026 | 16:28:39 | Shutting down
+22 Jul 2026 | 16:28:40 | Waiting for application shutdown.
+22 Jul 2026 | 16:28:40 | Application shutdown complete.
+22 Jul 2026 | 16:28:40 | Finished server process [48584]
+22 Jul 2026 | 16:28:40 | Started server process [48720]
+22 Jul 2026 | 16:28:40 | Waiting for application startup.
+22 Jul 2026 | 16:28:40 | Application startup complete.
+22 Jul 2026 | 16:29:07 | Shutting down
+22 Jul 2026 | 16:29:07 | Waiting for application shutdown.
+22 Jul 2026 | 16:29:07 | Application shutdown complete.
+22 Jul 2026 | 16:29:07 | Finished server process [48720]
+22 Jul 2026 | 16:29:08 | Started server process [49265]
+22 Jul 2026 | 16:29:08 | Waiting for application startup.
+22 Jul 2026 | 16:29:08 | Application startup complete.
+22 Jul 2026 | 16:29:28 | Shutting down
+22 Jul 2026 | 16:29:28 | Waiting for application shutdown.
+22 Jul 2026 | 16:29:28 | Application shutdown complete.
+22 Jul 2026 | 16:29:28 | Finished server process [49265]
+22 Jul 2026 | 16:29:28 | Started server process [49648]
+22 Jul 2026 | 16:29:28 | Waiting for application startup.
+22 Jul 2026 | 16:29:28 | Application startup complete.
+22 Jul 2026 | 16:29:41 | Shutting down
+22 Jul 2026 | 16:29:41 | Waiting for application shutdown.
+22 Jul 2026 | 16:29:41 | Application shutdown complete.
+22 Jul 2026 | 16:29:41 | Finished server process [49648]
+22 Jul 2026 | 16:29:42 | Started server process [49951]
+22 Jul 2026 | 16:29:42 | Waiting for application startup.
+22 Jul 2026 | 16:29:42 | Application startup complete.
+22 Jul 2026 | 16:29:47 | Shutting down
+22 Jul 2026 | 16:29:47 | Waiting for application shutdown.
+22 Jul 2026 | 16:29:47 | Application shutdown complete.
+22 Jul 2026 | 16:29:47 | Finished server process [49951]
+22 Jul 2026 | 16:29:48 | Started server process [50109]
+22 Jul 2026 | 16:29:48 | Waiting for application startup.
+22 Jul 2026 | 16:29:48 | Application startup complete.
+22 Jul 2026 | 16:29:56 | Shutting down
+22 Jul 2026 | 16:29:56 | Waiting for application shutdown.
+22 Jul 2026 | 16:29:56 | Application shutdown complete.
+22 Jul 2026 | 16:29:56 | Finished server process [50109]
+22 Jul 2026 | 16:29:56 | Started server process [50278]
+22 Jul 2026 | 16:29:56 | Waiting for application startup.
+22 Jul 2026 | 16:29:56 | Application startup complete.
+22 Jul 2026 | 16:30:11 | Shutting down
+22 Jul 2026 | 16:30:11 | Waiting for application shutdown.
+22 Jul 2026 | 16:30:11 | Application shutdown complete.
+22 Jul 2026 | 16:30:11 | Finished server process [50278]
+22 Jul 2026 | 16:30:11 | Started server process [50607]
+22 Jul 2026 | 16:30:11 | Waiting for application startup.
+22 Jul 2026 | 16:30:11 | Application startup complete.
+22 Jul 2026 | 16:30:33 | Shutting down
+22 Jul 2026 | 16:30:33 | Waiting for application shutdown.
+22 Jul 2026 | 16:30:33 | Application shutdown complete.
+22 Jul 2026 | 16:30:33 | Finished server process [50607]
+22 Jul 2026 | 16:30:34 | Started server process [51101]
+22 Jul 2026 | 16:30:34 | Waiting for application startup.
+22 Jul 2026 | 16:30:34 | Application startup complete.
+22 Jul 2026 | 16:30:53 | Shutting down
+22 Jul 2026 | 16:30:53 | Waiting for application shutdown.
+22 Jul 2026 | 16:30:53 | Application shutdown complete.
+22 Jul 2026 | 16:30:53 | Finished server process [51101]
+22 Jul 2026 | 16:30:54 | Started server process [51458]
+22 Jul 2026 | 16:30:54 | Waiting for application startup.
+22 Jul 2026 | 16:30:54 | Application startup complete.
+22 Jul 2026 | 16:30:59 | Shutting down
+22 Jul 2026 | 16:30:59 | Waiting for application shutdown.
+22 Jul 2026 | 16:30:59 | Application shutdown complete.
+22 Jul 2026 | 16:30:59 | Finished server process [51458]
+22 Jul 2026 | 16:31:00 | Started server process [51635]
+22 Jul 2026 | 16:31:00 | Waiting for application startup.
+22 Jul 2026 | 16:31:00 | Application startup complete.
+22 Jul 2026 | 16:31:14 | Shutting down
+22 Jul 2026 | 16:31:14 | Waiting for application shutdown.
+22 Jul 2026 | 16:31:14 | Application shutdown complete.
+22 Jul 2026 | 16:31:14 | Finished server process [51635]
+22 Jul 2026 | 16:31:15 | Started server process [51950]
+22 Jul 2026 | 16:31:15 | Waiting for application startup.
+22 Jul 2026 | 16:31:15 | Application startup complete.
+22 Jul 2026 | 16:32:37 | 127.0.0.1:58628 - "GET /health HTTP/1.1" 200
+22 Jul 2026 | 16:32:41 | 127.0.0.1:59232 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:32:47 | 127.0.0.1:59238 - "GET /passage-groups/pentateuch HTTP/1.1" 200
+22 Jul 2026 | 16:32:47 | 127.0.0.1:59242 - "GET /passage-groups/nope HTTP/1.1" 404
+22 Jul 2026 | 16:32:47 | 127.0.0.1:59250 - "GET /metadata/Genesis/1/1/1/1 HTTP/1.1" 500
+22 Jul 2026 | 16:32:47 | Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 422, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/fastapi/applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 2685, in app
+    await route.handle(scope, receive, send)
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 1267, in handle
+    await super().handle(scope, receive, send)
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 151, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 137, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 691, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 347, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/starlette/concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2641, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1033, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/overlord/Theo/theo/server.py", line 432, in get_metadata_by_range
+    return fetch_metadata_for_range(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/overlord/Theo/theo/metadata.py", line 299, in get_metadata_for_range
+    attributes=resolve_attributes(book_num, notes),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/overlord/Theo/theo/metadata.py", line 239, in resolve_attributes
+    for note in get_notes_for_group(group.slug):
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/overlord/Theo/theo/notes.py", line 292, in get_notes_for_group
+    cur.execute(
+  File "/home/overlord/Theo/.venv/lib/python3.12/site-packages/psycopg/cursor.py", line 117, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.AmbiguousColumn: column reference "id" is ambiguous
+LINE 2:                 SELECT id, slug, title, book, chapter_start,...
+                               ^
+22 Jul 2026 | 16:33:22 | Shutting down
+22 Jul 2026 | 16:33:22 | Waiting for application shutdown.
+22 Jul 2026 | 16:33:22 | Application shutdown complete.
+22 Jul 2026 | 16:33:22 | Finished server process [51950]
+22 Jul 2026 | 16:33:22 | Started server process [54479]
+22 Jul 2026 | 16:33:22 | Waiting for application startup.
+22 Jul 2026 | 16:33:22 | Application startup complete.
+22 Jul 2026 | 16:33:30 | 127.0.0.1:44040 - "GET /metadata/Genesis/1/1/1/1 HTTP/1.1" 200
+22 Jul 2026 | 16:33:36 | 127.0.0.1:44054 - "GET /metadata/Matthew/1/1/1/1 HTTP/1.1" 200
+22 Jul 2026 | 16:33:49 | Shutting down
+22 Jul 2026 | 16:33:49 | Waiting for application shutdown.
+22 Jul 2026 | 16:33:49 | Application shutdown complete.
+22 Jul 2026 | 16:33:49 | Finished server process [54479]
+22 Jul 2026 | 16:33:49 | Started server process [55081]
+22 Jul 2026 | 16:33:49 | Waiting for application startup.
+22 Jul 2026 | 16:33:49 | Application startup complete.
+22 Jul 2026 | 16:33:53 | Shutting down
+22 Jul 2026 | 16:33:53 | Waiting for application shutdown.
+22 Jul 2026 | 16:33:53 | Application shutdown complete.
+22 Jul 2026 | 16:33:53 | Finished server process [55081]
+22 Jul 2026 | 16:33:53 | Started server process [55191]
+22 Jul 2026 | 16:33:53 | Waiting for application startup.
+22 Jul 2026 | 16:33:53 | Application startup complete.
+22 Jul 2026 | 16:33:55 | 127.0.0.1:58398 - "GET /verses/2%20Peter/1/3/11?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:33:55 | 127.0.0.1:58408 - "GET /verses/2%20Peter/1/3/11?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:33:55 | 127.0.0.1:58408 - "GET /reading/2%20Peter/1/3/1/11?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:33:55 | 127.0.0.1:58398 - "GET /reading/2%20Peter/1/3/1/11?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:33:55 | 127.0.0.1:58398 - "GET /metadata/pericope/019f8113-f04a-7c27-b454-27f2d206ad10?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:33:55 | 127.0.0.1:58408 - "GET /metadata/pericope/019f8113-f04a-7c27-b454-27f2d206ad10?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:34:00 | Shutting down
+22 Jul 2026 | 16:34:00 | Waiting for application shutdown.
+22 Jul 2026 | 16:34:00 | Application shutdown complete.
+22 Jul 2026 | 16:34:00 | Finished server process [55191]
+22 Jul 2026 | 16:34:00 | Started server process [55428]
+22 Jul 2026 | 16:34:00 | Waiting for application startup.
+22 Jul 2026 | 16:34:00 | Application startup complete.
+22 Jul 2026 | 16:34:03 | 127.0.0.1:37880 - "GET /verses/Genesis/1/3/11?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:34:03 | 127.0.0.1:37880 - "GET /reading/Genesis/1/3/1/11?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:34:04 | HTTP Request: GET http://testserver/passage-groups "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:04 | HTTP Request: GET http://testserver/passage-groups/pentateuch "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:04 | HTTP Request: GET http://testserver/passage-groups/old-testament "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:04 | HTTP Request: GET http://testserver/passage-groups/not-a-real-group "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:34:04 | HTTP Request: GET http://testserver/metadata/Exodus/4/14/4/14?translation=NIV "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:04 | HTTP Request: GET http://testserver/metadata/Ruth/1/1/1/22 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:04 | HTTP Request: GET http://testserver/metadata/Ruth/1/1/1/22 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:04 | HTTP Request: GET http://testserver/names/Ruth/1/1/1/22 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:04 | HTTP Request: GET http://testserver/metadata/Ruth/1/1/1/22 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:04 | HTTP Request: GET http://testserver/metadata/NotABook/1/1/1/10 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:34:04 | HTTP Request: GET http://testserver/pericopes/Ruth "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:04 | HTTP Request: GET http://testserver/metadata/pericope/019f8113-eff7-7db5-8feb-be51bf818f74 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:04 | HTTP Request: GET http://testserver/metadata/pericope/00000000-0000-0000-0000-000000000000 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:34:04 | HTTP Request: GET http://testserver/metadata/Genesis/1/1/1/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:04 | HTTP Request: GET http://testserver/metadata/Genesis/1/1/1/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:04 | HTTP Request: GET http://testserver/metadata/Matthew/1/1/1/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:05 | 127.0.0.1:37880 - "GET /metadata/Genesis/1/3/1/11?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:34:08 | 127.0.0.1:37880 - "GET /event/019f817d-cf19-7397-a9dd-cc8d3f96a24b HTTP/1.1" 200
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/dictionary?q=phylactery "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/dictionary?q=Jerusalem&limit=3 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/dictionary "HTTP/1.1 422 Unprocessable Entity"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/dictionary?q=shepherd%27s "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/dictionary?q=phylactery "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/dictionary/019f817d-e0e2-77b6-9896-4f93aa11f6c2 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/dictionary/00000000-0000-0000-0000-000000000000 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/events "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/events/1/1/1/2/25 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/events/NotABook/1/1/1/10 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/events/1/1/1/2/25 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/event/019f817d-cf19-7397-a9dd-cc8d3f96a24b "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/event/00000000-0000-0000-0000-000000000000 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/lexicon?q=love "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/lexicon/H0175 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/lexicon/G2264H "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/lexicon/H9999X "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/lexicon?q=steadfast+%22love "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | truncated response for Test Pericope (00000000-0000-0000-0000-000000000001); retrying (2/3, budget 5000)
+22 Jul 2026 | 16:34:08 | truncated response for Test Pericope (00000000-0000-0000-0000-000000000001); retrying (2/3, budget 6000)
+22 Jul 2026 | 16:34:08 | truncated response for Test Pericope (00000000-0000-0000-0000-000000000001); retrying (3/3, budget 3000)
+22 Jul 2026 | 16:34:08 | truncated response for Test Pericope (00000000-0000-0000-0000-000000000001); retrying (2/3, budget 5000)
+22 Jul 2026 | 16:34:08 | truncated response for Test Pericope (00000000-0000-0000-0000-000000000001); retrying (3/3, budget 2500)
+22 Jul 2026 | 16:34:08 | together.ai request failed (attempt 1/4), retrying in 2.5s: HTTP 429: rate limited
+22 Jul 2026 | 16:34:08 | together.ai request failed (attempt 1/4), retrying in 2.0s: HTTP 500: boom
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/pericopes/Ruth "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/pericopes/Ruth "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/metadata/pericope/019f8113-eff7-7db5-8feb-be51bf818f74 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/metadata/Exodus/4/14/4/14?translation=NIV "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/metadata/Ruth/1/1/1/22 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/metadata/Ruth/1/1/1/22 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/names/Ruth/1/1/1/22 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/metadata/Ruth/1/1/1/22 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/metadata/NotABook/1/1/1/10 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/pericopes/Ruth "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/metadata/pericope/019f8113-eff7-7db5-8feb-be51bf818f74 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/metadata/pericope/00000000-0000-0000-0000-000000000000 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/metadata/Genesis/1/1/1/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/metadata/Genesis/1/1/1/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:08 | HTTP Request: GET http://testserver/metadata/Matthew/1/1/1/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/passage-groups "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/passage-groups/pentateuch "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/passage-groups/old-testament "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/passage-groups/not-a-real-group "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/people/13/1/1/1/27 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/people/Genesis/5/1/5/32 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/people/NotABook/1/1/1/10 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/people/1/1/1/1/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/people-groups "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/people-groups "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/people-groups/019f817d-b6d4-778b-aa62-fb1647ed393c "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/people-groups/00000000-0000-0000-0000-000000000000 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/pericopes "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/pericopes?book=1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/pericopes?q=shepherd "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/pericopes?q=prodigal%27s "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/pericopes/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/pericopes/9999 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/pericopes/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/pericope/019f8113-efde-719b-bdd6-02dae9b8b8a8 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/pericope/00000000-0000-0000-0000-000000000000 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/places/6/15/1/15/12 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/places/Joshua/15/1/15/12 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/places/NotABook/1/1/1/10 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/places/1/1/1/1/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/reading/Genesis/1/1/1/31 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/reading/Psalm/1/1/1/6 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/reading/John/1/38/1/38 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/reading/Genesis/1/1/1/31?translation=ESV "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/reading/NotABook/1/1/1/10 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:34:09 | HTTP Request: GET http://testserver/search?q=a+shepherd+caring+for+lost+sheep&mode=bm25&limit=3 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:15 | No device provided, using cuda:0
+22 Jul 2026 | 16:34:15 | Loading SentenceTransformer model from BAAI/bge-large-en-v1.5.
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/search?q=a+shepherd+caring+for+lost+sheep&limit=3 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/search?q=a+shepherd+caring+for+lost+sheep&mode=semantic&limit=3 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/search "HTTP/1.1 422 Unprocessable Entity"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/search?q=test&mode=bogus "HTTP/1.1 422 Unprocessable Entity"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/search?q=shepherd%27s+heart&mode=bm25 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/search?q=shepherd%27s+heart&mode=hybrid "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/search?q=%28%29&mode=bm25 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/search?q=kinsman&mode=bm25&limit=10 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/search?q=kinsman&mode=hybrid&limit=10 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/names/2/4/14/4/14 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/names/Exodus/4/14/4/14 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/names/NotABook/1/1/1/10 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/names/19/117/1/117/2 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/names?q=first+high+priest+of+Israel "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/names?q=Aaron%27s "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/names/2/4/14/4/14 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/name/019f825f-9e1f-7980-81ea-74ab2eced23a "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/names?q=Abana "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/name/019f825f-9f45-778f-9fcf-f2704834d48e "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/name/not-a-uuid "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/verses/1/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/verses/Genesis/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/verses/1/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/verses/1/9999 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/verses/NotABook/1 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/verses/1/1/1/3 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:34:18 | HTTP Request: GET http://testserver/verses/1/9999/1/3 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:35:32 | Shutting down
+22 Jul 2026 | 16:35:32 | Waiting for application shutdown.
+22 Jul 2026 | 16:35:32 | Application shutdown complete.
+22 Jul 2026 | 16:35:32 | Finished server process [55428]
+22 Jul 2026 | 16:35:33 | Started server process [57307]
+22 Jul 2026 | 16:35:33 | Waiting for application startup.
+22 Jul 2026 | 16:35:33 | Application startup complete.
+22 Jul 2026 | 16:35:36 | Shutting down
+22 Jul 2026 | 16:35:36 | Waiting for application shutdown.
+22 Jul 2026 | 16:35:36 | Application shutdown complete.
+22 Jul 2026 | 16:35:36 | Finished server process [57307]
+22 Jul 2026 | 16:35:37 | Started server process [57416]
+22 Jul 2026 | 16:35:37 | Waiting for application startup.
+22 Jul 2026 | 16:35:37 | Application startup complete.
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/dictionary?q=phylactery "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/dictionary?q=Jerusalem&limit=3 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/dictionary "HTTP/1.1 422 Unprocessable Entity"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/dictionary?q=shepherd%27s "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/dictionary?q=phylactery "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/dictionary/019f817d-e0e2-77b6-9896-4f93aa11f6c2 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/dictionary/00000000-0000-0000-0000-000000000000 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/events "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/events/1/1/1/2/25 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/events/NotABook/1/1/1/10 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/events/1/1/1/2/25 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/event/019f817d-cf19-7397-a9dd-cc8d3f96a24b "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/event/00000000-0000-0000-0000-000000000000 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/lexicon?q=love "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/lexicon/H0175 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/lexicon/G2264H "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/lexicon/H9999X "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/lexicon?q=steadfast+%22love "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | truncated response for Test Pericope (00000000-0000-0000-0000-000000000001); retrying (2/3, budget 5000)
+22 Jul 2026 | 16:35:41 | truncated response for Test Pericope (00000000-0000-0000-0000-000000000001); retrying (2/3, budget 6000)
+22 Jul 2026 | 16:35:41 | truncated response for Test Pericope (00000000-0000-0000-0000-000000000001); retrying (3/3, budget 3000)
+22 Jul 2026 | 16:35:41 | truncated response for Test Pericope (00000000-0000-0000-0000-000000000001); retrying (2/3, budget 5000)
+22 Jul 2026 | 16:35:41 | truncated response for Test Pericope (00000000-0000-0000-0000-000000000001); retrying (3/3, budget 2500)
+22 Jul 2026 | 16:35:41 | together.ai request failed (attempt 1/4), retrying in 2.5s: HTTP 429: rate limited
+22 Jul 2026 | 16:35:41 | together.ai request failed (attempt 1/4), retrying in 2.0s: HTTP 500: boom
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/pericopes/Ruth "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/pericopes/Ruth "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/metadata/pericope/019f8113-eff7-7db5-8feb-be51bf818f74 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/metadata/Exodus/4/14/4/14?translation=NIV "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/metadata/Ruth/1/1/1/22 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/metadata/Ruth/1/1/1/22 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/names/Ruth/1/1/1/22 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/metadata/Ruth/1/1/1/22 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/metadata/NotABook/1/1/1/10 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/pericopes/Ruth "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/metadata/pericope/019f8113-eff7-7db5-8feb-be51bf818f74 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/metadata/pericope/00000000-0000-0000-0000-000000000000 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/metadata/Genesis/1/1/1/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/metadata/Genesis/1/1/1/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:41 | HTTP Request: GET http://testserver/metadata/Matthew/1/1/1/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/passage-groups "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/passage-groups/pentateuch "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/passage-groups/old-testament "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/passage-groups/not-a-real-group "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/people/13/1/1/1/27 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/people/Genesis/5/1/5/32 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/people/NotABook/1/1/1/10 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/people/1/1/1/1/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/people-groups "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/people-groups "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/people-groups/019f817d-b6d4-778b-aa62-fb1647ed393c "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/people-groups/00000000-0000-0000-0000-000000000000 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/pericopes "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/pericopes?book=1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/pericopes?q=shepherd "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/pericopes?q=prodigal%27s "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/pericopes/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/pericopes/9999 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/pericopes/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/pericope/019f8113-efde-719b-bdd6-02dae9b8b8a8 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/pericope/00000000-0000-0000-0000-000000000000 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/places/6/15/1/15/12 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/places/Joshua/15/1/15/12 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/places/NotABook/1/1/1/10 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/places/1/1/1/1/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/reading/Genesis/1/1/1/31 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/reading/Psalm/1/1/1/6 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/reading/John/1/38/1/38 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/reading/Genesis/1/1/1/31?translation=ESV "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/reading/NotABook/1/1/1/10 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:35:42 | HTTP Request: GET http://testserver/search?q=a+shepherd+caring+for+lost+sheep&mode=bm25&limit=3 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:48 | No device provided, using cuda:0
+22 Jul 2026 | 16:35:49 | Loading SentenceTransformer model from BAAI/bge-large-en-v1.5.
+22 Jul 2026 | 16:35:51 | HTTP Request: GET http://testserver/search?q=a+shepherd+caring+for+lost+sheep&limit=3 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:51 | HTTP Request: GET http://testserver/search?q=a+shepherd+caring+for+lost+sheep&mode=semantic&limit=3 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:51 | HTTP Request: GET http://testserver/search "HTTP/1.1 422 Unprocessable Entity"
+22 Jul 2026 | 16:35:51 | HTTP Request: GET http://testserver/search?q=test&mode=bogus "HTTP/1.1 422 Unprocessable Entity"
+22 Jul 2026 | 16:35:51 | HTTP Request: GET http://testserver/search?q=shepherd%27s+heart&mode=bm25 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:51 | HTTP Request: GET http://testserver/search?q=shepherd%27s+heart&mode=hybrid "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:51 | HTTP Request: GET http://testserver/search?q=%28%29&mode=bm25 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:51 | HTTP Request: GET http://testserver/search?q=kinsman&mode=bm25&limit=10 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:51 | HTTP Request: GET http://testserver/search?q=kinsman&mode=hybrid&limit=10 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:51 | HTTP Request: GET http://testserver/names/2/4/14/4/14 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:51 | HTTP Request: GET http://testserver/names/Exodus/4/14/4/14 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:51 | HTTP Request: GET http://testserver/names/NotABook/1/1/1/10 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:35:51 | HTTP Request: GET http://testserver/names/19/117/1/117/2 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:51 | HTTP Request: GET http://testserver/names?q=first+high+priest+of+Israel "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:52 | HTTP Request: GET http://testserver/names?q=Aaron%27s "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:52 | HTTP Request: GET http://testserver/names/2/4/14/4/14 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:52 | HTTP Request: GET http://testserver/name/019f825f-9e1f-7980-81ea-74ab2eced23a "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:52 | HTTP Request: GET http://testserver/names?q=Abana "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:52 | HTTP Request: GET http://testserver/name/019f825f-9f45-778f-9fcf-f2704834d48e "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:52 | HTTP Request: GET http://testserver/name/not-a-uuid "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:35:52 | HTTP Request: GET http://testserver/verses/1/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:52 | HTTP Request: GET http://testserver/verses/Genesis/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:52 | HTTP Request: GET http://testserver/verses/1/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:52 | HTTP Request: GET http://testserver/verses/1/9999 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:35:52 | HTTP Request: GET http://testserver/verses/NotABook/1 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:35:52 | HTTP Request: GET http://testserver/verses/1/1/1/3 "HTTP/1.1 200 OK"
+22 Jul 2026 | 16:35:52 | HTTP Request: GET http://testserver/verses/1/9999/1/3 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 16:39:47 | 127.0.0.1:43224 - "GET /event/019f817d-cf19-7397-a9dd-cc8d3f96a24b HTTP/1.1" 200
+22 Jul 2026 | 16:41:35 | 127.0.0.1:49104 - "GET /metadata/Genesis/1/3/1/11?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:44:02 | 127.0.0.1:54918 - "GET /verses/exodus/1/3/11?translation=NIV HTTP/1.1" 404
+22 Jul 2026 | 16:44:06 | 127.0.0.1:54918 - "GET /verses/Exodus/1/3/11?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:44:06 | 127.0.0.1:54918 - "GET /reading/Exodus/1/3/1/11?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:44:08 | 127.0.0.1:54918 - "GET /metadata/Exodus/1/3/1/11?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:44:19 | 127.0.0.1:33090 - "GET /verses/Genesis/1/3/11?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:44:19 | 127.0.0.1:33090 - "GET /reading/Genesis/1/3/1/11?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:44:21 | 127.0.0.1:33090 - "GET /metadata/Genesis/1/3/1/11?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:45:45 | Shutting down
+22 Jul 2026 | 16:45:45 | Waiting for application shutdown.
+22 Jul 2026 | 16:45:45 | Application shutdown complete.
+22 Jul 2026 | 16:45:45 | Finished server process [57416]
+22 Jul 2026 | 16:45:46 | Started server process [68937]
+22 Jul 2026 | 16:45:46 | Waiting for application startup.
+22 Jul 2026 | 16:45:46 | Application startup complete.
+22 Jul 2026 | 16:45:51 | Shutting down
+22 Jul 2026 | 16:45:51 | Waiting for application shutdown.
+22 Jul 2026 | 16:45:51 | Application shutdown complete.
+22 Jul 2026 | 16:45:51 | Finished server process [68937]
+22 Jul 2026 | 16:45:51 | Started server process [69056]
+22 Jul 2026 | 16:45:51 | Waiting for application startup.
+22 Jul 2026 | 16:45:51 | Application startup complete.
+22 Jul 2026 | 16:47:23 | 127.0.0.1:44980 - "GET /events HTTP/1.1" 200
+22 Jul 2026 | 16:47:23 | 127.0.0.1:44986 - "GET /events HTTP/1.1" 200
+22 Jul 2026 | 16:48:02 | 127.0.0.1:52118 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:48:02 | 127.0.0.1:52112 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:48:02 | 127.0.0.1:52134 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:48:02 | 127.0.0.1:52118 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:48:59 | 127.0.0.1:45946 - "GET /verses/Genesis/1?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:48:59 | 127.0.0.1:45946 - "GET /reading/Genesis/1/1/1/31?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:49:01 | 127.0.0.1:45946 - "GET /metadata/Genesis/1/1/1/31?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:49:03 | 127.0.0.1:45946 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:49:03 | 127.0.0.1:45950 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:49:03 | 127.0.0.1:45954 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 16:49:03 | 127.0.0.1:45956 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:49:03 | 127.0.0.1:45946 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:49:03 | 127.0.0.1:45950 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 16:50:18 | 127.0.0.1:40872 - "GET /verses/Romans/10?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:50:18 | 127.0.0.1:40872 - "GET /reading/Romans/10/1/10/21?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:50:22 | 127.0.0.1:40872 - "GET /metadata/Romans/10/1/10/21?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:51:27 | 127.0.0.1:57340 - "GET /verses/Exodus/10?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:51:27 | 127.0.0.1:57340 - "GET /reading/Exodus/10/1/10/29?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:51:30 | 127.0.0.1:57340 - "GET /metadata/Exodus/10/1/10/29?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:51:33 | 127.0.0.1:57340 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:51:33 | 127.0.0.1:46682 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:51:33 | 127.0.0.1:46698 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:51:33 | 127.0.0.1:46696 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 16:51:33 | 127.0.0.1:57340 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:51:33 | 127.0.0.1:46698 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 16:52:25 | 127.0.0.1:54698 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:52:25 | 127.0.0.1:54714 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:53:17 | 127.0.0.1:48676 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:53:17 | 127.0.0.1:48678 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:53:17 | 127.0.0.1:48682 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:53:17 | 127.0.0.1:48676 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:53:21 | 127.0.0.1:48682 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:53:21 | 127.0.0.1:48676 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:53:21 | 127.0.0.1:48682 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:53:21 | 127.0.0.1:48678 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:53:42 | 127.0.0.1:58618 - "GET /verses/Exodus/1?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:53:42 | 127.0.0.1:58618 - "GET /reading/Exodus/1/1/1/22?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:53:43 | 127.0.0.1:58618 - "GET /metadata/Exodus/1/1/1/22?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 16:54:12 | 127.0.0.1:44158 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 16:54:12 | 127.0.0.1:44172 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:54:12 | 127.0.0.1:44186 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 16:54:12 | 127.0.0.1:44158 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:54:14 | 127.0.0.1:44158 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:54:14 | 127.0.0.1:44186 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:54:14 | 127.0.0.1:44188 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:54:14 | 127.0.0.1:44172 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:54:15 | 127.0.0.1:44188 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:54:15 | 127.0.0.1:44172 - "GET /note/exodus/dating-and-historicity HTTP/1.1" 200
+22 Jul 2026 | 16:54:15 | 127.0.0.1:44158 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:54:15 | 127.0.0.1:44186 - "GET /note/exodus/dating-and-historicity HTTP/1.1" 200
+22 Jul 2026 | 16:54:16 | 127.0.0.1:44158 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:54:16 | 127.0.0.1:44186 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:54:16 | 127.0.0.1:44172 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:54:16 | 127.0.0.1:44158 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:54:17 | 127.0.0.1:44172 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:54:17 | 127.0.0.1:44158 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 16:54:17 | 127.0.0.1:44186 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:54:17 | 127.0.0.1:44172 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 16:54:19 | 127.0.0.1:44172 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:54:19 | 127.0.0.1:44186 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:54:19 | 127.0.0.1:44158 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:54:19 | 127.0.0.1:44172 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:54:20 | 127.0.0.1:44158 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:54:20 | 127.0.0.1:44172 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 16:54:20 | 127.0.0.1:44186 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:54:20 | 127.0.0.1:44188 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 16:54:21 | 127.0.0.1:44188 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:54:21 | 127.0.0.1:44186 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:54:21 | 127.0.0.1:44172 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:54:21 | 127.0.0.1:44188 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:56:53 | 127.0.0.1:49440 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 16:56:53 | 127.0.0.1:49446 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:56:53 | 127.0.0.1:49462 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 16:56:53 | 127.0.0.1:49440 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:58:18 | 127.0.0.1:60002 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:58:18 | 127.0.0.1:59998 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:58:18 | 127.0.0.1:60006 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:58:18 | 127.0.0.1:60002 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:58:19 | 127.0.0.1:60006 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:58:19 | 127.0.0.1:60002 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 16:58:19 | 127.0.0.1:59998 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:58:19 | 127.0.0.1:60006 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 16:58:20 | 127.0.0.1:60006 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:58:20 | 127.0.0.1:59998 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:58:20 | 127.0.0.1:60002 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 16:58:20 | 127.0.0.1:60006 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 16:58:25 | Shutting down
+22 Jul 2026 | 16:58:25 | Waiting for application shutdown.
+22 Jul 2026 | 16:58:25 | Application shutdown complete.
+22 Jul 2026 | 16:58:25 | Finished server process [69056]

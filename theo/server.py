@@ -36,6 +36,12 @@ from theo.people_groups import (
     list_groups as fetch_groups,
 )
 
+from theo.passage_groups import PassageGroup, PassageGroupDetail
+from theo.passage_groups import (
+    get_passage_group_detail as fetch_passage_group_detail,
+    list_passage_groups as fetch_passage_groups,
+)
+
 from theo.dictionary import DictionaryEntry
 from theo.dictionary import (
     get_dictionary_entry as fetch_dictionary_entry,
@@ -59,6 +65,7 @@ from theo.notes import Note
 from theo.notes import (
     get_note as fetch_note,
     get_notes_in_range as fetch_notes_in_range,
+    list_notes as fetch_all_notes,
     search_notes as run_note_search,
 )
 
@@ -253,6 +260,25 @@ def get_people_group(
 
     return detail
 
+@app.get("/passage-groups")
+def list_passage_groups() -> list[PassageGroup]:
+    """List every canon-structure group (Pentateuch, Old/New Testament,
+    Gospels...) -- which books belong together. See theo.passage_groups."""
+    return fetch_passage_groups()
+
+@app.get("/passage-groups/{slug}")
+def get_passage_group(
+    slug: str = Path(..., description='Group slug, as returned by /passage-groups, e.g. "pentateuch".'),
+) -> PassageGroupDetail:
+    """Fetch a single passage group along with its expanded book list and
+    any direct child groups."""
+    detail = fetch_passage_group_detail(slug)
+
+    if detail is None:
+        raise HTTPException(status_code=404, detail="Passage group not found")
+
+    return detail
+
 @app.get("/dictionary")
 def search_dictionary(
     q: str = Query(..., description='Search query, e.g. "phylactery".'),
@@ -338,10 +364,14 @@ def get_step_lexicon_entries(
 
 @app.get("/notes")
 def search_notes(
-    q: str = Query(..., description='Search query, e.g. "documentary hypothesis".'),
+    q: str | None = Query(None, description='Search query, e.g. "documentary hypothesis". Omit to list every note.'),
     limit: int = Query(50, ge=1, le=200, description="Max number of notes to return."),
 ) -> list[Note]:
-    """Search personal commentary notes by title or body text (BM25)."""
+    """Search personal commentary notes by title or body text (BM25), or --
+    if `q` is omitted -- list every note in canonical passage order (for a
+    browsable Notes page)."""
+    if q is None:
+        return fetch_all_notes()
     return run_note_search(q, limit=limit)
 
 @app.get("/notes/{book}/{chapter_start}/{verse_start}/{chapter_end}/{verse_end}")
@@ -378,9 +408,13 @@ def get_metadata_by_pericope(
     overlapping pericopes, one source-prioritized `entities` list (STEP
     proper nouns first, theographic knowledge graph filling the gaps),
     events, Strong's lexicon entries (keyed by the entities' ustrongs),
-    one NLP annotation per pericope (best pipeline: LLM over spaCy), and
-    any personal notes anchored to the range. The per-source endpoints
-    (/people, /names, /notes, ...) still expose everything."""
+    one NLP annotation per pericope (best pipeline: LLM over spaCy), any
+    personal notes anchored to the range, the passage groups the book
+    belongs to (e.g. Pentateuch), and `attributes` -- key/value facts
+    (author, date, ...) inherited from notes on the range or any
+    containing passage group, most specific scope winning. The per-source
+    endpoints (/people, /names, /notes, /passage-groups, ...) still expose
+    everything."""
     metadata = fetch_metadata_for_pericope(pericope_id, translation=translation)
 
     if metadata is None:

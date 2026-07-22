@@ -71,11 +71,6 @@ export interface PeopleGroup {
   group_name: string;
 }
 
-export interface GroupDetail {
-  group: PeopleGroup;
-  members: Person[];
-}
-
 export class ApiError extends Error {
   status: number;
 
@@ -136,8 +131,8 @@ export function listVerses({
   return request<Verse[]>(path, { translation });
 }
 
-// --- Theographic data: people, places, events, and people groups referenced
-// in a verse range, plus browsing events and people groups directly. ---
+// --- Theographic data: people, places, and events referenced in a verse
+// range, plus fetching a single event's detail directly. ---
 
 export interface VerseRangeParams {
   book: string | number;
@@ -151,20 +146,8 @@ function rangePath(entity: string, { book, chapterStart, verseStart, chapterEnd,
   return `/${entity}/${encodeURIComponent(String(book))}/${chapterStart}/${verseStart}/${chapterEnd}/${verseEnd}`;
 }
 
-export function listEvents(): Promise<Event[]> {
-  return request<Event[]>("/events", {});
-}
-
 export function getEvent(eventId: string): Promise<EventDetail> {
   return request<EventDetail>(`/event/${encodeURIComponent(eventId)}`, {});
-}
-
-export function listPeopleGroups(): Promise<PeopleGroup[]> {
-  return request<PeopleGroup[]>("/people-groups", {});
-}
-
-export function getPeopleGroup(groupId: string): Promise<GroupDetail> {
-  return request<GroupDetail>(`/people-groups/${encodeURIComponent(groupId)}`, {});
 }
 
 // --- STEPBible data: TIPNR proper nouns and the Strong's brief lexicons. ---
@@ -301,6 +284,58 @@ export type MetadataEntity =
   | (EntityBase & { source: "theographic"; kind: "place"; ustrong: null; data: Place })
   | (EntityBase & { source: "theographic"; kind: "group"; ustrong: null; data: PeopleGroup });
 
+// Personal commentary (theo/notes.py): hand-written markdown anchored to a
+// verse range or a whole passage group, e.g. notes/pentateuch/authorship.md.
+export interface Note {
+  id: string;
+  slug: string;
+  title: string;
+  book: number | null;
+  chapter_start: number | null;
+  verse_start: number | null;
+  chapter_end: number | null;
+  verse_end: number | null;
+  passage_group_id: string | null;
+  tags: string[];
+  attributes: Record<string, string>;
+  body: string; // raw markdown
+}
+
+// Canon-structure grouping (theo/passage_groups.py), e.g. "Pentateuch".
+export interface PassageGroup {
+  id: string;
+  slug: string;
+  name: string;
+  description: string | null;
+  parent_group_id: string | null;
+}
+
+// One inherited fact (e.g. author, date) plus provenance: which note
+// asserted it, and at what scope ("range", or a PassageGroup slug it was
+// inherited from) -- see theo.metadata.resolve_attributes.
+export interface ResolvedAttribute {
+  value: string;
+  source_note_slug: string;
+  scope: string;
+}
+
+// List every personal note (for a browsable Notes page); server default
+// order is canonical passage order.
+export function listNotes(): Promise<Note[]> {
+  return request<Note[]>("/notes", {});
+}
+
+// Fetch a single note by its slug (its path under notes/, without .md --
+// may contain "/", e.g. "pentateuch/authorship"; the server's route is a
+// path-type param so the slash doesn't need escaping).
+export function getNote(slug: string): Promise<Note> {
+  return request<Note>(`/note/${slug}`, {});
+}
+
+export function listPassageGroups(): Promise<PassageGroup[]> {
+  return request<PassageGroup[]>("/passage-groups", {});
+}
+
 export interface VerseMetadata {
   book: number;
   chapter_start: number;
@@ -312,6 +347,9 @@ export interface VerseMetadata {
   events: Event[];
   lexicon: Record<string, LexiconEntry[]>;
   annotations: PericopeAnnotation[]; // one per overlapping pericope (best pipeline)
+  notes: Note[]; // personal commentary overlapping the range
+  passage_groups: PassageGroup[]; // groups the book belongs to, narrowest first
+  attributes: Record<string, ResolvedAttribute>; // inherited facts, e.g. authorship
 }
 
 export function getMetadataForRange(range: VerseRangeParams, translation?: string): Promise<VerseMetadata> {

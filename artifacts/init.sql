@@ -660,6 +660,44 @@ CREATE INDEX IF NOT EXISTS pericope_metadata_index_search_idx ON pericope_metada
 ) WITH (key_field = 'id');
 
 
+-- Canon-structure groups, e.g. "Pentateuch" (books 1-5) or "Johannine
+-- Literature" (a non-contiguous set: John, 1/2/3 John, Revelation). Hand-
+-- authored in passage_groups.yaml (tracked in git, like notes/), synced by
+-- ingest_passage_groups.py -- see theo.passage_groups. Distinct from
+-- people_groups: this is about which books/passages belong together, not
+-- biographical/theographic groups of people.
+CREATE TABLE IF NOT EXISTS passage_groups (
+    id UUID NOT NULL DEFAULT uuidv7(),
+    slug TEXT NOT NULL,
+    name TEXT NOT NULL,
+    description TEXT,
+    parent_group_id UUID,            -- display/breadcrumb hierarchy only;
+                                      -- NOT used for containment or attribute-priority resolution (see passage_group_members)
+    PRIMARY KEY (id),
+    CONSTRAINT unique_passage_groups_slug UNIQUE (slug),
+    CONSTRAINT fk_passage_groups_parent FOREIGN KEY (parent_group_id) REFERENCES passage_groups(id) ON DELETE SET NULL
+);
+CREATE INDEX IF NOT EXISTS passage_groups_parent_id_idx ON passage_groups(parent_group_id);
+
+-- Every group (leaf and container alike) restates its own book coverage
+-- here -- Old Testament restates [1, 39] even though its child Pentateuch
+-- restates [1, 5] -- so "which groups contain book N" is one flat range
+-- scan with no tree walk, and ordering by (book_end - book_start) gives
+-- specific-before-general for free. Non-contiguous groups get one row per
+-- book instead of one range row.
+CREATE TABLE IF NOT EXISTS passage_group_members (
+    id UUID NOT NULL DEFAULT uuidv7(),
+    group_id UUID NOT NULL,
+    book_start INT NOT NULL,
+    book_end INT NOT NULL,
+    PRIMARY KEY (id),
+    CONSTRAINT fk_passage_group_members_group FOREIGN KEY (group_id) REFERENCES passage_groups(id) ON DELETE CASCADE,
+    CONSTRAINT unique_passage_group_members UNIQUE (group_id, book_start, book_end)
+);
+CREATE INDEX IF NOT EXISTS passage_group_members_group_idx ON passage_group_members(group_id);
+CREATE INDEX IF NOT EXISTS passage_group_members_range_idx ON passage_group_members(book_start, book_end);
+
+
 -- Personal commentary, sourced from hand-written notes/*.md (YAML
 -- frontmatter + markdown body) via ingest_notes.py -- see theo.notes.
 -- Unlike the theographic/STEP tables, this is a living corpus the user
@@ -667,21 +705,40 @@ CREATE INDEX IF NOT EXISTS pericope_metadata_index_search_idx ON pericope_metada
 -- upsert key: rerunning ingest_notes.py after an edit overwrites the row
 -- in place instead of skipping it, and a note whose file disappears is
 -- deleted from the table.
+--
+-- A note is scoped to EITHER a verse range (book/chapter_start/verse_start/
+-- chapter_end/verse_end, all set) OR a passage_group (passage_group_id
+-- set) -- never both, never neither (see notes_scope_xor). Group-scoped
+-- notes are how facts attach above the book level, e.g. a note on
+-- `group: pentateuch` with `attributes: {author: "..."}` -- see
+-- theo.metadata.resolve_attributes for how those inherit down to any
+-- book/range inside the group.
 CREATE TABLE IF NOT EXISTS notes (
     id UUID NOT NULL DEFAULT uuidv7(),
     slug TEXT NOT NULL,
     title TEXT NOT NULL,
-    book INT NOT NULL,
-    chapter_start INT NOT NULL,
-    verse_start INT NOT NULL,
-    chapter_end INT NOT NULL,
-    verse_end INT NOT NULL,
+    book INT,
+    chapter_start INT,
+    verse_start INT,
+    chapter_end INT,
+    verse_end INT,
+    passage_group_id UUID,
     tags TEXT[] NOT NULL DEFAULT '{}',
+    attributes JSONB NOT NULL DEFAULT '{}',
     body TEXT NOT NULL,
     PRIMARY KEY (id),
-    CONSTRAINT unique_notes_slug UNIQUE (slug)
+    CONSTRAINT unique_notes_slug UNIQUE (slug),
+    CONSTRAINT fk_notes_passage_group FOREIGN KEY (passage_group_id) REFERENCES passage_groups(id),
+    CONSTRAINT notes_scope_xor CHECK (
+        (book IS NOT NULL AND chapter_start IS NOT NULL AND verse_start IS NOT NULL
+            AND chapter_end IS NOT NULL AND verse_end IS NOT NULL AND passage_group_id IS NULL)
+        OR
+        (book IS NULL AND chapter_start IS NULL AND verse_start IS NULL
+            AND chapter_end IS NULL AND verse_end IS NULL AND passage_group_id IS NOT NULL)
+    )
 );
 CREATE INDEX IF NOT EXISTS notes_location_idx ON notes(book, chapter_start, verse_start, chapter_end, verse_end);
+CREATE INDEX IF NOT EXISTS notes_passage_group_idx ON notes(passage_group_id);
 
 CREATE INDEX IF NOT EXISTS notes_search_idx ON notes USING bm25 (
     id,

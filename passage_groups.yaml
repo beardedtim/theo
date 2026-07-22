@@ -1,0 +1,71 @@
+# Canon-structure groups: which books belong together, and how those
+# groupings nest. Hand-authored, tracked in git -- edit this file and rerun
+# `uv run ingest_passage_groups.py passage_groups.yaml` to apply changes.
+#
+# Each group is one of:
+#   books: [book_start, book_end]   -- a contiguous range of books
+#   members: [book, book, ...]      -- an explicit, possibly non-contiguous list
+# `parent` (optional) is another group's slug, purely for display/breadcrumb
+# hierarchy -- it does not affect containment lookups or attribute
+# inheritance priority (see theo/passage_groups.py and theo/metadata.py).
+#
+# Book numbers are the canonical 1-66 order in theo/bible.py's BOOKS list.
+# This is a starting seed, not exhaustive -- extend freely.
+
+groups:
+  - slug: old-testament
+    name: Old Testament
+    books: [1, 39]
+
+  - slug: new-testament
+    name: New Testament
+    books: [40, 66]
+
+  - slug: pentateuch
+    name: Pentateuch
+    description: "The five books traditionally attributed to Moses: Genesis-Deuteronomy."
+    parent: old-testament
+    books: [1, 5]
+
+  - slug: historical-books
+    name: Historical Books
+    parent: old-testament
+    books: [6, 17]
+
+  - slug: wisdom-literature
+    name: Wisdom Literature
+    description: "The poetic/wisdom books: Job-Song of Solomon."
+    parent: old-testament
+    books: [18, 22]
+
+  - slug: major-prophets
+    name: Major Prophets
+    parent: old-testament
+    books: [23, 27]
+
+  - slug: minor-prophets
+    name: Minor Prophets
+    parent: old-testament
+    books: [28, 39]
+
+  - slug: gospels
+    name: Gospels
+    parent: new-testament
+    books: [40, 43]
+
+  - slug: pauline-epistles
+    name: Pauline Epistles
+    description: "Romans-Philemon. Hebrews is deliberately excluded"
+    parent: new-testament
+    books: [45, 57]
+
+  - slug: general-epistles
+    name: General Epistles
+    description: "James-Jude."
+    parent: new-testament
+    books: [59, 65]
+
+  - slug: johannine-literature
+    name: Johannine Literature
+    description: "The books traditionally attributed to John: cuts across the Gospels/general-epistles/apocalyptic groupings above."
+    members: [43, 62, 63, 64, 66]

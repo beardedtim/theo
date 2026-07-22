@@ -65,6 +65,15 @@ runs [artifacts/init.sql](artifacts/init.sql), which creates:
   given `(book, chapt_num, verse_num)`, translation-independent like `pericopes`.
 - **`people_groups`** — named collections of people (tribes, apostles, genealogies...),
   with a `parent_group_id` self-reference and a `people_group_members` join table.
+- **`passage_groups`** / **`passage_group_members`** — canon-structure groups (Pentateuch,
+  Old/New Testament, Gospels...): which books belong together. Distinct from
+  `people_groups` (people, not passages). Hand-authored in
+  [passage_groups.yaml](passage_groups.yaml) (tracked in git, like `notes/`), synced by
+  `ingest_passage_groups.py`. `parent_group_id` is display/breadcrumb hierarchy only;
+  every group (leaf and container) restates its own full book coverage in
+  `passage_group_members`, so "which groups contain book N" is a flat range scan with
+  no tree walk, and ordering by range width gives specific-before-general for free. See
+  [theo/passage_groups.py](theo/passage_groups.py).
 - **`events`** — biographical/historical events (e.g. "Exodus from Egypt"), with a
   `predecessor_id` self-reference, a `sort_key` for chronological ordering across
   BC/AD dates, and `event_parts`/`event_people`/`event_places`/`event_groups`/
@@ -100,11 +109,16 @@ runs [artifacts/init.sql](artifacts/init.sql), which creates:
   spaCy (`en_core_web_trf`) + fastcoref pipeline in [theo/parse.py](theo/parse.py).
   Keyed by a `pipeline` version string so reprocessing under new models can
   coexist with old rows.
-- **`notes`** — personal commentary: verse-range-anchored, BM25-indexed,
-  synced from hand-written markdown files under `notes/` (see
-  [theo/notes.py](theo/notes.py) and the Notes section below). This is the
-  one table where the source folder, not the database, is authoritative —
-  `ingest_notes.py` upserts on edit and deletes rows whose file is gone.
+- **`notes`** — personal commentary: BM25-indexed, synced from hand-written
+  markdown files under `notes/` (see [theo/notes.py](theo/notes.py) and
+  the Notes section below). This is the one table where the source
+  folder, not the database, is authoritative — `ingest_notes.py` upserts
+  on edit and deletes rows whose file is gone. A note is scoped to
+  *either* a verse range (`book`/`chapter_start`/... — all nullable, and
+  all-or-nothing via the `notes_scope_xor` check constraint) *or* a
+  `passage_group_id`, never both. `attributes` (JSONB) holds optional
+  key/value facts that inherit down to anything inside the note's scope —
+  see `theo.metadata.resolve_attributes`.
 
 `embedding`'s dimension (1024) must match whatever embedding model is used for
 ingestion — decide before first ingesting data; changing it later means editing
@@ -185,9 +199,14 @@ uv run annotate_pericopes.py                          # populates pericope_annot
 uv run llm_annotate_pericopes.py                      # populates pericope_annotations via together.ai (entities,
                                                        # SVO, themes, keywords, summary; needs TOGETHER_API_KEY)
 
+uv run ingest_passage_groups.py passage_groups.yaml   # syncs the canon-structure taxonomy (Pentateuch, Old/New
+                                                       # Testament, ...) into passage_groups/passage_group_members
+                                                       # -- independent of the above; run before ingest_notes.py
+                                                       # if any note frontmatter references a group by slug
 uv run ingest_notes.py                                # syncs notes/*.md into the `notes` table (independent of
-                                                       # the above; rerun any time after adding/editing/deleting
-                                                       # a note file -- see the Notes section below)
+                                                       # the above except passage_groups if a note uses `group:`;
+                                                       # rerun any time after adding/editing/deleting a note file
+                                                       # -- see the Notes section below)
 
 uv run index_pericope_metadata.py                     # populates pericope_metadata_index -- STEP/theographic
                                                        # entity names+descriptions, personal notes, and the NLP
@@ -199,6 +218,28 @@ uv run index_pericope_metadata.py                     # populates pericope_metad
                                                        # steps above change.
 ```
 
+## Passage groups (canon structure)
+
+`passage_groups.yaml` (repo root, tracked in git) is a small hand-authored
+taxonomy of which books belong together -- Pentateuch, Old/New Testament,
+Gospels, Pauline/General Epistles, and so on -- and how those groupings
+nest. Each entry is a `slug`/`name`/optional `description`/optional
+`parent` (another group's slug, display hierarchy only), plus either
+`books: [book_start, book_end]` for a contiguous range or `members: [...]`
+for an explicit, possibly non-contiguous book list (e.g. Johannine
+literature: John + 1/2/3 John + Revelation). See the file itself for the
+full seed taxonomy -- it's a starting point, not exhaustive.
+
+Sync with `uv run ingest_passage_groups.py passage_groups.yaml`. Like
+notes, this treats the file as live/authoritative: editing a group and
+rerunning overwrites it in place (name, description, parent, book
+ranges). `--prune` additionally removes groups no longer in the file
+(off by default, same rationale as `ingest_notes.py --prune`).
+
+Groups show up in `/passage-groups` and `/passage-groups/{slug}`, and in
+`/metadata`'s `passage_groups` field (which groups a range's book belongs
+to, narrowest first) -- see [theo/passage_groups.py](theo/passage_groups.py).
+
 ## Notes (personal commentary)
 
 `notes/` holds hand-written markdown files -- tracked in git, unlike
@@ -208,7 +249,9 @@ etc.) with your own research. Organize them into subfolders however you
 like; a note's identity (its `slug`) is its path relative to `notes/`,
 without the `.md` extension.
 
-Each file is YAML frontmatter, a closing `---`, then a markdown body:
+Each file is YAML frontmatter, a closing `---`, then a markdown body. A
+note is scoped to *either* a verse range *or* a passage group -- never
+both. Range-scoped, the common case:
 
 ```markdown
 ---
@@ -230,24 +273,50 @@ shapes, from most to least explicit -- pick whichever fits:
 - `chapter`/`verse_start`/`verse_end` -- a range within one chapter
 - `chapter`/`verse` -- a single verse
 
-`tags` is optional (defaults to none). See
-[notes/exodus/dating-and-historicity.md](notes/exodus/dating-and-historicity.md)
-for a filled-out example.
+Group-scoped, using a [passage_groups.yaml](passage_groups.yaml) slug
+instead of `book`/a range:
 
-Sync the folder into the database with `uv run ingest_notes.py`. Unlike
-every other ingest script, this treats the folder as live/authoritative:
-rerunning after adding or editing a file inserts/updates its row. Deleting
-a note file does *not* delete its row unless you also pass `--prune`
-(`uv run ingest_notes.py --prune`) -- pruning compares against whatever
-directory you point it at, so running it against a partial/wrong path
-would silently delete every note outside that path; only use it against
-your real, complete `notes/` folder when you've actually removed a file.
-After syncing, rerun `uv run index_pericope_metadata.py` so hybrid search
-picks up the change.
+```markdown
+---
+title: "Authorship of the Pentateuch"
+group: pentateuch
+tags: [authorship, historicity]
+attributes:
+  author: "Disputed -- traditionally attributed to Moses; the Documentary Hypothesis proposes composite JEDP authorship."
+---
+Body text in markdown goes here.
+```
+
+`tags` is optional (defaults to none). `attributes` is optional too -- a
+flat map of key/value facts (author, date, genre, ...) that *inherit*
+down to every book/range inside the note's scope: a fact set on
+`group: pentateuch` surfaces in `/metadata` for Genesis through
+Deuteronomy unless a more specific note (or narrower group) sets the same
+key, in which case the more specific source wins (see
+`theo.metadata.resolve_attributes`). See
+[notes/exodus/dating-and-historicity.md](notes/exodus/dating-and-historicity.md)
+and [notes/pentateuch/authorship.md](notes/pentateuch/authorship.md) for
+filled-out examples of each scope.
+
+Sync the folder into the database with `uv run ingest_notes.py` (after
+`ingest_passage_groups.py`, if any note frontmatter references a group by
+slug). Unlike every other ingest script, this treats the folder as
+live/authoritative: rerunning after adding or editing a file
+inserts/updates its row. Deleting a note file does *not* delete its row
+unless you also pass `--prune` (`uv run ingest_notes.py --prune`) --
+pruning compares against whatever directory you point it at, so running
+it against a partial/wrong path would silently delete every note outside
+that path; only use it against your real, complete `notes/` folder when
+you've actually removed a file. After syncing, rerun
+`uv run index_pericope_metadata.py` so hybrid search picks up the change.
 
 Notes show up in `/metadata` and `/metadata/pericope/{id}` (alongside
-people/places/events/annotations), are searchable directly via
-`GET /notes?q=`, and are one leg of what `hybrid_search` fuses over.
+people/places/events/annotations, and via `attributes` if inherited from
+a group), are searchable directly via `GET /notes?q=`, and their
+title/tags are one leg of what `hybrid_search` fuses over (a note's body
+is not indexed there -- see [theo/metadata_index.py](theo/metadata_index.py)
+-- to avoid a long or wide-ranging note swamping every pericope in its
+scope; the note itself is still reachable in full via `/notes`/`/note/{slug}`).
 
 Every ingest script is safe to rerun — rows already present are left alone
 (duplicates skipped), so re-running after adding a new translation or fixing
@@ -283,6 +352,8 @@ index built from all of the above for every NIV pericope.
 | `GET /event/{event_id}`                                                                     | A single event with its participants and locations resolved                                                                                                                         |
 | `GET /people-groups`                                                                        | All people groups (tribes, apostles, genealogies...)                                                                                                                                |
 | `GET /people-groups/{group_id}`                                                             | A single people group with its members resolved                                                                                                                                     |
+| `GET /passage-groups`                                                                        | All canon-structure groups (Pentateuch, Old/New Testament, Gospels...)                                                                                                              |
+| `GET /passage-groups/{slug}`                                                                 | A single passage group with its expanded book list and direct child groups                                                                                                         |
 | `GET /dictionary?q=&limit=`                                                                 | Search Easton's Bible Dictionary by term/definition (BM25)                                                                                                                          |
 | `GET /dictionary/{entry_id}`                                                                | A single dictionary entry                                                                                                                                                           |
 | `GET /names?q=&limit=`                                                                      | Search TIPNR proper nouns by name/description (BM25)                                                                                                                                |
@@ -293,7 +364,7 @@ index built from all of the above for every NIV pericope.
 | `GET /notes?q=&limit=`                                                                      | Search personal commentary notes by title/body text (BM25)                                                                                                                          |
 | `GET /notes/{book}/{chapter_start}/{verse_start}/{chapter_end}/{verse_end}`                 | Personal notes anchored to a verse range                                                                                                                                             |
 | `GET /note/{slug}`                                                                          | A single personal note by slug (its path under `notes/`, without `.md`)                                                                                                             |
-| `GET /metadata/{book}/{chapter_start}/{verse_start}/{chapter_end}/{verse_end}?translation=` | Everything known about a verse range in one call: overlapping pericopes, people, places, groups, events, TIPNR names, their lexicon entries (keyed by ustrong), NLP annotations, and personal notes |
+| `GET /metadata/{book}/{chapter_start}/{verse_start}/{chapter_end}/{verse_end}?translation=` | Everything known about a verse range in one call: overlapping pericopes, people, places, groups, events, TIPNR names, their lexicon entries (keyed by ustrong), NLP annotations, personal notes, the passage groups the book belongs to, and inherited `attributes` (author, date, ...) |
 | `GET /metadata/pericope/{pericope_id}?translation=`                                         | The same combined payload, addressed by pericope id (the shape `/search` results come in)                                                                                           |
 | `GET /reading/{book}/{chapter_start}/{verse_start}/{chapter_end}/{verse_end}?translation=`  | A verse range laid out for reading: paragraphs, poetry line breaks/indentation, section headings, inline styling. NIV only for now — any other translation 404s                     |
 

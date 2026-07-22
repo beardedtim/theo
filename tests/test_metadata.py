@@ -5,7 +5,8 @@ entries, and one NLP annotation per pericope.
 
 _KEYS = {
     "book", "chapter_start", "verse_start", "chapter_end", "verse_end",
-    "pericopes", "entities", "events", "lexicon", "annotations",
+    "pericopes", "entities", "events", "lexicon", "annotations", "notes",
+    "passage_groups", "attributes",
 }
 
 
@@ -93,3 +94,26 @@ def test_metadata_by_pericope_not_found(client):
     response = client.get("/metadata/pericope/00000000-0000-0000-0000-000000000000")
 
     assert response.status_code == 404
+
+
+def test_metadata_passage_groups_narrowest_first(client):
+    metadata = client.get("/metadata/Genesis/1/1/1/1").json()
+
+    slugs = [g["slug"] for g in metadata["passage_groups"]]
+    assert "pentateuch" in slugs and "old-testament" in slugs
+    assert slugs.index("pentateuch") < slugs.index("old-testament")
+
+
+def test_metadata_attribute_inherited_from_passage_group(client):
+    metadata = client.get("/metadata/Genesis/1/1/1/1").json()
+
+    assert "author" in metadata["attributes"]
+    author = metadata["attributes"]["author"]
+    assert author["scope"] == "pentateuch"
+    assert author["source_note_slug"] == "pentateuch/authorship"
+
+
+def test_metadata_attributes_empty_outside_group(client):
+    metadata = client.get("/metadata/Matthew/1/1/1/1").json()
+
+    assert metadata["attributes"] == {}

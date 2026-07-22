@@ -14,13 +14,12 @@ import type { IconType } from "react-icons";
 import {
   LuArrowRight,
   LuBookOpen,
-  LuCalendarRange,
   LuLanguages,
   LuMessageCircleQuestion,
   LuNetwork,
+  LuNotebookPen,
   LuSearch,
   LuSparkles,
-  LuUsers,
 } from "react-icons/lu";
 
 const STATS: { value: string; label: string }[] = [
@@ -51,18 +50,11 @@ const FEATURES: {
       "Read full chapters in a clean, paragraph-style view with cross-references right where you need them.",
   },
   {
-    href: "/events",
-    icon: LuCalendarRange,
-    title: "Events",
+    href: "/notes",
+    icon: LuNotebookPen,
+    title: "Notes",
     description:
-      "Browse the events of Scripture and see how they connect across books and centuries.",
-  },
-  {
-    href: "/groups",
-    icon: LuUsers,
-    title: "People Groups",
-    description:
-      "Look up the nations, tribes, and peoples named throughout the Bible.",
+      "Personal commentary and research, anchored to a passage or a whole group of books.",
   },
   {
     href: "/lexicon",
@@ -220,7 +212,7 @@ function HomePage() {
             Everything you need to study a passage
           </Heading>
           <Text color="fg.muted">
-            Five ways into the text, all pointing back at each other.
+            Four ways into the text, all pointing back at each other.
           </Text>
         </VStack>
         <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} gap="4">

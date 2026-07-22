@@ -19,9 +19,11 @@ is a full Easton's Dictionary entry (thousands of characters), identical
 across every pericope that mentions the same person/place, and would
 swamp the index. STEP's `brief`/`description` fields are curated
 one-liners (~40 chars average) and safe to include in full. Personal notes
-(theo.notes) are included in full too -- unlike dictionary_text, a note is
-short, original, and specific to the range it's anchored to, so it doesn't
-have the same swamp-the-index problem.
+(theo.notes) contribute their `title`/`tags` only, for the same reason --
+a note's `body` is free-form prose that can run to thousands of characters
+and, for a note anchored to a wide range (e.g. a note spanning several
+chapters), would repeat in full across every pericope in that range. The
+note itself is already reachable in full via `/notes` and `/note/{slug}`.
 """
 
 from __future__ import annotations
@@ -73,7 +75,6 @@ def build_search_text(pericope: Pericope, translation: str = "NIV") -> str:
     for note in get_notes_in_range(*span):
         parts.append(note.title)
         parts.extend(note.tags)
-        parts.append(note.body)
 
     annotation = best_annotation(pericope.id, translation)
     if annotation is not None:

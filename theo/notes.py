@@ -4,13 +4,19 @@ into the `notes` table), used to supplement/correct Theographic's more
 theologically conservative framing with the user's own research.
 
 Frontmatter fields:
-  title (required)  -- str
-  book (required)    -- number or name, e.g. "Exodus" or 2
-  tags (optional)    -- list of strings, default []
-  one of, to anchor the note to a verse range:
-    chapter_start/verse_start/chapter_end/verse_end  -- full range
-    chapter/verse_start/verse_end                     -- one chapter
-    chapter/verse                                     -- a single verse
+  title (required)      -- str
+  tags (optional)        -- list of strings, default []
+  attributes (optional)  -- dict of str -> str, e.g. {author: "Disputed..."};
+                             inherited by anything inside the note's scope,
+                             see theo.metadata.resolve_attributes
+  scope: exactly one of --
+    book (+ a range shape below) -- number or name, e.g. "Exodus" or 2, plus
+      one of, to anchor the note to a verse range:
+        chapter_start/verse_start/chapter_end/verse_end  -- full range
+        chapter/verse_start/verse_end                     -- one chapter
+        chapter/verse                                     -- a single verse
+    group -- a theo.passage_groups slug, e.g. "pentateuch", to anchor the
+      note to a whole passage group instead of a specific range
 
 Everything after the closing `---` is the note body: raw markdown, stored
 and served as-is (rendering it is a client concern).
@@ -24,6 +30,7 @@ from pathlib import Path
 
 import yaml
 from psycopg.rows import dict_row
+from psycopg.types.json import Jsonb
 
 from theo.bible import book_number
 from theo.bm25 import sanitize_query
@@ -31,21 +38,28 @@ from theo.db import get_connection
 
 _FRONTMATTER_RE = re.compile(r"\A---\s*\n(.*?\n)---\s*\n?(.*)\Z", re.DOTALL)
 
-_COLUMNS = "id, slug, title, book, chapter_start, verse_start, chapter_end, verse_end, tags, body"
+_COLUMNS = (
+    "id, slug, title, book, chapter_start, verse_start, chapter_end, verse_end, "
+    "passage_group_id, tags, attributes, body"
+)
 
 
 @dataclass(frozen=True)
 class ParsedNote:
     """One notes/*.md file's frontmatter + body, not yet in the database --
-    what ingest_notes.py hands to its upsert."""
+    what ingest_notes.py hands to its upsert. Exactly one of (book +
+    range) or passage_group_slug is set, matching the `notes` table's
+    notes_scope_xor constraint."""
     slug: str
     title: str
-    book: int
-    chapter_start: int
-    verse_start: int
-    chapter_end: int
-    verse_end: int
+    book: int | None
+    chapter_start: int | None
+    verse_start: int | None
+    chapter_end: int | None
+    verse_end: int | None
+    passage_group_slug: str | None
     tags: list[str]
+    attributes: dict[str, str]
     body: str
 
 
@@ -54,12 +68,14 @@ class Note:
     id: str
     slug: str
     title: str
-    book: int
-    chapter_start: int
-    verse_start: int
-    chapter_end: int
-    verse_end: int
+    book: int | None
+    chapter_start: int | None
+    verse_start: int | None
+    chapter_end: int | None
+    verse_end: int | None
+    passage_group_id: str | None
     tags: list[str]
+    attributes: dict[str, str]
     body: str
 
 
@@ -97,9 +113,17 @@ def parse_note_file(path: Path, slug: str) -> ParsedNote:
     fm = yaml.safe_load(match.group(1)) or {}
     body = match.group(2).strip()
 
-    book = fm["book"]
-    book_num = book if isinstance(book, int) else book_number(str(book))
-    chapter_start, verse_start, chapter_end, verse_end = _range_from_frontmatter(fm, path)
+    if "group" in fm and "book" in fm:
+        raise ValueError(f"{path}: frontmatter has both 'group' and 'book' -- a note is scoped to one or the other")
+
+    if "group" in fm:
+        book_num = chapter_start = verse_start = chapter_end = verse_end = None
+        passage_group_slug = str(fm["group"])
+    else:
+        book = fm["book"]
+        book_num = book if isinstance(book, int) else book_number(str(book))
+        chapter_start, verse_start, chapter_end, verse_end = _range_from_frontmatter(fm, path)
+        passage_group_slug = None
 
     return ParsedNote(
         slug=slug,
@@ -109,7 +133,9 @@ def parse_note_file(path: Path, slug: str) -> ParsedNote:
         verse_start=verse_start,
         chapter_end=chapter_end,
         verse_end=verse_end,
+        passage_group_slug=passage_group_slug,
         tags=[str(t) for t in (fm.get("tags") or [])],
+        attributes={str(k): str(v) for k, v in (fm.get("attributes") or {}).items()},
         body=body,
     )
 
@@ -140,11 +166,29 @@ def sync_notes(notes_dir: Path, prune: bool = False) -> tuple[int, int]:
 
     with get_connection() as conn:
         with conn.cursor() as cur:
+            cur.execute("SELECT slug, id FROM passage_groups")
+            group_slug_to_id = {row[0]: row[1] for row in cur.fetchall()}
+
+            unknown_groups = {
+                n.passage_group_slug for n in parsed
+                if n.passage_group_slug is not None and n.passage_group_slug not in group_slug_to_id
+            }
+            if unknown_groups:
+                raise ValueError(
+                    f"Unknown passage group slug(s) {sorted(unknown_groups)} -- "
+                    "check passage_groups.yaml (and rerun ingest_passage_groups.py if you just added them)"
+                )
+
             cur.executemany(
                 """
-                INSERT INTO notes (slug, title, book, chapter_start, verse_start, chapter_end, verse_end, tags, body)
-                VALUES (%(slug)s, %(title)s, %(book)s, %(chapter_start)s, %(verse_start)s,
-                        %(chapter_end)s, %(verse_end)s, %(tags)s, %(body)s)
+                INSERT INTO notes (
+                    slug, title, book, chapter_start, verse_start, chapter_end, verse_end,
+                    passage_group_id, tags, attributes, body
+                )
+                VALUES (
+                    %(slug)s, %(title)s, %(book)s, %(chapter_start)s, %(verse_start)s,
+                    %(chapter_end)s, %(verse_end)s, %(passage_group_id)s, %(tags)s, %(attributes)s, %(body)s
+                )
                 ON CONFLICT (slug) DO UPDATE SET
                     title = EXCLUDED.title,
                     book = EXCLUDED.book,
@@ -152,7 +196,9 @@ def sync_notes(notes_dir: Path, prune: bool = False) -> tuple[int, int]:
                     verse_start = EXCLUDED.verse_start,
                     chapter_end = EXCLUDED.chapter_end,
                     verse_end = EXCLUDED.verse_end,
+                    passage_group_id = EXCLUDED.passage_group_id,
                     tags = EXCLUDED.tags,
+                    attributes = EXCLUDED.attributes,
                     body = EXCLUDED.body
                 """,
                 [
@@ -164,7 +210,9 @@ def sync_notes(notes_dir: Path, prune: bool = False) -> tuple[int, int]:
                         "verse_start": n.verse_start,
                         "chapter_end": n.chapter_end,
                         "verse_end": n.verse_end,
+                        "passage_group_id": group_slug_to_id[n.passage_group_slug] if n.passage_group_slug else None,
                         "tags": n.tags,
+                        "attributes": Jsonb(n.attributes),
                         "body": n.body,
                     }
                     for n in parsed
@@ -192,7 +240,9 @@ def _row_to_note(row: dict) -> Note:
         verse_start=row["verse_start"],
         chapter_end=row["chapter_end"],
         verse_end=row["verse_end"],
+        passage_group_id=str(row["passage_group_id"]) if row["passage_group_id"] else None,
         tags=row["tags"] or [],
+        attributes=row["attributes"] or {},
         body=row["body"],
     )
 
@@ -228,6 +278,24 @@ def get_notes_in_range(
                 ORDER BY chapter_start, verse_start
                 """,
                 (book_num, chapter_end, verse_end, chapter_start, verse_start),
+            )
+            rows = cur.fetchall()
+    return [_row_to_note(row) for row in rows]
+
+
+def get_notes_for_group(slug: str) -> list[Note]:
+    """Every note scoped directly to the passage group `slug` (not its
+    ancestors/descendants -- see theo.metadata.resolve_attributes for the
+    walk that climbs passage_groups.get_passage_groups_for_book)."""
+    with get_connection() as conn:
+        with conn.cursor(row_factory=dict_row) as cur:
+            cur.execute(
+                f"""
+                SELECT {_COLUMNS}
+                FROM notes
+                WHERE passage_group_id = (SELECT id FROM passage_groups WHERE slug = %s)
+                """,
+                (slug,),
             )
             rows = cur.fetchall()
     return [_row_to_note(row) for row in rows]

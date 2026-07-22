@@ -36,7 +36,8 @@ from theo.annotations import get_annotations
 from theo.bible import book_number
 from theo.events import Event, get_events_in_range
 from theo.lexicon import LexiconEntry, get_lexicon_for_ustrongs
-from theo.notes import Note, get_notes_in_range
+from theo.notes import Note, get_notes_for_group, get_notes_in_range
+from theo.passage_groups import PassageGroup, get_passage_groups_for_book
 from theo.people import get_people_in_range
 from theo.people_groups import get_groups_in_range
 from theo.pericopes import Pericope, get_pericope, get_pericopes_in_range
@@ -210,6 +211,38 @@ def best_annotation(pericope_id: str, translation: str) -> PericopeAnnotation | 
 
 
 @dataclass(frozen=True)
+class ResolvedAttribute:
+    """One inherited fact (e.g. author, date) plus provenance -- which note
+    asserted it and at what scope, so a client can render "(from
+    Pentateuch)" next to it. See resolve_attributes."""
+    value: str
+    source_note_slug: str
+    scope: str      # "range", or a theo.passage_groups slug
+
+
+def resolve_attributes(book: int, range_notes: list[Note]) -> dict[str, ResolvedAttribute]:
+    """Every key/value fact that applies to `book`, most specific source
+    winning per key: notes scoped directly to the queried range first
+    (`range_notes`, already fetched for VerseMetadata.notes), then each
+    passage group containing `book` in narrowest-first order (see
+    theo.passage_groups.get_passage_groups_for_book) -- so a fact on
+    `group: pentateuch` inherits down to Genesis unless a more specific
+    note (or a narrower group, e.g. a future "torah-legal-code" subgroup)
+    already set the same key. `dict.setdefault` is what encodes "first
+    (most specific) source wins", same idiom as merge_entities/
+    best_annotation above."""
+    resolved: dict[str, ResolvedAttribute] = {}
+    for note in range_notes:
+        for key, value in note.attributes.items():
+            resolved.setdefault(key, ResolvedAttribute(value=value, source_note_slug=note.slug, scope="range"))
+    for group in get_passage_groups_for_book(book):
+        for note in get_notes_for_group(group.slug):
+            for key, value in note.attributes.items():
+                resolved.setdefault(key, ResolvedAttribute(value=value, source_note_slug=note.slug, scope=group.slug))
+    return resolved
+
+
+@dataclass(frozen=True)
 class VerseMetadata:
     book: int
     chapter_start: int
@@ -222,6 +255,8 @@ class VerseMetadata:
     lexicon: dict[str, list[LexiconEntry]]  # keyed by the entities' ustrong ids
     annotations: list[PericopeAnnotation]   # one per overlapping pericope (best pipeline)
     notes: list[Note]              # personal commentary overlapping the range (see theo.notes)
+    passage_groups: list[PassageGroup]           # groups book belongs to, narrowest first (see theo.passage_groups)
+    attributes: dict[str, ResolvedAttribute]     # inherited facts, range notes then passage groups (see resolve_attributes)
 
 
 def get_metadata_for_range(
@@ -245,6 +280,7 @@ def get_metadata_for_range(
         for p in pericopes
         if (annotation := best_annotation(p.id, translation)) is not None
     ]
+    notes = get_notes_in_range(*span)
     return VerseMetadata(
         book=book_num,
         chapter_start=chapter_start,
@@ -258,7 +294,9 @@ def get_metadata_for_range(
             sorted({e.ustrong for e in entities if e.ustrong})
         ),
         annotations=annotations,
-        notes=get_notes_in_range(*span),
+        notes=notes,
+        passage_groups=get_passage_groups_for_book(book_num),
+        attributes=resolve_attributes(book_num, notes),
     )
 
 

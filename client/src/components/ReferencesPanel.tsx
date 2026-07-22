@@ -1,4 +1,5 @@
 import { useEffect, useState, type ReactNode } from "react";
+import { Link } from "wouter";
 import { Badge, Box, Button, Collapsible, HStack, Stack, Text } from "@chakra-ui/react";
 import { Tooltip } from "@/components/ui/tooltip";
 import { EventDetailDialog } from "@/components/EventDetailDialog";
@@ -12,12 +13,14 @@ import {
   type Event,
   type EntityKind,
   type MetadataEntity,
+  type Note,
   type Person,
   type Place,
   type StepName,
   type VerseMetadata,
   type VerseRangeParams,
 } from "@/lib/api";
+import { noteHref } from "@/lib/notes";
 
 const KIND_ROWS: { kind: EntityKind; label: string; color: string }[] = [
   { kind: "person", label: "People", color: "blue" },
@@ -69,6 +72,67 @@ function ReferenceRow({ label, children }: { label: string; children: ReactNode 
         {children}
       </HStack>
     </HStack>
+  );
+}
+
+function NoteBadge({ note }: { note: Note }) {
+  const snippet = note.body.split(/\n\s*\n/)[0]?.slice(0, 200) ?? note.title;
+  return (
+    <Tooltip content={snippet} contentProps={{ maxW: "sm" }}>
+      <Link href={noteHref(note.slug)}>
+        <Badge colorPalette="purple" variant="subtle" cursor="pointer">
+          {note.title}
+        </Badge>
+      </Link>
+    </Tooltip>
+  );
+}
+
+/** Facts (author, date, ...) inherited from personal notes -- either
+ * anchored directly to this range or to a passage group the book belongs
+ * to (e.g. a Pentateuch-wide authorship note applying to Genesis). See
+ * theo.metadata.resolve_attributes. Rendered as its own callout, above the
+ * reference badges, since these are usually the first thing worth reading
+ * about a passage rather than a supporting detail. */
+function AttributesPanel({ metadata }: { metadata: VerseMetadata }) {
+  const entries = Object.entries(metadata.attributes);
+  if (entries.length === 0) return null;
+
+  const groupName = (slug: string) =>
+    metadata.passage_groups.find((g) => g.slug === slug)?.name ?? slug;
+
+  return (
+    <Stack
+      gap="3"
+      p="3"
+      borderWidth="1px"
+      borderColor="border.muted"
+      borderRadius="md"
+      bg="bg.subtle"
+    >
+      {entries.map(([key, attribute]) => (
+        <Box key={key}>
+          <HStack gap="2" align="baseline" flexWrap="wrap">
+            <Text fontSize="xs" fontWeight="semibold" textTransform="uppercase" color="fg.muted">
+              {key}
+            </Text>
+            <Link href={noteHref(attribute.source_note_slug)}>
+              <Text
+                as="span"
+                fontSize="2xs"
+                color="fg.subtle"
+                textDecoration="underline"
+                textUnderlineOffset="2px"
+                cursor="pointer"
+              >
+                via note{attribute.scope !== "range" ? ` on ${groupName(attribute.scope)}` : ""}
+              </Text>
+            </Link>
+          </HStack>
+          <Text fontSize="sm">{attribute.value}</Text>
+        </Box>
+      ))}
+    </Stack>
   );
 }
 
@@ -165,7 +229,10 @@ export function ReferencesPanel({
     return undefined; // theographic groups have no detail view
   }
 
-  const total = metadata ? metadata.entities.length + metadata.events.length : null;
+  const total = metadata
+    ? metadata.entities.length + metadata.events.length + metadata.notes.length
+    : null;
+  const hasAttributes = metadata ? Object.keys(metadata.attributes).length > 0 : false;
 
   return (
     <Stack gap="2">
@@ -182,10 +249,20 @@ export function ReferencesPanel({
               </Text>
             )}
 
-            {metadata && total === 0 && metadata.annotations.length === 0 && (
+            {metadata && total === 0 && metadata.annotations.length === 0 && !hasAttributes && (
               <Text fontSize="sm" color="fg.muted">
                 Nothing found for this passage.
               </Text>
+            )}
+
+            {metadata && <AttributesPanel metadata={metadata} />}
+
+            {metadata && metadata.notes.length > 0 && (
+              <ReferenceRow label="Notes">
+                {metadata.notes.map((note) => (
+                  <NoteBadge key={note.id} note={note} />
+                ))}
+              </ReferenceRow>
             )}
 
             {metadata &&

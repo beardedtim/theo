@@ -268,10 +268,11 @@ def list_passage_groups() -> list[PassageGroup]:
 
 @app.get("/passage-groups/{slug}")
 def get_passage_group(
-    slug: str = Path(..., description='Group slug, as returned by /passage-groups, e.g. "pentateuch".'),
+    slug: str = Path(..., description='Group slug, name, or alias -- e.g. "pentateuch", "Pentateuch", or "Torah". Matched case-insensitively.'),
 ) -> PassageGroupDetail:
-    """Fetch a single passage group along with its expanded book list and
-    any direct child groups."""
+    """Fetch a single passage group along with its expanded book list, its
+    direct child groups, and its aliases. Accepts a slug, canonical name, or
+    any alias (see theo.passage_groups.resolve_passage_group)."""
     detail = fetch_passage_group_detail(slug)
 
     if detail is None:

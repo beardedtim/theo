@@ -697,6 +697,24 @@ CREATE TABLE IF NOT EXISTS passage_group_members (
 CREATE INDEX IF NOT EXISTS passage_group_members_group_idx ON passage_group_members(group_id);
 CREATE INDEX IF NOT EXISTS passage_group_members_range_idx ON passage_group_members(book_start, book_end);
 
+-- Alternate names that resolve to a group in lookups (e.g. "Torah" ->
+-- pentateuch, "The Twelve" -> minor-prophets). Authored in the optional
+-- `aliases:` list per group in passage_groups.yaml, replaced wholesale on
+-- sync like passage_group_members. `alias_normalized` (lower(trim(alias)))
+-- is the lookup key; the UNIQUE on it makes an alias globally unique across
+-- every group at the DB level. Ingest additionally rejects aliases that
+-- collide with any slug or book name (see theo.passage_groups).
+CREATE TABLE IF NOT EXISTS passage_group_aliases (
+    id UUID NOT NULL DEFAULT uuidv7(),
+    group_id UUID NOT NULL,
+    alias TEXT NOT NULL,                  -- as authored, for display
+    alias_normalized TEXT NOT NULL,       -- lower(trim(alias)), the lookup key
+    PRIMARY KEY (id),
+    CONSTRAINT fk_passage_group_aliases_group FOREIGN KEY (group_id) REFERENCES passage_groups(id) ON DELETE CASCADE,
+    CONSTRAINT unique_passage_group_aliases_normalized UNIQUE (alias_normalized)
+);
+CREATE INDEX IF NOT EXISTS passage_group_aliases_group_idx ON passage_group_aliases(group_id);
+
 
 -- Personal commentary, sourced from hand-written notes/*.md (YAML
 -- frontmatter + markdown body) via ingest_notes.py -- see theo.notes.

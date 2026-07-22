@@ -6,6 +6,8 @@ verse_start: 1
 chapter_end: 15
 verse_end: 21
 tags: [historicity, archaeology, dating, egyptology]
+attributes:
+  dating: "Composition (not the event): the narrative is widely placed in the exilic/post-exilic period (6th-5th century BCE), long after any Bronze Age setting. The date of the Exodus itself is separately disputed -- see body."
 ---
 Theographic (and most Evangelical study-Bible apparatus) defaults to a
 15th-century BCE "early date" derived from a literal reading of 1 Kings

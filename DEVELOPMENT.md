@@ -65,14 +65,16 @@ runs [artifacts/init.sql](artifacts/init.sql), which creates:
   given `(book, chapt_num, verse_num)`, translation-independent like `pericopes`.
 - **`people_groups`** — named collections of people (tribes, apostles, genealogies...),
   with a `parent_group_id` self-reference and a `people_group_members` join table.
-- **`passage_groups`** / **`passage_group_members`** — canon-structure groups (Pentateuch,
-  Old/New Testament, Gospels...): which books belong together. Distinct from
-  `people_groups` (people, not passages). Hand-authored in
+- **`passage_groups`** / **`passage_group_members`** / **`passage_group_aliases`** —
+  canon-structure groups (Pentateuch, Old/New Testament, Gospels...): which books belong
+  together. Distinct from `people_groups` (people, not passages). Hand-authored in
   [passage_groups.yaml](passage_groups.yaml) (tracked in git, like `notes/`), synced by
   `ingest_passage_groups.py`. `parent_group_id` is display/breadcrumb hierarchy only;
   every group (leaf and container) restates its own full book coverage in
   `passage_group_members`, so "which groups contain book N" is a flat range scan with
-  no tree walk, and ordering by range width gives specific-before-general for free. See
+  no tree walk, and ordering by range width gives specific-before-general for free.
+  `passage_group_aliases` holds alternate names (`Torah`, `The Twelve`, `OT`...), keyed
+  by a normalized (lower/trim) lookup column that's `UNIQUE` across all groups. See
   [theo/passage_groups.py](theo/passage_groups.py).
 - **`events`** — biographical/historical events (e.g. "Exodus from Egypt"), with a
   `predecessor_id` self-reference, a `sort_key` for chronological ordering across
@@ -227,18 +229,26 @@ nest. Each entry is a `slug`/`name`/optional `description`/optional
 `parent` (another group's slug, display hierarchy only), plus either
 `books: [book_start, book_end]` for a contiguous range or `members: [...]`
 for an explicit, possibly non-contiguous book list (e.g. Johannine
-literature: John + 1/2/3 John + Revelation). See the file itself for the
-full seed taxonomy -- it's a starting point, not exhaustive.
+literature: John + 1/2/3 John + Revelation). An optional `aliases:` list
+gives alternate names that resolve to the group in lookups (`Torah` ->
+pentateuch, `The Twelve` -> minor-prophets), stored in
+`passage_group_aliases`. Aliases match case-insensitively / whitespace-
+trimmed, are globally unique, and may not collide with any slug or book
+name -- ingest **hard-fails** (before writing anything) on a collision or
+duplicate rather than silently picking a winner. See the file itself for
+the full seed taxonomy -- it's a starting point, not exhaustive.
 
 Sync with `uv run ingest_passage_groups.py passage_groups.yaml`. Like
 notes, this treats the file as live/authoritative: editing a group and
-rerunning overwrites it in place (name, description, parent, book
-ranges). `--prune` additionally removes groups no longer in the file
+rerunning overwrites it in place (name, description, parent, book ranges,
+aliases). `--prune` additionally removes groups no longer in the file
 (off by default, same rationale as `ingest_notes.py --prune`).
 
-Groups show up in `/passage-groups` and `/passage-groups/{slug}`, and in
-`/metadata`'s `passage_groups` field (which groups a range's book belongs
-to, narrowest first) -- see [theo/passage_groups.py](theo/passage_groups.py).
+Groups show up in `/passage-groups` and `/passage-groups/{slug}` (which
+accepts a slug, canonical name, or any alias, and returns the group's
+`aliases`), and in `/metadata`'s `passage_groups` field (which groups a
+range's book belongs to, narrowest first) -- see
+[theo/passage_groups.py](theo/passage_groups.py).
 
 ## Notes (personal commentary)
 

@@ -22,6 +22,8 @@ import {
   type PassageGroup,
 } from "@/lib/api";
 import { noteParagraphs, noteRangeLabel } from "@/lib/notes";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 function NoteScope({ note, groups }: { note: Note; groups: PassageGroup[] }) {
   if (note.passage_group_id) {
@@ -110,7 +112,7 @@ function NoteDetailPage() {
 
           {Object.keys(note.attributes).length > 0 && (
             <Stack
-              gap="3"
+              gap="10"
               p="3"
               borderWidth="1px"
               borderColor="border.muted"
@@ -118,27 +120,42 @@ function NoteDetailPage() {
               bg="bg.subtle"
             >
               {Object.entries(note.attributes).map(([key, value]) => (
-                <Box key={key}>
+                <Box key={key} textAlign="left" display="flex">
                   <Text
                     fontSize="xs"
                     fontWeight="semibold"
                     textTransform="uppercase"
                     color="fg.muted"
+                    marginBottom="1.5"
                   >
                     {key}
                   </Text>
-                  <Text fontSize="sm">{value}</Text>
+                  <Text fontSize="xs" paddingLeft="1.5">
+                    {value}
+                  </Text>
                 </Box>
               ))}
             </Stack>
           )}
 
-          <Prose maxWidth="55rem" width="98%" margin="0 auto">
-            {noteParagraphs(note.body).map((paragraph, i) => (
-              <Text key={i} textAlign="left" marginBottom="2">
-                {paragraph}
-              </Text>
-            ))}
+          <Prose
+            maxWidth="55rem"
+            width="98%"
+            margin="0 auto"
+            textAlign="left"
+            css={{
+              "& p": {
+                "margin-bottom": "1rem",
+              },
+              "& h1, & h2, & h3, & h4, & h5, & h6": {
+                marginBottom: "2rem",
+                marginTop: "2rem",
+              },
+            }}
+          >
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {note.body}
+            </ReactMarkdown>
           </Prose>
         </VStack>
       )}

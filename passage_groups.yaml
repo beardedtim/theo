@@ -9,63 +9,215 @@
 # hierarchy -- it does not affect containment lookups or attribute
 # inheritance priority (see theo/passage_groups.py and theo/metadata.py).
 #
+# `aliases` (optional) is a list of alternate names that should resolve to this
+# group in lookups. Conventions:
+#   - Match case-insensitively and ignore surrounding whitespace, so
+#     "the twelve", "The Twelve" and "THE TWELVE" all hit minor-prophets.
+#   - Aliases must be globally unique and must not collide with any slug or
+#     any book name in theo/bible.py's BOOKS. Ingest should hard-fail on a
+#     collision rather than silently picking a winner.
+#   - The canonical `name` does not need to be repeated here; ingest is
+#     expected to index slug and name already.
+#
 # Book numbers are the canonical 1-66 order in theo/bible.py's BOOKS list.
-# This is a starting seed, not exhaustive -- extend freely.
+# Every entry carries a trailing comment naming its books, so diffs stay
+# reviewable without cross-referencing BOOKS.
+#
+# CAUTION when editing: `books` is a RANGE (start, end), `members` is a LIST.
+# `books: [43, 62]` is a legal-looking 20-book span, not two books. If you are
+# writing a non-contiguous group, you want `members`.
+#
+# Coverage: every book 1-66 belongs to at least one group besides
+# old-testament / new-testament. Groups may overlap freely (johannine-literature,
+# luke-acts, apocalyptic-literature and the Nevi'im groups all cut across the
+# canon-division groups). When adding a group, check whether it creates a new
+# overlap and confirm metadata.py resolves it the way you expect.
 
 groups:
+  # --- Top-level testaments -------------------------------------------------
+
   - slug: old-testament
     name: Old Testament
-    books: [1, 39]
+    aliases: ["OT", "Hebrew Bible", "Hebrew Scriptures", "First Testament"]
+    books: [1, 39] # Genesis - Malachi
 
   - slug: new-testament
     name: New Testament
-    books: [40, 66]
+    aliases: ["NT", "Greek Scriptures"]
+    books: [40, 66] # Matthew - Revelation
+
+  # --- Old Testament: standard English-canon divisions ----------------------
 
   - slug: pentateuch
     name: Pentateuch
     description: "The five books traditionally attributed to Moses: Genesis-Deuteronomy."
+    aliases:
+      [
+        "Torah",
+        "Books of Moses",
+        "Five Books of Moses",
+        "Law of Moses",
+        "Chumash",
+      ]
     parent: old-testament
-    books: [1, 5]
+    books: [1, 5] # Genesis - Deuteronomy
 
   - slug: historical-books
     name: Historical Books
+    aliases: ["Histories", "History Books"]
     parent: old-testament
-    books: [6, 17]
+    books: [6, 17] # Joshua - Esther
 
   - slug: wisdom-literature
     name: Wisdom Literature
     description: "The poetic/wisdom books: Job-Song of Solomon."
+    aliases:
+      ["Wisdom Books", "Poetic Books", "Poetry and Wisdom", "Books of Poetry"]
     parent: old-testament
-    books: [18, 22]
+    books: [18, 22] # Job - Song of Solomon
 
   - slug: major-prophets
     name: Major Prophets
+    aliases: ["Greater Prophets"]
     parent: old-testament
-    books: [23, 27]
+    books: [23, 27] # Isaiah - Daniel
 
   - slug: minor-prophets
     name: Minor Prophets
+    description: "The Twelve: Hosea-Malachi."
+    aliases:
+      ["The Twelve", "Twelve Prophets", "Book of the Twelve", "Trei Asar"]
     parent: old-testament
-    books: [28, 39]
+    books: [28, 39] # Hosea - Malachi
+
+  # --- Old Testament: finer / cross-cutting groupings -----------------------
+
+  - slug: solomonic-books
+    name: Solomonic Books
+    description: "The three wisdom books traditionally attributed to Solomon."
+    aliases: ["Books of Solomon", "Solomonic Corpus"]
+    parent: wisdom-literature
+    members: [20, 21, 22] # Proverbs, Ecclesiastes, Song of Solomon
+
+  # The next two follow the Hebrew canon's Nevi'im division, which cuts across
+  # the English historical/prophetic split above -- Joshua-Kings are "prophets"
+  # there, and Daniel is not.
+  - slug: former-prophets
+    name: Former Prophets
+    description: "Nevi'im Rishonim: the narrative prophetic books of the Hebrew canon."
+    aliases: ["Nevi'im Rishonim", "Neviim Rishonim"]
+    parent: old-testament
+    members: [6, 7, 9, 10, 11, 12] # Joshua, Judges, 1-2 Samuel, 1-2 Kings
+
+  - slug: latter-prophets
+    name: Latter Prophets
+    description: "Nevi'im Aharonim: Isaiah, Jeremiah, Ezekiel, and the Twelve. Excludes Daniel, which the Hebrew canon places among the Writings."
+    aliases: ["Nevi'im Aharonim", "Neviim Aharonim"]
+    parent: old-testament
+    members: [23, 24, 26, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39] # Isaiah, Jeremiah, Ezekiel, Hosea - Malachi
+
+  # --- New Testament: standard divisions ------------------------------------
 
   - slug: gospels
     name: Gospels
+    aliases: ["The Four Gospels", "Fourfold Gospel"]
     parent: new-testament
-    books: [40, 43]
+    books: [40, 43] # Matthew - John
+
+  # Acts and Hebrews each fell into a gap between the ranges below and belonged
+  # to no group but new-testament. Single-book groups keep coverage complete.
+  # If you would rather treat Hebrews as a General Epistle, delete this entry
+  # and widen general-epistles to `books: [58, 65]` instead.
+  - slug: acts
+    name: Acts of the Apostles
+    description: "Luke's second volume; sits between the Gospels and the Epistles."
+    aliases: ["Book of Acts"] # not "Acts" -- collides with the slug and the book name
+    parent: new-testament
+    members: [44] # Acts
 
   - slug: pauline-epistles
     name: Pauline Epistles
     description: "Romans-Philemon. Hebrews is deliberately excluded"
+    aliases:
+      ["Paulines", "Pauline Corpus", "Letters of Paul", "Epistles of Paul"]
     parent: new-testament
-    books: [45, 57]
+    books: [45, 57] # Romans - Philemon
+
+  - slug: hebrews
+    name: Hebrews
+    description: "Anonymous; grouped separately because pauline-epistles deliberately excludes it."
+    aliases: ["Epistle to the Hebrews", "Letter to the Hebrews"]
+    parent: new-testament
+    members: [58] # Hebrews
 
   - slug: general-epistles
     name: General Epistles
-    description: "James-Jude."
+    description: "James-Jude. Also called the Catholic Epistles."
+    aliases: ["Catholic Epistles", "Catholic Letters", "General Letters"]
     parent: new-testament
-    books: [59, 65]
+    books: [59, 65] # James - Jude
+
+  - slug: revelation
+    name: Revelation
+    aliases: ["Apocalypse", "Apocalypse of John", "The Revelation of John"]
+    parent: new-testament
+    members: [66] # Revelation
+
+  # --- New Testament: finer / cross-cutting groupings -----------------------
+
+  - slug: synoptic-gospels
+    name: Synoptic Gospels
+    description: "Matthew, Mark, and Luke, which share a common narrative outline."
+    aliases: ["Synoptics", "The Synoptics"]
+    parent: gospels
+    books: [40, 42] # Matthew - Luke
+
+  - slug: luke-acts
+    name: Luke-Acts
+    description: "Luke's two-volume work, treated as a single literary unit. Cuts across the gospels/acts boundary."
+    aliases: ["Lukan Corpus", "Luke and Acts"]
+    parent: new-testament
+    members: [42, 44] # Luke, Acts
+
+  - slug: prison-epistles
+    name: Prison Epistles
+    description: "Letters written from imprisonment."
+    aliases: ["Captivity Epistles", "Captivity Letters", "Prison Letters"]
+    parent: pauline-epistles
+    members: [49, 50, 51, 57] # Ephesians, Philippians, Colossians, Philemon
+
+  - slug: pastoral-epistles
+    name: Pastoral Epistles
+    description: "Letters addressed to individuals overseeing churches."
+    aliases: ["Pastorals", "Pastoral Letters"]
+    parent: pauline-epistles
+    members: [54, 55, 56] # 1 Timothy, 2 Timothy, Titus
+
+  - slug: corinthian-correspondence
+    name: Corinthian Correspondence
+    aliases: ["Corinthian Letters", "Letters to Corinth"]
+    parent: pauline-epistles
+    books: [46, 47] # 1-2 Corinthians
+
+  - slug: petrine-literature
+    name: Petrine Literature
+    description: "The letters traditionally attributed to Peter."
+    aliases: ["Petrine Epistles", "Petrine Corpus", "Letters of Peter"]
+    parent: general-epistles
+    members: [60, 61] # 1-2 Peter
 
   - slug: johannine-literature
     name: Johannine Literature
-    description: "The books traditionally attributed to John: cuts across the Gospels/general-epistles/apocalyptic groupings above."
-    members: [43, 62, 63, 64, 66]
+    description: "The books traditionally attributed to John: cuts across the Gospels/general-epistles/apocalyptic groupings."
+    aliases: ["Johannine Corpus", "Johannine Writings", "Writings of John"]
+    parent: new-testament
+    members: [43, 62, 63, 64, 66] # John, 1-3 John, Revelation
+
+  # --- Cross-testament ------------------------------------------------------
+
+  # No parent: this one spans both testaments, so no single breadcrumb fits.
+  - slug: apocalyptic-literature
+    name: Apocalyptic Literature
+    description: "The two fully apocalyptic books of the canon. Apocalyptic material also appears in sections of Ezekiel, Zechariah, and the Olivet Discourse."
+    aliases: ["Apocalyptic", "Apocalypses"]
+    members: [27, 66] # Daniel, Revelation

@@ -1,6 +1,14 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { Link } from "wouter";
-import { Badge, Box, Button, Collapsible, HStack, Stack, Text } from "@chakra-ui/react";
+import {
+  Badge,
+  Box,
+  Button,
+  Collapsible,
+  HStack,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import { Tooltip } from "@/components/ui/tooltip";
 import { EventDetailDialog } from "@/components/EventDetailDialog";
 import { NameDetailDialog } from "@/components/NameDetailDialog";
@@ -39,7 +47,10 @@ function EntityBadge({
   onClick?: () => void;
 }) {
   return (
-    <Tooltip content={entity.description ?? entity.name} contentProps={{ maxW: "sm" }}>
+    <Tooltip
+      content={entity.description ?? entity.name}
+      contentProps={{ maxW: "sm" }}
+    >
       <Badge
         colorPalette={color}
         variant="subtle"
@@ -54,15 +65,29 @@ function EntityBadge({
 
 function EventBadge({ event, onClick }: { event: Event; onClick: () => void }) {
   return (
-    <Tooltip content={event.start_date ?? event.title} contentProps={{ maxW: "sm" }}>
-      <Badge colorPalette="orange" variant="subtle" cursor="pointer" onClick={onClick}>
+    <Tooltip
+      content={event.start_date ?? event.title}
+      contentProps={{ maxW: "sm" }}
+    >
+      <Badge
+        colorPalette="orange"
+        variant="subtle"
+        cursor="pointer"
+        onClick={onClick}
+      >
         {event.title}
       </Badge>
     </Tooltip>
   );
 }
 
-function ReferenceRow({ label, children }: { label: string; children: ReactNode }) {
+function ReferenceRow({
+  label,
+  children,
+}: {
+  label: string;
+  children: ReactNode;
+}) {
   return (
     <HStack gap="2" flexWrap="wrap" align="start">
       <Text fontSize="xs" color="fg.muted" minW="14" pt="0.5">
@@ -112,8 +137,13 @@ function AttributesPanel({ metadata }: { metadata: VerseMetadata }) {
     >
       {entries.map(([key, attribute]) => (
         <Box key={key}>
-          <HStack gap="2" align="baseline" flexWrap="wrap">
-            <Text fontSize="xs" fontWeight="semibold" textTransform="uppercase" color="fg.muted">
+          <HStack gap="2" align="baseline" flexWrap="wrap" textAlign="left">
+            <Text
+              fontSize="xs"
+              fontWeight="semibold"
+              textTransform="uppercase"
+              color="fg.muted"
+            >
               {key}
             </Text>
             <Link href={noteHref(attribute.source_note_slug)}>
@@ -125,11 +155,14 @@ function AttributesPanel({ metadata }: { metadata: VerseMetadata }) {
                 textUnderlineOffset="2px"
                 cursor="pointer"
               >
-                via note{attribute.scope !== "range" ? ` on ${groupName(attribute.scope)}` : ""}
+                via note
+                {attribute.scope !== "range"
+                  ? ` on ${groupName(attribute.scope)}`
+                  : ""}
               </Text>
             </Link>
           </HStack>
-          <Text fontSize="sm">{attribute.value}</Text>
+          <Text fontSize="xs">{attribute.value}</Text>
         </Box>
       ))}
     </Stack>
@@ -151,9 +184,16 @@ function StatementsRow({ metadata }: { metadata: VerseMetadata }) {
         <Stack gap="0.5">
           {triples.map(([subject, verb, object], i) => (
             <Text key={i} fontSize="sm">
-              <Text as="span" fontWeight="medium">{subject}</Text>
-              <Text as="span" color="fg.muted"> {verb} </Text>
-              <Text as="span" fontWeight="medium">{object}</Text>
+              <Text as="span" fontWeight="medium">
+                {subject}
+              </Text>
+              <Text as="span" color="fg.muted">
+                {" "}
+                {verb}{" "}
+              </Text>
+              <Text as="span" fontWeight="medium">
+                {object}
+              </Text>
             </Text>
           ))}
         </Stack>
@@ -200,7 +240,11 @@ export function ReferencesPanel({
           : await getMetadataForRange(range, translation),
       );
     } catch (err) {
-      setError(err instanceof ApiError ? err.message : "Couldn't load passage details.");
+      setError(
+        err instanceof ApiError
+          ? err.message
+          : "Couldn't load passage details.",
+      );
     } finally {
       setLoading(false);
     }
@@ -222,7 +266,9 @@ export function ReferencesPanel({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  function entityClickHandler(entity: MetadataEntity): (() => void) | undefined {
+  function entityClickHandler(
+    entity: MetadataEntity,
+  ): (() => void) | undefined {
     if (entity.source === "step") return () => setSelectedName(entity.data);
     if (entity.kind === "person") return () => setSelectedPerson(entity.data);
     if (entity.kind === "place") return () => setSelectedPlace(entity.data);
@@ -232,12 +278,21 @@ export function ReferencesPanel({
   const total = metadata
     ? metadata.entities.length + metadata.events.length + metadata.notes.length
     : null;
-  const hasAttributes = metadata ? Object.keys(metadata.attributes).length > 0 : false;
+  const hasAttributes = metadata
+    ? Object.keys(metadata.attributes).length > 0
+    : false;
 
   return (
     <Stack gap="2">
-      <Button size="xs" variant="ghost" alignSelf="start" onClick={handleToggle} loading={loading}>
-        {open ? "Hide" : "Show"} passage details{total !== null ? ` (${total})` : ""}
+      <Button
+        size="xs"
+        variant="ghost"
+        alignSelf="start"
+        onClick={handleToggle}
+        loading={loading}
+      >
+        {open ? "Hide" : "Show"} passage details
+        {total !== null ? ` (${total})` : ""}
       </Button>
 
       <Collapsible.Root open={open}>
@@ -249,11 +304,14 @@ export function ReferencesPanel({
               </Text>
             )}
 
-            {metadata && total === 0 && metadata.annotations.length === 0 && !hasAttributes && (
-              <Text fontSize="sm" color="fg.muted">
-                Nothing found for this passage.
-              </Text>
-            )}
+            {metadata &&
+              total === 0 &&
+              metadata.annotations.length === 0 &&
+              !hasAttributes && (
+                <Text fontSize="sm" color="fg.muted">
+                  Nothing found for this passage.
+                </Text>
+              )}
 
             {metadata && <AttributesPanel metadata={metadata} />}
 
@@ -267,7 +325,9 @@ export function ReferencesPanel({
 
             {metadata &&
               KIND_ROWS.map(({ kind, label, color }) => {
-                const entities = metadata.entities.filter((e) => e.kind === kind);
+                const entities = metadata.entities.filter(
+                  (e) => e.kind === kind,
+                );
                 if (entities.length === 0) return null;
                 return (
                   <ReferenceRow key={kind} label={label}>
@@ -286,7 +346,11 @@ export function ReferencesPanel({
             {metadata && metadata.events.length > 0 && (
               <ReferenceRow label="Events">
                 {metadata.events.map((e) => (
-                  <EventBadge key={e.id} event={e} onClick={() => setSelectedEventId(e.id)} />
+                  <EventBadge
+                    key={e.id}
+                    event={e}
+                    onClick={() => setSelectedEventId(e.id)}
+                  />
                 ))}
               </ReferenceRow>
             )}
@@ -296,12 +360,23 @@ export function ReferencesPanel({
         </Collapsible.Content>
       </Collapsible.Root>
 
-      <PersonDetailDialog person={selectedPerson} onClose={() => setSelectedPerson(null)} />
-      <PlaceDetailDialog place={selectedPlace} onClose={() => setSelectedPlace(null)} />
-      <EventDetailDialog eventId={selectedEventId} onClose={() => setSelectedEventId(null)} />
+      <PersonDetailDialog
+        person={selectedPerson}
+        onClose={() => setSelectedPerson(null)}
+      />
+      <PlaceDetailDialog
+        place={selectedPlace}
+        onClose={() => setSelectedPlace(null)}
+      />
+      <EventDetailDialog
+        eventId={selectedEventId}
+        onClose={() => setSelectedEventId(null)}
+      />
       <NameDetailDialog
         name={selectedName}
-        lexicon={selectedName ? metadata?.lexicon[selectedName.ustrong] ?? [] : []}
+        lexicon={
+          selectedName ? (metadata?.lexicon[selectedName.ustrong] ?? []) : []
+        }
         onClose={() => setSelectedName(null)}
       />
     </Stack>

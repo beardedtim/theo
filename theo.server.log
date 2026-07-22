@@ -564,3 +564,158 @@ LINE 2:                 SELECT id, slug, title, book, chapter_start,...
 22 Jul 2026 | 16:58:25 | Waiting for application shutdown.
 22 Jul 2026 | 16:58:25 | Application shutdown complete.
 22 Jul 2026 | 16:58:25 | Finished server process [69056]
+22 Jul 2026 | 17:18:16 | HTTP Request: GET http://testserver/passage-groups "HTTP/1.1 200 OK"
+22 Jul 2026 | 17:18:16 | HTTP Request: GET http://testserver/passage-groups/pentateuch "HTTP/1.1 200 OK"
+22 Jul 2026 | 17:18:16 | HTTP Request: GET http://testserver/passage-groups/old-testament "HTTP/1.1 200 OK"
+22 Jul 2026 | 17:18:16 | HTTP Request: GET http://testserver/passage-groups/not-a-real-group "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 17:18:16 | HTTP Request: GET http://testserver/passage-groups/Torah "HTTP/1.1 200 OK"
+22 Jul 2026 | 17:18:16 | HTTP Request: GET http://testserver/passage-groups/Old%20Testament "HTTP/1.1 200 OK"
+22 Jul 2026 | 17:18:23 | HTTP Request: GET http://testserver/metadata/Exodus/4/14/4/14?translation=NIV "HTTP/1.1 200 OK"
+22 Jul 2026 | 17:18:23 | HTTP Request: GET http://testserver/metadata/Ruth/1/1/1/22 "HTTP/1.1 200 OK"
+22 Jul 2026 | 17:18:23 | HTTP Request: GET http://testserver/metadata/Ruth/1/1/1/22 "HTTP/1.1 200 OK"
+22 Jul 2026 | 17:18:23 | HTTP Request: GET http://testserver/names/Ruth/1/1/1/22 "HTTP/1.1 200 OK"
+22 Jul 2026 | 17:18:23 | HTTP Request: GET http://testserver/metadata/Ruth/1/1/1/22 "HTTP/1.1 200 OK"
+22 Jul 2026 | 17:18:23 | HTTP Request: GET http://testserver/metadata/NotABook/1/1/1/10 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 17:18:23 | HTTP Request: GET http://testserver/pericopes/Ruth "HTTP/1.1 200 OK"
+22 Jul 2026 | 17:18:23 | HTTP Request: GET http://testserver/metadata/pericope/019f8113-eff7-7db5-8feb-be51bf818f74 "HTTP/1.1 200 OK"
+22 Jul 2026 | 17:18:23 | HTTP Request: GET http://testserver/metadata/pericope/00000000-0000-0000-0000-000000000000 "HTTP/1.1 404 Not Found"
+22 Jul 2026 | 17:18:23 | HTTP Request: GET http://testserver/metadata/Genesis/1/1/1/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 17:18:23 | HTTP Request: GET http://testserver/metadata/Genesis/1/1/1/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 17:18:23 | HTTP Request: GET http://testserver/metadata/Matthew/1/1/1/1 "HTTP/1.1 200 OK"
+22 Jul 2026 | 17:30:01 | Started server process [120820]
+22 Jul 2026 | 17:30:01 | Waiting for application startup.
+22 Jul 2026 | 17:30:01 | Application startup complete.
+22 Jul 2026 | 17:30:10 | 127.0.0.1:34906 - "GET /verses/Genesis/1?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 17:30:10 | 127.0.0.1:34906 - "GET /reading/Genesis/1/1/1/31?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 17:30:13 | 127.0.0.1:34906 - "GET /metadata/Genesis/1/1/1/31?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 17:30:20 | 127.0.0.1:42310 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 17:30:20 | 127.0.0.1:42314 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:30:20 | 127.0.0.1:42330 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 17:30:20 | 127.0.0.1:42310 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:30:33 | 127.0.0.1:48246 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 17:30:33 | 127.0.0.1:48254 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 17:30:33 | 127.0.0.1:48258 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:30:33 | 127.0.0.1:48274 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:30:41 | 127.0.0.1:54204 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:30:41 | 127.0.0.1:54220 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:30:41 | 127.0.0.1:54236 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:30:41 | 127.0.0.1:54238 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:30:43 | 127.0.0.1:54238 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:30:43 | 127.0.0.1:54236 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:30:43 | 127.0.0.1:54220 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:30:43 | 127.0.0.1:54238 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:30:51 | 127.0.0.1:48068 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 17:30:51 | 127.0.0.1:48080 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:30:51 | 127.0.0.1:48092 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 17:30:51 | 127.0.0.1:48068 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:32:08 | 127.0.0.1:56474 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:32:08 | 127.0.0.1:56468 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 17:32:08 | 127.0.0.1:56482 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:32:08 | 127.0.0.1:56484 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 17:32:09 | 127.0.0.1:56482 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:32:09 | 127.0.0.1:56484 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 17:32:09 | 127.0.0.1:56474 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 17:32:09 | 127.0.0.1:56468 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:32:33 | 127.0.0.1:51444 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:32:33 | 127.0.0.1:51438 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 17:32:33 | 127.0.0.1:51450 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:32:33 | 127.0.0.1:51458 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 17:51:58 | 127.0.0.1:44594 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:51:58 | 127.0.0.1:44608 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:51:58 | 127.0.0.1:44600 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:51:58 | 127.0.0.1:44594 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:52:02 | 127.0.0.1:44600 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:52:02 | 127.0.0.1:44594 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:52:02 | 127.0.0.1:44608 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:52:02 | 127.0.0.1:44616 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:52:03 | 127.0.0.1:44608 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:52:03 | 127.0.0.1:44616 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 17:52:03 | 127.0.0.1:44594 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:52:03 | 127.0.0.1:44600 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 17:52:40 | 127.0.0.1:46680 - "GET /verses/Genesis/22?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 17:52:40 | 127.0.0.1:46680 - "GET /reading/Genesis/22/1/22/24?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 17:52:53 | 127.0.0.1:42582 - "GET /metadata/Genesis/22/1/22/24?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 17:52:58 | 127.0.0.1:42596 - "GET /name/019f825f-9e29-7303-971b-a64ddd4572a2 HTTP/1.1" 200
+22 Jul 2026 | 17:53:01 | 127.0.0.1:42596 - "GET /name/019f825f-9fa5-7892-b50f-8af7c118921b HTTP/1.1" 200
+22 Jul 2026 | 17:54:17 | 127.0.0.1:34022 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:54:17 | 127.0.0.1:34020 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 17:54:17 | 127.0.0.1:34028 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:54:17 | 127.0.0.1:34034 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 17:54:19 | 127.0.0.1:34028 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:54:19 | 127.0.0.1:34034 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:54:19 | 127.0.0.1:34020 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:54:19 | 127.0.0.1:34022 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:54:22 | 127.0.0.1:34020 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:54:22 | 127.0.0.1:34022 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:54:22 | 127.0.0.1:34034 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:54:22 | 127.0.0.1:34028 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:54:23 | 127.0.0.1:34028 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:54:23 | 127.0.0.1:34034 - "GET /note/exodus/dating-and-historicity HTTP/1.1" 200
+22 Jul 2026 | 17:54:23 | 127.0.0.1:34022 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:54:23 | 127.0.0.1:34020 - "GET /note/exodus/dating-and-historicity HTTP/1.1" 200
+22 Jul 2026 | 17:54:27 | 127.0.0.1:34020 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:54:27 | 127.0.0.1:34022 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:54:27 | 127.0.0.1:34028 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:54:27 | 127.0.0.1:34034 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:54:28 | 127.0.0.1:34028 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:54:28 | 127.0.0.1:34034 - "GET /note/dating-and-historicity HTTP/1.1" 200
+22 Jul 2026 | 17:54:28 | 127.0.0.1:34020 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:54:28 | 127.0.0.1:34022 - "GET /note/dating-and-historicity HTTP/1.1" 200
+22 Jul 2026 | 17:54:59 | 127.0.0.1:53556 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:54:59 | 127.0.0.1:53562 - "GET /note/dating-and-historicity HTTP/1.1" 404
+22 Jul 2026 | 17:54:59 | 127.0.0.1:53560 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:54:59 | 127.0.0.1:53578 - "GET /note/dating-and-historicity HTTP/1.1" 404
+22 Jul 2026 | 17:55:01 | 127.0.0.1:53578 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:55:01 | 127.0.0.1:53560 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:55:01 | 127.0.0.1:53556 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:55:01 | 127.0.0.1:53562 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:55:02 | 127.0.0.1:53556 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:55:02 | 127.0.0.1:53562 - "GET /note/exodus/dating-and-historicity HTTP/1.1" 200
+22 Jul 2026 | 17:55:02 | 127.0.0.1:53560 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:55:02 | 127.0.0.1:53578 - "GET /note/exodus/dating-and-historicity HTTP/1.1" 200
+22 Jul 2026 | 17:55:06 | 127.0.0.1:53578 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:55:06 | 127.0.0.1:53560 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:55:06 | 127.0.0.1:53562 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:55:06 | 127.0.0.1:53556 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:55:06 | 127.0.0.1:53562 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:55:06 | 127.0.0.1:53556 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 17:55:06 | 127.0.0.1:53560 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:55:06 | 127.0.0.1:53578 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 17:57:13 | 127.0.0.1:50398 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:57:13 | 127.0.0.1:50390 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:57:13 | 127.0.0.1:50400 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:57:13 | 127.0.0.1:50410 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:57:20 | 127.0.0.1:53946 - "GET /verses/Exodus/1?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 17:57:20 | 127.0.0.1:53946 - "GET /reading/Exodus/1/1/1/22?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 17:57:22 | 127.0.0.1:53946 - "GET /metadata/Exodus/1/1/1/22?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 17:58:28 | 127.0.0.1:39972 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:58:28 | 127.0.0.1:39956 - "GET /note/exodus/dating-and-historicity HTTP/1.1" 200
+22 Jul 2026 | 17:58:28 | 127.0.0.1:39988 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:58:28 | 127.0.0.1:40000 - "GET /note/exodus/dating-and-historicity HTTP/1.1" 200
+22 Jul 2026 | 17:58:29 | 127.0.0.1:40000 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:58:29 | 127.0.0.1:39988 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:58:29 | 127.0.0.1:39956 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 17:58:29 | 127.0.0.1:39972 - "GET /notes HTTP/1.1" 200
+22 Jul 2026 | 17:58:39 | 127.0.0.1:55830 - "GET /verses/Exodus/22?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 17:58:39 | 127.0.0.1:55830 - "GET /reading/Exodus/22/1/22/31?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 17:58:46 | 127.0.0.1:55838 - "GET /verses/Genesis/22?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 17:58:46 | 127.0.0.1:55838 - "GET /reading/Genesis/22/1/22/24?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 17:58:54 | 127.0.0.1:53692 - "GET /verses/Genesis/22?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 17:58:54 | 127.0.0.1:53692 - "GET /reading/Genesis/22/1/22/24?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 17:58:59 | 127.0.0.1:53692 - "GET /verses/Genesis/22/1/19?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 17:58:59 | 127.0.0.1:53692 - "GET /reading/Genesis/22/1/22/19?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 17:59:02 | 127.0.0.1:53692 - "GET /metadata/Genesis/22/1/22/19?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 17:59:15 | 127.0.0.1:60110 - "GET /verses/Exodus/22/1/19?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 17:59:15 | 127.0.0.1:60110 - "GET /reading/Exodus/22/1/22/19?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 17:59:17 | 127.0.0.1:60110 - "GET /metadata/Exodus/22/1/22/19?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 18:01:42 | 127.0.0.1:33502 - "GET /verses/Genesis/11?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 18:01:42 | 127.0.0.1:33502 - "GET /reading/Genesis/11/1/11/32?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 18:01:44 | 127.0.0.1:33502 - "GET /metadata/Genesis/11/1/11/32?translation=NIV HTTP/1.1" 200
+22 Jul 2026 | 18:01:49 | 127.0.0.1:59182 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 18:01:49 | 127.0.0.1:33502 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 18:01:49 | 127.0.0.1:59186 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 18:01:49 | 127.0.0.1:59202 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 18:01:51 | 127.0.0.1:59202 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 18:01:51 | 127.0.0.1:59186 - "GET /note/pentateuch/authorship HTTP/1.1" 200
+22 Jul 2026 | 18:01:51 | 127.0.0.1:33502 - "GET /passage-groups HTTP/1.1" 200
+22 Jul 2026 | 18:01:51 | 127.0.0.1:59182 - "GET /note/pentateuch/authorship HTTP/1.1" 200

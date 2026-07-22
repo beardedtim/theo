@@ -7,9 +7,10 @@ chapter_end: 15
 verse_end: 21
 tags: [historicity, archaeology, dating, egyptology]
 attributes:
-  dating: "Composition (not the event): the narrative is widely placed in the exilic/post-exilic period (6th-5th century BCE), long after any Bronze Age setting. The date of the Exodus itself is separately disputed -- see body."
+  dating: "Composition (not the event): the narrative is widely placed in the exilic/post-exilic period (6th-5th century BCE), long after any Bronze Age setting. The date of the Exodus itself is separately disputed."
 ---
-Theographic (and most Evangelical study-Bible apparatus) defaults to a
+
+Theographic (and most Evangelical study-Bibles) defaults to a
 15th-century BCE "early date" derived from a literal reading of 1 Kings
 6:1, tied to Thutmose III/Amenhotep II. That reading is a minority position
 in current biblical archaeology.
@@ -17,8 +18,8 @@ in current biblical archaeology.
 The mainstream scholarly picture (Dever, Finkelstein, Redford, Hoffmeier's
 more conservative but still non-fundamentalist take) treats the Exodus
 narrative as not straightforwardly historical in the way Kings or Samuel
-are: there is no Egyptian record of the plagues, the Sinai wandering, or a
-mass departure of the scale described (600,000 men plus dependents, per
+are: there is no Egyptian recordnoteParagraphs, of the plagues, the Sinai wandering, or a
+mass departure of the scale described (600,000 men plus dependents, pernoteParagraphs,
 Exodus 12:37, would be several million people -- larger than any attested
 Bronze Age population movement, and archaeologically invisible in the
 Sinai). Semitic presence and labor in the Delta region (Avaris/Pi-Ramesses)

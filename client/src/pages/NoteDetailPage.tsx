@@ -21,7 +21,7 @@ import {
   type Note,
   type PassageGroup,
 } from "@/lib/api";
-import { noteParagraphs, noteRangeLabel } from "@/lib/notes";
+import { noteRangeLabel } from "@/lib/notes";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 

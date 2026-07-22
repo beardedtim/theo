@@ -43,7 +43,7 @@ function App() {
     <Box minH="100svh">
       <Box borderBottomWidth="1px" borderColor="border">
         <Container maxW="4xl" py="4">
-          <Flex align="center" justify="space-between">
+          <Flex align="center" justify="space-between" gap={2} flexFlow="wrap">
             <Link href="/">
               <Heading size="md">SproutFaith</Heading>
             </Link>

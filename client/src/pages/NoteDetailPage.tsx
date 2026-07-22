@@ -120,7 +120,12 @@ function NoteDetailPage() {
               bg="bg.subtle"
             >
               {Object.entries(note.attributes).map(([key, value]) => (
-                <Box key={key} textAlign="left" display="flex">
+                <Box
+                  key={key}
+                  textAlign="left"
+                  display="flex"
+                  flexDirection="column"
+                >
                   <Text
                     fontSize="xs"
                     fontWeight="semibold"

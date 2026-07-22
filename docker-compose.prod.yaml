@@ -26,6 +26,7 @@ services:
       retries: 10
 
   api:
+    image: mckp/sproutfaith-api:latest
     build:
       context: .
       dockerfile: Dockerfile.api
@@ -48,6 +49,7 @@ services:
       start_period: 30s
 
   client:
+    image: mckp/sproutfaith-client:latest
     build:
       context: ./client
       args:

@@ -82,6 +82,15 @@ for the full table-by-table breakdown. The load-bearing structural choices:
   prefix (`"together:"` for the LLM pipeline, `"en_core_web..."` for spaCy),
   so reprocessing under a new model/version coexists with old rows instead
   of overwriting them.
+- **`notes`** holds personal commentary: hand-written markdown files with
+  YAML frontmatter under `notes/` (tracked in git, unlike `data/`), synced
+  in by `ingest_notes.py` via `theo/notes.py`. Anchored to a verse range
+  like `pericopes`/`events`, searchable (BM25) and included in `/metadata`
+  and the hybrid-search metadata leg. Unlike every other ingest script,
+  the folder is the live source of truth: rerunning after an edit
+  overwrites the row (upsert by slug = file path). Deleting a file only
+  deletes its row if you rerun with `--prune`, since pruning trusts
+  whatever directory you point it at to be the *complete* set.
 - To add tables to an already-running dev DB without a full reset, apply
   just the new DDL by hand — most `CREATE INDEX` statements in
   `init.sql` lack `IF NOT EXISTS`, so replaying the whole file throws noisy

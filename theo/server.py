@@ -55,6 +55,13 @@ from theo.lexicon import (
     search_lexicon as run_lexicon_search,
 )
 
+from theo.notes import Note
+from theo.notes import (
+    get_note as fetch_note,
+    get_notes_in_range as fetch_notes_in_range,
+    search_notes as run_note_search,
+)
+
 from theo.metadata import VerseMetadata
 from theo.metadata import (
     get_metadata_for_pericope as fetch_metadata_for_pericope,
@@ -329,6 +336,39 @@ def get_step_lexicon_entries(
 
     return entries
 
+@app.get("/notes")
+def search_notes(
+    q: str = Query(..., description='Search query, e.g. "documentary hypothesis".'),
+    limit: int = Query(50, ge=1, le=200, description="Max number of notes to return."),
+) -> list[Note]:
+    """Search personal commentary notes by title or body text (BM25)."""
+    return run_note_search(q, limit=limit)
+
+@app.get("/notes/{book}/{chapter_start}/{verse_start}/{chapter_end}/{verse_end}")
+def get_notes_for_range(
+    book: str = Path(..., description='Book number or name, e.g. "1" or "Genesis".'),
+    chapter_start: int = Path(..., description="Chapter the range starts in."),
+    verse_start: int = Path(..., description="Verse the range starts at."),
+    chapter_end: int = Path(..., description="Chapter the range ends in."),
+    verse_end: int = Path(..., description="Verse the range ends at."),
+) -> list[Note]:
+    """List every personal note overlapping a verse range. Same range shape
+    as /people/{book}/.../{verse_end}; an empty list just means no note is
+    anchored to that range."""
+    return fetch_notes_in_range(parse_book_id(book), chapter_start, verse_start, chapter_end, verse_end)
+
+@app.get("/note/{slug:path}")
+def get_note(
+    slug: str = Path(..., description="Note slug, as returned by /notes (its file path under notes/, without .md)."),
+) -> Note:
+    """Fetch a single personal note by its slug."""
+    note = fetch_note(slug)
+
+    if note is None:
+        raise HTTPException(status_code=404, detail="Note not found")
+
+    return note
+
 @app.get("/metadata/pericope/{pericope_id}")
 def get_metadata_by_pericope(
     pericope_id: str = Path(..., description="Pericope id, as returned by /search or /pericopes."),
@@ -337,9 +377,10 @@ def get_metadata_by_pericope(
     """Everything known about a pericope's verse range in one call: the
     overlapping pericopes, one source-prioritized `entities` list (STEP
     proper nouns first, theographic knowledge graph filling the gaps),
-    events, Strong's lexicon entries (keyed by the entities' ustrongs), and
-    one NLP annotation per pericope (best pipeline: LLM over spaCy). The
-    per-source endpoints (/people, /names, ...) still expose everything."""
+    events, Strong's lexicon entries (keyed by the entities' ustrongs),
+    one NLP annotation per pericope (best pipeline: LLM over spaCy), and
+    any personal notes anchored to the range. The per-source endpoints
+    (/people, /names, /notes, ...) still expose everything."""
     metadata = fetch_metadata_for_pericope(pericope_id, translation=translation)
 
     if metadata is None:

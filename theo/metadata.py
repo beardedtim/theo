@@ -36,6 +36,7 @@ from theo.annotations import get_annotations
 from theo.bible import book_number
 from theo.events import Event, get_events_in_range
 from theo.lexicon import LexiconEntry, get_lexicon_for_ustrongs
+from theo.notes import Note, get_notes_in_range
 from theo.people import get_people_in_range
 from theo.people_groups import get_groups_in_range
 from theo.pericopes import Pericope, get_pericope, get_pericopes_in_range
@@ -220,6 +221,7 @@ class VerseMetadata:
     events: list[Event]            # theographic timeline (no competing source yet)
     lexicon: dict[str, list[LexiconEntry]]  # keyed by the entities' ustrong ids
     annotations: list[PericopeAnnotation]   # one per overlapping pericope (best pipeline)
+    notes: list[Note]              # personal commentary overlapping the range (see theo.notes)
 
 
 def get_metadata_for_range(
@@ -256,6 +258,7 @@ def get_metadata_for_range(
             sorted({e.ustrong for e in entities if e.ustrong})
         ),
         annotations=annotations,
+        notes=get_notes_in_range(*span),
     )
 
 

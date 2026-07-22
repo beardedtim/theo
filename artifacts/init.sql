@@ -658,3 +658,33 @@ CREATE INDEX IF NOT EXISTS pericope_metadata_index_search_idx ON pericope_metada
     search_text,
     translation
 ) WITH (key_field = 'id');
+
+
+-- Personal commentary, sourced from hand-written notes/*.md (YAML
+-- frontmatter + markdown body) via ingest_notes.py -- see theo.notes.
+-- Unlike the theographic/STEP tables, this is a living corpus the user
+-- keeps editing, so `slug` (derived from the note's file path) is the
+-- upsert key: rerunning ingest_notes.py after an edit overwrites the row
+-- in place instead of skipping it, and a note whose file disappears is
+-- deleted from the table.
+CREATE TABLE IF NOT EXISTS notes (
+    id UUID NOT NULL DEFAULT uuidv7(),
+    slug TEXT NOT NULL,
+    title TEXT NOT NULL,
+    book INT NOT NULL,
+    chapter_start INT NOT NULL,
+    verse_start INT NOT NULL,
+    chapter_end INT NOT NULL,
+    verse_end INT NOT NULL,
+    tags TEXT[] NOT NULL DEFAULT '{}',
+    body TEXT NOT NULL,
+    PRIMARY KEY (id),
+    CONSTRAINT unique_notes_slug UNIQUE (slug)
+);
+CREATE INDEX IF NOT EXISTS notes_location_idx ON notes(book, chapter_start, verse_start, chapter_end, verse_end);
+
+CREATE INDEX IF NOT EXISTS notes_search_idx ON notes USING bm25 (
+    id,
+    title,
+    body
+) WITH (key_field = 'id');

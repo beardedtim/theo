@@ -18,7 +18,10 @@ Theographic entity descriptions are deliberately excluded: `dictionary_text`
 is a full Easton's Dictionary entry (thousands of characters), identical
 across every pericope that mentions the same person/place, and would
 swamp the index. STEP's `brief`/`description` fields are curated
-one-liners (~40 chars average) and safe to include in full.
+one-liners (~40 chars average) and safe to include in full. Personal notes
+(theo.notes) are included in full too -- unlike dictionary_text, a note is
+short, original, and specific to the range it's anchored to, so it doesn't
+have the same swamp-the-index problem.
 """
 
 from __future__ import annotations
@@ -27,6 +30,7 @@ from rich.progress import track
 
 from theo.db import get_connection
 from theo.metadata import Entity, Span, best_annotation, merge_entities
+from theo.notes import get_notes_in_range
 from theo.pericopes import Pericope, list_pericopes
 
 # LLM-generated SVO triples use one of these (case-insensitively) as the
@@ -65,6 +69,11 @@ def build_search_text(pericope: Pericope, translation: str = "NIV") -> str:
 
     for entity in merge_entities(span):
         parts.extend(_entity_text(entity))
+
+    for note in get_notes_in_range(*span):
+        parts.append(note.title)
+        parts.extend(note.tags)
+        parts.append(note.body)
 
     annotation = best_annotation(pericope.id, translation)
     if annotation is not None:

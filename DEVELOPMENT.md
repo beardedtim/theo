@@ -100,6 +100,11 @@ runs [artifacts/init.sql](artifacts/init.sql), which creates:
   spaCy (`en_core_web_trf`) + fastcoref pipeline in [theo/parse.py](theo/parse.py).
   Keyed by a `pipeline` version string so reprocessing under new models can
   coexist with old rows.
+- **`notes`** — personal commentary: verse-range-anchored, BM25-indexed,
+  synced from hand-written markdown files under `notes/` (see
+  [theo/notes.py](theo/notes.py) and the Notes section below). This is the
+  one table where the source folder, not the database, is authoritative —
+  `ingest_notes.py` upserts on edit and deletes rows whose file is gone.
 
 `embedding`'s dimension (1024) must match whatever embedding model is used for
 ingestion — decide before first ingesting data; changing it later means editing
@@ -180,14 +185,69 @@ uv run annotate_pericopes.py                          # populates pericope_annot
 uv run llm_annotate_pericopes.py                      # populates pericope_annotations via together.ai (entities,
                                                        # SVO, themes, keywords, summary; needs TOGETHER_API_KEY)
 
+uv run ingest_notes.py                                # syncs notes/*.md into the `notes` table (independent of
+                                                       # the above; rerun any time after adding/editing/deleting
+                                                       # a note file -- see the Notes section below)
+
 uv run index_pericope_metadata.py                     # populates pericope_metadata_index -- STEP/theographic
-                                                       # entity names+descriptions and the NLP annotation's SVO/
-                                                       # entities/themes/keywords/summary, denormalized into one
-                                                       # BM25-searchable text blob per pericope. theo.search's
-                                                       # hybrid mode fuses hits against it alongside chunk-text
-                                                       # BM25 and semantic similarity. Rerun after any of the
-                                                       # STEP/theographic/annotation steps above change.
+                                                       # entity names+descriptions, personal notes, and the NLP
+                                                       # annotation's SVO/entities/themes/keywords/summary,
+                                                       # denormalized into one BM25-searchable text blob per
+                                                       # pericope. theo.search's hybrid mode fuses hits against
+                                                       # it alongside chunk-text BM25 and semantic similarity.
+                                                       # Rerun after any of the STEP/theographic/annotation/notes
+                                                       # steps above change.
 ```
+
+## Notes (personal commentary)
+
+`notes/` holds hand-written markdown files -- tracked in git, unlike
+`data/` -- for commentary that corrects or supplements Theographic's more
+theologically conservative framing (dating, historicity, authorship,
+etc.) with your own research. Organize them into subfolders however you
+like; a note's identity (its `slug`) is its path relative to `notes/`,
+without the `.md` extension.
+
+Each file is YAML frontmatter, a closing `---`, then a markdown body:
+
+```markdown
+---
+title: "Dating the Exodus: what the archaeological record actually supports"
+book: Exodus
+chapter_start: 1
+verse_start: 1
+chapter_end: 15
+verse_end: 21
+tags: [historicity, archaeology, dating]
+---
+Body text in markdown goes here.
+```
+
+`book` accepts a number or a name. The verse range can be given in three
+shapes, from most to least explicit -- pick whichever fits:
+
+- `chapter_start`/`verse_start`/`chapter_end`/`verse_end` -- a range spanning chapters
+- `chapter`/`verse_start`/`verse_end` -- a range within one chapter
+- `chapter`/`verse` -- a single verse
+
+`tags` is optional (defaults to none). See
+[notes/exodus/dating-and-historicity.md](notes/exodus/dating-and-historicity.md)
+for a filled-out example.
+
+Sync the folder into the database with `uv run ingest_notes.py`. Unlike
+every other ingest script, this treats the folder as live/authoritative:
+rerunning after adding or editing a file inserts/updates its row. Deleting
+a note file does *not* delete its row unless you also pass `--prune`
+(`uv run ingest_notes.py --prune`) -- pruning compares against whatever
+directory you point it at, so running it against a partial/wrong path
+would silently delete every note outside that path; only use it against
+your real, complete `notes/` folder when you've actually removed a file.
+After syncing, rerun `uv run index_pericope_metadata.py` so hybrid search
+picks up the change.
+
+Notes show up in `/metadata` and `/metadata/pericope/{id}` (alongside
+people/places/events/annotations), are searchable directly via
+`GET /notes?q=`, and are one leg of what `hybrid_search` fuses over.
 
 Every ingest script is safe to rerun — rows already present are left alone
 (duplicates skipped), so re-running after adding a new translation or fixing
@@ -230,7 +290,10 @@ index built from all of the above for every NIV pericope.
 | `GET /name/{name_id}`                                                                       | A single proper noun with its name forms, article, and full verse reference list                                                                                                    |
 | `GET /lexicon?q=&limit=`                                                                    | Search the Strong's brief lexicons by gloss/transliteration/meaning (BM25)                                                                                                          |
 | `GET /lexicon/{strongs}`                                                                    | Every lexicon entry for a Strong's number (dStrong, eStrong, or uStrong — a uStrong fans out to all entries unified under it, across both testaments)                               |
-| `GET /metadata/{book}/{chapter_start}/{verse_start}/{chapter_end}/{verse_end}?translation=` | Everything known about a verse range in one call: overlapping pericopes, people, places, groups, events, TIPNR names, their lexicon entries (keyed by ustrong), and NLP annotations |
+| `GET /notes?q=&limit=`                                                                      | Search personal commentary notes by title/body text (BM25)                                                                                                                          |
+| `GET /notes/{book}/{chapter_start}/{verse_start}/{chapter_end}/{verse_end}`                 | Personal notes anchored to a verse range                                                                                                                                             |
+| `GET /note/{slug}`                                                                          | A single personal note by slug (its path under `notes/`, without `.md`)                                                                                                             |
+| `GET /metadata/{book}/{chapter_start}/{verse_start}/{chapter_end}/{verse_end}?translation=` | Everything known about a verse range in one call: overlapping pericopes, people, places, groups, events, TIPNR names, their lexicon entries (keyed by ustrong), NLP annotations, and personal notes |
 | `GET /metadata/pericope/{pericope_id}?translation=`                                         | The same combined payload, addressed by pericope id (the shape `/search` results come in)                                                                                           |
 | `GET /reading/{book}/{chapter_start}/{verse_start}/{chapter_end}/{verse_end}?translation=`  | A verse range laid out for reading: paragraphs, poetry line breaks/indentation, section headings, inline styling. NIV only for now — any other translation 404s                     |
 

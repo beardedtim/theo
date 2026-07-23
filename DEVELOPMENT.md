@@ -69,7 +69,7 @@ runs [artifacts/init.sql](artifacts/init.sql), which creates:
   canon-structure groups (Pentateuch, Old/New Testament, Gospels...): which books belong
   together. Distinct from `people_groups` (people, not passages). Hand-authored in
   [passage_groups.yaml](passage_groups.yaml) (tracked in git, like `notes/`), synced by
-  `ingest_passage_groups.py`. `parent_group_id` is display/breadcrumb hierarchy only;
+  `uv run -m scripts.ingest_passage_groups`. `parent_group_id` is display/breadcrumb hierarchy only;
   every group (leaf and container) restates its own full book coverage in
   `passage_group_members`, so "which groups contain book N" is a flat range scan with
   no tree walk, and ordering by range width gives specific-before-general for free.
@@ -114,7 +114,7 @@ runs [artifacts/init.sql](artifacts/init.sql), which creates:
 - **`notes`** — personal commentary: BM25-indexed, synced from hand-written
   markdown files under `notes/` (see [theo/notes.py](theo/notes.py) and
   the Notes section below). This is the one table where the source
-  folder, not the database, is authoritative — `ingest_notes.py` upserts
+  folder, not the database, is authoritative — `uv run -m scripts.ingest_notes` upserts
   on edit and deletes rows whose file is gone. A note is scoped to
   *either* a verse range (`book`/`chapter_start`/... — all nullable, and
   all-or-nothing via the `notes_scope_xor` check constraint) *or* a
@@ -173,51 +173,51 @@ its `CSV/` folder, which doesn't follow normal table design).
 Ingestion, in order:
 
 ```
-uv run ingest_verses.py data/bible/NIV/NIV_bible.json --translation NIV
-uv run build_pericopes.py                          # writes data/pericopes.json
-uv run ingest_pericopes.py data/pericopes.json
-uv run embed_pericopes.py --translation NIV         # populates chunks_1024
+uv run -m scripts.ingest_verses data/bible/NIV/NIV_bible.json --translation NIV
+uv run -m scripts.build_pericopes                          # writes data/pericopes.json
+uv run -m scripts.ingest_pericopes data/pericopes.json
+uv run -m scripts.embed_pericopes --translation NIV         # populates chunks_1024
 
-uv run ingest_places.py                             # populates places, verse_places
-uv run ingest_people.py                              # populates people, person_relationships, verse_people
-                                                       # (run after ingest_places.py: resolves birth/death place)
-uv run ingest_people_groups.py                       # populates people_groups + members/verses
-                                                       # (run after ingest_people.py)
-uv run ingest_events.py                              # populates events + parts/people/places/groups/verses
-                                                       # (run after ingest_people_groups.py)
-uv run ingest_dictionary.py                          # populates dictionary_entries + person/place links
-                                                       # (run after ingest_people.py/ingest_places.py)
+uv run -m scripts.ingest_places                             # populates places, verse_places
+uv run -m scripts.ingest_people                              # populates people, person_relationships, verse_people
+                                                               # (run after ingest_places.py: resolves birth/death place)
+uv run -m scripts.ingest_people_groups                       # populates people_groups + members/verses
+                                                               # (run after ingest_people.py)
+uv run -m scripts.ingest_events                              # populates events + parts/people/places/groups/verses
+                                                               # (run after ingest_people_groups.py)
+uv run -m scripts.ingest_dictionary                          # populates dictionary_entries + person/place links
+                                                               # (run after ingest_people.py/ingest_places.py)
 
-uv run ingest_reading.py                              # populates reading_verses, reading_headings (NIV only)
-                                                       # (independent of the theographic/pericope steps above)
+uv run -m scripts.ingest_reading                              # populates reading_verses, reading_headings (NIV only)
+                                                               # (independent of the theographic/pericope steps above)
 
-uv run ingest_step_names.py                           # populates step_names + forms/verse links from
-                                                       # data/step-bible's TIPNR file (independent of the above)
-uv run ingest_lexicon.py                              # populates step_lexicon from data/step-bible's
-                                                       # TBESH/TBESG brief lexicons (independent of the above)
-uv run annotate_pericopes.py                          # populates pericope_annotations via spaCy + fastcoref
-                                                       # (needs verses + pericopes; GPU strongly recommended --
-                                                       # ~25 min for all NIV pericopes on an RTX 4060, resumable)
-uv run llm_annotate_pericopes.py                      # populates pericope_annotations via together.ai (entities,
-                                                       # SVO, themes, keywords, summary; needs TOGETHER_API_KEY)
+uv run -m scripts.ingest_step_names                           # populates step_names + forms/verse links from
+                                                               # data/step-bible's TIPNR file (independent of the above)
+uv run -m scripts.ingest_lexicon                              # populates step_lexicon from data/step-bible's
+                                                               # TBESH/TBESG brief lexicons (independent of the above)
+uv run -m scripts.annotate_pericopes                          # populates pericope_annotations via spaCy + fastcoref
+                                                               # (needs verses + pericopes; GPU strongly recommended --
+                                                               # ~25 min for all NIV pericopes on an RTX 4060, resumable)
+uv run -m scripts.llm_annotate_pericopes                      # populates pericope_annotations via together.ai (entities,
+                                                               # SVO, themes, keywords, summary; needs TOGETHER_API_KEY)
 
-uv run ingest_passage_groups.py passage_groups.yaml   # syncs the canon-structure taxonomy (Pentateuch, Old/New
-                                                       # Testament, ...) into passage_groups/passage_group_members
-                                                       # -- independent of the above; run before ingest_notes.py
-                                                       # if any note frontmatter references a group by slug
-uv run ingest_notes.py                                # syncs notes/*.md into the `notes` table (independent of
-                                                       # the above except passage_groups if a note uses `group:`;
-                                                       # rerun any time after adding/editing/deleting a note file
-                                                       # -- see the Notes section below)
+uv run -m scripts.ingest_passage_groups passage_groups.yaml   # syncs the canon-structure taxonomy (Pentateuch, Old/New
+                                                               # Testament, ...) into passage_groups/passage_group_members
+                                                               # -- independent of the above; run before ingest_notes.py
+                                                               # if any note frontmatter references a group by slug
+uv run -m scripts.ingest_notes                                # syncs notes/*.md into the `notes` table (independent of
+                                                               # the above except passage_groups if a note uses `group:`;
+                                                               # rerun any time after adding/editing/deleting a note file
+                                                               # -- see the Notes section below)
 
-uv run index_pericope_metadata.py                     # populates pericope_metadata_index -- STEP/theographic
-                                                       # entity names+descriptions, personal notes, and the NLP
-                                                       # annotation's SVO/entities/themes/keywords/summary,
-                                                       # denormalized into one BM25-searchable text blob per
-                                                       # pericope. theo.search's hybrid mode fuses hits against
-                                                       # it alongside chunk-text BM25 and semantic similarity.
-                                                       # Rerun after any of the STEP/theographic/annotation/notes
-                                                       # steps above change.
+uv run -m scripts.index_pericope_metadata                     # populates pericope_metadata_index -- STEP/theographic
+                                                               # entity names+descriptions, personal notes, and the NLP
+                                                               # annotation's SVO/entities/themes/keywords/summary,
+                                                               # denormalized into one BM25-searchable text blob per
+                                                               # pericope. theo.search's hybrid mode fuses hits against
+                                                               # it alongside chunk-text BM25 and semantic similarity.
+                                                               # Rerun after any of the STEP/theographic/annotation/notes
+                                                               # steps above change.
 ```
 
 ## Passage groups (canon structure)
@@ -238,11 +238,11 @@ name -- ingest **hard-fails** (before writing anything) on a collision or
 duplicate rather than silently picking a winner. See the file itself for
 the full seed taxonomy -- it's a starting point, not exhaustive.
 
-Sync with `uv run ingest_passage_groups.py passage_groups.yaml`. Like
+Sync with `uv run -m scripts.ingest_passage_groups passage_groups.yaml`. Like
 notes, this treats the file as live/authoritative: editing a group and
 rerunning overwrites it in place (name, description, parent, book ranges,
 aliases). `--prune` additionally removes groups no longer in the file
-(off by default, same rationale as `ingest_notes.py --prune`).
+(off by default, same rationale as `uv run -m scripts.ingest_notes --prune`).
 
 Groups show up in `/passage-groups` and `/passage-groups/{slug}` (which
 accepts a slug, canonical name, or any alias, and returns the group's
@@ -308,17 +308,17 @@ key, in which case the more specific source wins (see
 and [notes/pentateuch/authorship.md](notes/pentateuch/authorship.md) for
 filled-out examples of each scope.
 
-Sync the folder into the database with `uv run ingest_notes.py` (after
-`ingest_passage_groups.py`, if any note frontmatter references a group by
+Sync the folder into the database with `uv run -m scripts.ingest_notes` (after
+`scripts.ingest_passage_groups`, if any note frontmatter references a group by
 slug). Unlike every other ingest script, this treats the folder as
 live/authoritative: rerunning after adding or editing a file
 inserts/updates its row. Deleting a note file does *not* delete its row
-unless you also pass `--prune` (`uv run ingest_notes.py --prune`) --
+unless you also pass `--prune` (`uv run -m scripts.ingest_notes --prune`) --
 pruning compares against whatever directory you point it at, so running
 it against a partial/wrong path would silently delete every note outside
 that path; only use it against your real, complete `notes/` folder when
 you've actually removed a file. After syncing, rerun
-`uv run index_pericope_metadata.py` so hybrid search picks up the change.
+`uv run -m scripts.index_pericope_metadata` so hybrid search picks up the change.
 
 Notes show up in `/metadata` and `/metadata/pericope/{id}` (alongside
 people/places/events/annotations, and via `attributes` if inherited from
@@ -330,7 +330,7 @@ scope; the note itself is still reachable in full via `/notes`/`/note/{slug}`).
 
 Every ingest script is safe to rerun — rows already present are left alone
 (duplicates skipped), so re-running after adding a new translation or fixing
-`build_pericopes.py`'s output only submits what's new.
+`scripts/build_pericopes.py`'s output only submits what's new.
 
 Currently ingested: all 66 books' NIV verses, ~2,200 pericopes, one
 `BAAI/bge-large-en-v1.5` embedding per pericope, the full Theographic

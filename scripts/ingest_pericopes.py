@@ -1,7 +1,7 @@
 """CLI: ingest data/pericopes.json into the `pericopes` table.
 
 Usage:
-    uv run ingest_pericopes.py data/pericopes.json
+    uv run -m scripts.ingest_pericopes data/pericopes.json
 """
 
 import sys

@@ -6,9 +6,9 @@ Resumable: already-annotated pericopes are skipped, so rerunning after an
 interruption picks up where it left off.
 
 Usage:
-    uv run annotate_pericopes.py                  # everything
-    uv run annotate_pericopes.py --book Ruth      # one book
-    uv run annotate_pericopes.py --limit 10       # smoke test
+    uv run -m scripts.annotate_pericopes                  # everything
+    uv run -m scripts.annotate_pericopes --book Ruth      # one book
+    uv run -m scripts.annotate_pericopes --limit 10       # smoke test
 """
 
 import tyro

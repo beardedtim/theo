@@ -3,7 +3,7 @@ pericope(s)) from Theographic event data. See theo/benchmark.py for the
 derivation and filtering rationale.
 
 Usage:
-    uv run build_search_golden_set.py
+    uv run -m scripts.build_search_golden_set
 """
 
 from pathlib import Path

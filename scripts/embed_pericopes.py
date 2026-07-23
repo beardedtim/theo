@@ -2,7 +2,7 @@
 theo.embeddings' current model (BAAI/bge-large-en-v1.5, 1024-dim -> chunks_1024).
 
 Usage:
-    uv run embed_pericopes.py
+    uv run -m scripts.embed_pericopes
 """
 
 import tyro

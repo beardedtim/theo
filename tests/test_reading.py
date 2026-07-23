@@ -3,7 +3,7 @@
 The `assemble_blocks` tests below are pure unit tests -- no DB, no `client`
 fixture -- since assembly is a pure function over already-fetched rows. The
 tests at the bottom are the usual integration style (see tests/conftest.py),
-requiring the dev DB to be up and `ingest_reading.py` already run.
+requiring the dev DB to be up and `uv run -m scripts.ingest_reading` already run.
 """
 
 from theo.reading import _parse_word, assemble_blocks
@@ -193,7 +193,7 @@ def test_assemble_chapter_opening_heading_present_at_verse_start_1():
     assert blocks[1].kind == "paragraph"
 
 
-# --- Integration tests (require the dev DB up + `uv run ingest_reading.py`) ---
+# --- Integration tests (require the dev DB up + `uv run -m scripts.ingest_reading`) ---
 
 def test_reading_genesis_1_has_headings_and_paragraphs(client):
     response = client.get("/reading/Genesis/1/1/1/31")

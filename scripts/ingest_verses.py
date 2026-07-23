@@ -1,7 +1,7 @@
 """CLI: ingest a translation's combined verse JSON into the `verses` table.
 
 Usage:
-    uv run ingest_verses.py data/bible/NIV/NIV_bible.json --translation NIV
+    uv run -m scripts.ingest_verses data/bible/NIV/NIV_bible.json --translation NIV
 """
 
 import sys

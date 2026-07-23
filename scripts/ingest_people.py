@@ -5,7 +5,7 @@ Requires `places` to already be ingested (run ingest_places.py first) so
 birth/death place references can resolve.
 
 Usage:
-    uv run ingest_people.py
+    uv run -m scripts.ingest_people
 """
 
 import sys

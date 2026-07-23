@@ -1,11 +1,11 @@
 """CLI: score theo.search's modes against benchmarks/search_golden_set.json
 and print a Recall@5/@10 + MRR report. Build the golden set first with
-`uv run build_search_golden_set.py`.
+`uv run -m scripts.build_search_golden_set`.
 
 Usage:
-    uv run benchmark_search.py
-    uv run benchmark_search.py --modes hybrid --show-misses 15
-    uv run benchmark_search.py --max-queries 40   # quick smoke run
+    uv run -m scripts.benchmark_search
+    uv run -m scripts.benchmark_search --modes hybrid --show-misses 15
+    uv run -m scripts.benchmark_search --max-queries 40   # quick smoke run
 """
 
 from pathlib import Path
@@ -66,7 +66,7 @@ def main(
         focus_mode: Which mode's misses to print when show_misses > 0
     """
     if not golden_set.exists():
-        raise SystemExit(f"{golden_set} not found -- run `uv run build_search_golden_set.py` first.")
+        raise SystemExit(f"{golden_set} not found -- run `uv run -m scripts.build_search_golden_set` first.")
 
     queries = load_golden_set(golden_set)
     if max_queries is not None:

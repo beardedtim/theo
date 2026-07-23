@@ -2,7 +2,7 @@
 `step_name_forms`, and `step_name_verses` tables.
 
 Usage:
-    uv run ingest_step_names.py
+    uv run -m scripts.ingest_step_names
 """
 
 import sys

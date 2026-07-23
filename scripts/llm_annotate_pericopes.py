@@ -9,9 +9,9 @@ are skipped and failures are just logged, so rerunning after an
 interruption (or to retry failures) picks up where it left off.
 
 Usage:
-    uv run llm_annotate_pericopes.py                  # everything
-    uv run llm_annotate_pericopes.py --book Ruth      # one book
-    uv run llm_annotate_pericopes.py --limit 5        # smoke test
+    uv run -m scripts.llm_annotate_pericopes                  # everything
+    uv run -m scripts.llm_annotate_pericopes --book Ruth      # one book
+    uv run -m scripts.llm_annotate_pericopes --limit 5        # smoke test
 """
 
 import logging

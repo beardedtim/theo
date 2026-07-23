@@ -45,11 +45,11 @@ strict order (later steps depend on earlier tables); see
 [DEVELOPMENT.md](DEVELOPMENT.md#data-pipeline) for the full ordered command
 list and what each populates. Every ingest script is idempotent/resumable —
 already-present rows are skipped, so rerunning after adding a translation or
-fixing `build_pericopes.py` only submits what's new.
+fixing `scripts/build_pericopes.py` only submits what's new.
 
-`annotate_pericopes.py` (spaCy+fastcoref) needs the `nlp`/`gpu` uv dependency
+`scripts/annotate_pericopes.py` (spaCy+fastcoref) needs the `nlp`/`gpu` uv dependency
 groups and a GPU is strongly recommended (~25 min for all NIV pericopes on an
-RTX 4060). `llm_annotate_pericopes.py` is the alternative/complementary
+RTX 4060). `scripts/llm_annotate_pericopes.py` is the alternative/complementary
 together.ai pipeline and needs `TOGETHER_API_KEY`.
 
 ## Architecture
@@ -84,7 +84,7 @@ for the full table-by-table breakdown. The load-bearing structural choices:
   of overwriting them.
 - **`notes`** holds personal commentary: hand-written markdown files with
   YAML frontmatter under `notes/` (tracked in git, unlike `data/`), synced
-  in by `ingest_notes.py` via `theo/notes.py`. Anchored to a verse range
+  in by `scripts/ingest_notes.py` via `theo/notes.py`. Anchored to a verse range
   like `pericopes`/`events`, searchable (BM25) and included in `/metadata`
   and the hybrid-search metadata leg. Unlike every other ingest script,
   the folder is the live source of truth: rerunning after an edit

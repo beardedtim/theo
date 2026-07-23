@@ -13,7 +13,7 @@ a verse can't be split across two pericopes, so it's kept with the section
 that started before the heading.
 
 Usage:
-    uv run build_pericopes.py
+    uv run -m scripts.build_pericopes
 """
 
 import json

@@ -2,7 +2,7 @@
 tables.
 
 Usage:
-    uv run ingest_places.py
+    uv run -m scripts.ingest_places
 """
 
 import sys

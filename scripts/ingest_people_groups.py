@@ -5,7 +5,7 @@ Requires `people` to already be ingested (run ingest_people.py first) so
 member references can resolve.
 
 Usage:
-    uv run ingest_people_groups.py
+    uv run -m scripts.ingest_people_groups
 """
 
 import sys

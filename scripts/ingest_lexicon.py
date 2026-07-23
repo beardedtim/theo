@@ -2,7 +2,7 @@
 and load them into the `step_lexicon` table.
 
 Usage:
-    uv run ingest_lexicon.py
+    uv run -m scripts.ingest_lexicon
 """
 
 import tyro

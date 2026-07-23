@@ -6,7 +6,7 @@ ingest_places.py and ingest_people.py first) so entry cross-links can
 resolve.
 
 Usage:
-    uv run ingest_dictionary.py
+    uv run -m scripts.ingest_dictionary
 """
 
 import sys

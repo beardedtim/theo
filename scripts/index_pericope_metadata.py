@@ -8,8 +8,8 @@ Safe to rerun any time any of those change: it upserts by
 (pericope_id, translation).
 
 Usage:
-    uv run index_pericope_metadata.py                  # everything
-    uv run index_pericope_metadata.py --book Ruth      # one book
+    uv run -m scripts.index_pericope_metadata                  # everything
+    uv run -m scripts.index_pericope_metadata --book Ruth      # one book
 """
 
 import tyro

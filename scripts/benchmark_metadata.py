@@ -3,9 +3,9 @@ against STEPBible's TIPNR tagging and print a Precision/Recall/F1 report.
 See theo/metadata_benchmark.py for the ground-truth/matching rationale.
 
 Usage:
-    uv run benchmark_metadata.py
-    uv run benchmark_metadata.py --pipelines en_core_web_trf+fastcoref/v1 --show-misses 15
-    uv run benchmark_metadata.py --book Ruth   # quick smoke run on one book
+    uv run -m scripts.benchmark_metadata
+    uv run -m scripts.benchmark_metadata --pipelines en_core_web_trf+fastcoref/v1 --show-misses 15
+    uv run -m scripts.benchmark_metadata --book Ruth   # quick smoke run on one book
 """
 
 import tyro

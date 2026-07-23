@@ -1,6 +1,6 @@
 # Canon-structure groups: which books belong together, and how those
 # groupings nest. Hand-authored, tracked in git -- edit this file and rerun
-# `uv run ingest_passage_groups.py passage_groups.yaml` to apply changes.
+# `uv run -m scripts.ingest_passage_groups passage_groups.yaml` to apply changes.
 #
 # Each group is one of:
 #   books: [book_start, book_end]   -- a contiguous range of books

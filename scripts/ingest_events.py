@@ -6,7 +6,7 @@ Requires `people`, `places`, and `people_groups` to already be ingested
 so participant/location/group references can resolve.
 
 Usage:
-    uv run ingest_events.py
+    uv run -m scripts.ingest_events
 """
 
 import sys

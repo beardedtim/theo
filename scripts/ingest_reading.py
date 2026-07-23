@@ -3,7 +3,7 @@
 inline styling for the reading view). NIV only for now.
 
 Usage:
-    uv run ingest_reading.py
+    uv run -m scripts.ingest_reading
 """
 
 import sys

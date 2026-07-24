@@ -22,6 +22,12 @@ COPY . .
 ARG VITE_API_BASE_URL=/api
 ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
 
+# og:url/og:image in index.html need an absolute URL to unfurl correctly --
+# defaults to the real domain here since only local dev (.env.development)
+# needs the localhost override.
+ARG VITE_SITE_URL=https://sproutfaith.com
+ENV VITE_SITE_URL=$VITE_SITE_URL
+
 RUN pnpm build
 
 FROM nginx:1.27-alpine AS runtime

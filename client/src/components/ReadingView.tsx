@@ -1,5 +1,10 @@
 import { Box, Heading, Stack, Text } from "@chakra-ui/react";
-import type { HeadingBlock, ParagraphBlock, ReadingBlock, ReadingLine } from "@/lib/api";
+import type {
+  HeadingBlock,
+  ParagraphBlock,
+  ReadingBlock,
+  ReadingLine,
+} from "@/lib/api";
 
 function headingSize(level: number): "xl" | "lg" | "sm" {
   if (level <= 1) return "xl";
@@ -46,7 +51,13 @@ function Line({ line, cursor }: { line: ReadingLine; cursor: ChapterCursor }) {
   );
 }
 
-function Paragraph({ block, cursor }: { block: ParagraphBlock; cursor: ChapterCursor }) {
+function Paragraph({
+  block,
+  cursor,
+}: {
+  block: ParagraphBlock;
+  cursor: ChapterCursor;
+}) {
   return (
     <Stack gap="0.5">
       {block.lines.map((line, i) => (
@@ -58,7 +69,10 @@ function Paragraph({ block, cursor }: { block: ParagraphBlock; cursor: ChapterCu
 
 function HeadingBlockView({ block }: { block: HeadingBlock }) {
   return (
-    <Heading size={headingSize(block.level)} color={block.level >= 3 ? "fg.muted" : undefined}>
+    <Heading
+      size={headingSize(block.level)}
+      color={block.level >= 3 ? "fg.muted" : undefined}
+    >
       {block.text}
     </Heading>
   );
@@ -68,7 +82,15 @@ export function ReadingView({ blocks }: { blocks: ReadingBlock[] }) {
   const cursor: ChapterCursor = { chapter: null };
 
   return (
-    <Stack gap="4" align="stretch">
+    <Stack
+      gap="4"
+      align="stretch"
+      css={{
+        "& ::selection": {
+          backgroundColor: "rgba(255, 97, 35, 0.222)",
+        },
+      }}
+    >
       {blocks.map((block, i) =>
         block.kind === "heading" ? (
           <HeadingBlockView key={i} block={block} />

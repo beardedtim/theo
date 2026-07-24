@@ -1,5 +1,5 @@
 import { useEffect, useState, type SubmitEvent } from "react";
-import { useSearch } from "wouter";
+import { useSearch, useSearchParams } from "wouter";
 import {
   Alert,
   Field,
@@ -13,7 +13,13 @@ import {
   VStack,
   Button,
 } from "@chakra-ui/react";
-import { ApiError, getReading, listVerses, type ReadingBlock, type Verse } from "@/lib/api";
+import {
+  ApiError,
+  getReading,
+  listVerses,
+  type ReadingBlock,
+  type Verse,
+} from "@/lib/api";
 import { ReferencesPanel } from "@/components/ReferencesPanel";
 import { ReadingView } from "@/components/ReadingView";
 
@@ -27,6 +33,7 @@ interface FetchArgs {
 
 function VersesPage() {
   const queryString = useSearch();
+  const [_, setUrlSearchParams] = useSearchParams();
 
   const [book, setBook] = useState("");
   const [chapter, setChapter] = useState("");
@@ -39,16 +46,30 @@ function VersesPage() {
   const [pericopeId, setPericopeId] = useState<string | null>(null);
 
   const [verses, setVerses] = useState<Verse[] | null>(null);
-  const [readingBlocks, setReadingBlocks] = useState<ReadingBlock[] | null>(null);
+  const [readingBlocks, setReadingBlocks] = useState<ReadingBlock[] | null>(
+    null,
+  );
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  async function fetchVerses({ book, chapter, verseStart, verseEnd, translation }: FetchArgs) {
+  async function fetchVerses({
+    book,
+    chapter,
+    verseStart,
+    verseEnd,
+    translation,
+  }: FetchArgs) {
     setLoading(true);
     setError(null);
     setReadingBlocks(null);
     try {
-      const data = await listVerses({ book, chapter, verseStart, verseEnd, translation });
+      const data = await listVerses({
+        book,
+        chapter,
+        verseStart,
+        verseEnd,
+        translation,
+      });
       setVerses(data);
 
       // Reading-formatted layout only exists for NIV so far. Best-effort:
@@ -71,7 +92,11 @@ function VersesPage() {
       }
     } catch (err) {
       setVerses(null);
-      setError(err instanceof ApiError ? err.message : "Something went wrong. Is the API running?");
+      setError(
+        err instanceof ApiError
+          ? err.message
+          : "Something went wrong. Is the API running?",
+      );
     } finally {
       setLoading(false);
     }
@@ -110,6 +135,31 @@ function VersesPage() {
     if (!book.trim() || !chapter.trim()) return;
 
     setPericopeId(null);
+
+    // Set url params so we have this in history
+    const args: any = {
+      book: book.trim(),
+      chapter: chapter.trim(),
+    };
+
+    const trimmedVS = verseStart.trim();
+    const trimmedVE = verseEnd.trim();
+    const trimmedT = translation.trim();
+
+    if (trimmedVS) {
+      args.verseStart = trimmedVS;
+    }
+
+    if (trimmedVE) {
+      args.verseEnd = trimmedVE;
+    }
+
+    if (trimmedT) {
+      args.translation = trimmedT;
+    }
+
+    setUrlSearchParams(args, { replace: true });
+
     await fetchVerses({
       book: book.trim(),
       chapter: Number(chapter),

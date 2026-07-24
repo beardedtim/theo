@@ -107,7 +107,7 @@ groups:
     description: "Nevi'im Rishonim: the narrative prophetic books of the Hebrew canon."
     aliases: ["Nevi'im Rishonim", "Neviim Rishonim"]
     parent: old-testament
-    members: [5, 6, 7, 9, 10, 11, 12] # Joshua, Judges, 1-2 Samuel, 1-2 Kings
+    members: [5, 6, 7, 9, 10, 11, 12] # Deutronomy, Joshua, Judges, 1-2 Samuel, 1-2 Kings
 
   - slug: latter-prophets
     name: Latter Prophets
